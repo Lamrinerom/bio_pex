@@ -645,12 +645,11 @@ hr{
   background-color: #f9f9f9;
 }
 .categories .section-title{
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .categories .section-title h1, .categories .section-title h2, .categories .section-title h3, .categories .section-title h4, .categories .section-title h5, .categories .section-title h6{
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 400;
   color: #1b1b1d;
   margin-bottom: 8px;
@@ -779,9 +778,15 @@ hr{
 }
 
 /* ----------------------------------Popular section */
+.popular-product .section-title h1, .popular-product .section-title h2, .popular-product .section-title h3, .popular-product .section-title h4, .popular-product .section-title h5, .popular-product .section-title h6{
+  font-size: 32px;
+  font-weight: 400;
+  color: #1b1b1d;
+  margin-bottom: 8px;
+  font-family: "Urbanist", sans-serif;
+}
 .popular-product .section-title {
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .popular-product{
   padding: 40px 20px;
@@ -789,9 +794,9 @@ hr{
 }
 .popular-product .pop-card{
   background-color: #fff;
-  border: 2px solid #e1e1e1;
+  border: 1px solid #e2e1e1;
   border-radius: 5px;
-  padding: 8px;
+  padding: 14px;
   text-align: center;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
@@ -816,7 +821,7 @@ hr{
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 200px;
+  max-width: 160px;
 }
 .popular-product .pop-card .pop-image img{
   max-width: 100%;
@@ -837,11 +842,14 @@ hr{
   font-weight: 600;
   color: #0d0d0d;
   margin-top: 10px;
+  margin-bottom: 10px;
   text-align: left;
   font-family: "Urbanist", sans-serif !important;
 }
 .popular-product .pop-card .pop-info .pop-price{
   color: #f05821;
+  margin-bottom: 6px !important;
+  display: block;
 }
 .popular-product .pop-card .specs-list{
   text-align: left;
@@ -890,6 +898,7 @@ hr{
   }
   
 }
+
 .nodesktop{
   display: none;
 }
@@ -907,8 +916,14 @@ hr{
 
 /* ----------------------------------Top pick */
 .top-product .section-title {
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+.top-product .section-title h1, .top-product .section-title h2, .top-product .section-title h3, .top-product .section-title h4, .top-product .section-title h5, .top-product .section-title h6{
+  font-size: 32px;
+  font-weight: 400;
+  color: #1b1b1d;
+  margin-bottom: 8px;
+  font-family: "Urbanist", sans-serif;
 }
 .top-product{
   padding: 40px 20px;
@@ -916,24 +931,25 @@ hr{
 }
 .top-product .pop-card{
   background-color: #fff;
-  border: 2px solid #e1e1e1;
+  border: 1px solid #e2e1e1;
   border-radius: 5px;
-  padding: 8px;
+  padding: 14px;
   text-align: center;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
   font-family: "Urbanist", sans-serif;
   display: grid;
   height: 100%;
+  position: relative;
 }
 .top-product .pop-card .side-label{
-  position: relative;
-  top: 0px;
-  left: -83px;
-  background-color: #f05821;
-  color: #fff;
-  padding: 5px 40px;
-  transform: rotate(-45deg);
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: #4f42ae14;
+  color: #072e91;
+  padding: 5px 15px;
+  /* transform: rotate(-45deg); */
   font-size: 12px;
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -942,8 +958,8 @@ hr{
 .top-product .pop-card .pop-image{
   width: 100%;
   height: auto;
-  margin: 0 auto;
-  max-width: 200px;
+  margin: 0 auto 0 0;
+  max-width: 160px;
 }
 .top-product .pop-card .pop-image img{
   max-width: 100%;
@@ -964,11 +980,30 @@ hr{
   font-weight: 600;
   color: #0d0d0d;
   margin-top: 10px;
+  margin-bottom: 10px;
   text-align: left;
   font-family: "Urbanist", sans-serif !important;
 }
 .top-product .pop-card .pop-info .pop-price{
-  color: #f05821;
+  font-size: 1.1rem;
+  color: #C40A2C; /* price color */
+  margin-bottom: 5px !important;
+  display: block;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 8px;
+}
+
+.discounted-price {
+  color: #CA576C;
+  font-weight: 600;
+  background-color: #dfeeff;
+  padding: 3px 5px;
+  border-radius: 3px;
+  border: 1px solid #e1e1e1;
+  margin-right: 5px;
 }
 .top-product .pop-card .specs-list{
   text-align: left;
@@ -1002,6 +1037,365 @@ hr{
   justify-content: end;
 }
 .top-product .pop-card .view-button a{
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2px 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #070762;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: 600;
+  &:hover {
+    background-color: #d94a1c;
+  }
+  
+}
+
+/* ---------------------------------------Slider */
+.slick-slide{
+  margin: 0 10px;
+}
+.slick-slide .slider-card{
+  display: grid;
+}
+.slick-carousel .slick-slide {
+    display: flex !important;
+    align-items: stretch;
+    height: auto;
+}
+
+.slider-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.best-seller .section-title h1, .best-seller .section-title h2, .best-seller .section-title h3, .best-seller .section-title h4, .best-seller .section-title h5, .best-seller .section-title h6{
+  font-size: 32px;
+  font-weight: 400;
+  color: #1b1b1d;
+  margin-bottom: 8px;
+  font-family: "Urbanist", sans-serif;
+}
+.best-seller .section-title {
+  margin-bottom: 15px;
+}
+.best-seller{
+  padding: 40px 20px;
+  background-color: #fff;
+  /* background-color: #f9f9f9; */
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+.best-seller .slider-card{
+  background-color: #fff;
+  border:1px solid #e2e1e1;
+  border-radius: 5px;
+  padding: 14px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  font-family: "Urbanist", sans-serif;
+  display: grid;
+  height: 100%;
+}
+.best-seller .slider-card .side-label{
+  position: relative;
+  top: 18px;
+  left: -96px;
+  background-color: #f05821;
+  color: #fff;
+  padding: 5px 40px;
+  transform: rotate(-45deg);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 9;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.best-seller .slider-card .side-label-green{
+  position: relative;
+  top: 18px;
+  left: -96px;
+  background-color: #4f42ae;
+  color: #fff;
+  padding: 5px 40px;
+  transform: rotate(-45deg);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 9;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular-product .side-label-pp{
+  position: relative;
+  top: 10px;
+  left: -18px;
+  background-color: #4f42ae14;
+  color: #072e91;
+  padding: 5px 14px;
+  /* transform: rotate(-45deg); */
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 9;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border-radius: 0 2px 2px 0;
+}
+.best-seller .slider-card .pop-image{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 160px;
+}
+.best-seller .slider-card .pop-image img{
+  max-width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.best-seller .slider-card a{
+  text-decoration: none;
+}
+.best-seller .slider-card .pop-info{
+  text-align: left;
+}
+.best-seller .slider-card .pop-info h1, .best-seller .slider-card .pop-info h2, .best-seller .slider-card .pop-info h3, .best-seller .slider-card .pop-info h4, .best-seller .slider-card .pop-info h5, .best-seller .slider-card .pop-info h6{
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d0d0d;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: "Urbanist", sans-serif !important;
+}
+.best-seller .slider-card .pop-info .pop-price{
+  color: #f05821;
+  display: block;
+  margin-bottom: 4px !important;
+}
+.best-seller .slider-card .specs-list{
+  text-align: left;
+}
+.best-seller .slider-card .specs-list ul{
+  list-style: none;
+  padding-left: 14px;
+  margin: 0;
+  font-size: 14px;
+}
+.best-seller .slider-card .specs-list ul li{
+  margin-bottom: 1px;
+  color: #54545c;
+  font-weight: 400;
+  line-height: 18px;
+}
+.best-seller .slider-card .specs-list ul li::before{
+ content: "\2022";
+  font-family: 'Bootstrap-icons';
+  color: #f05821;
+  display: inline-block;
+  font-size: 18px;
+  width: 15px;  
+  margin-left: -15px;
+}
+.best-seller .slider-card .view-button{
+  margin-top: 10px;
+  text-align: end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.best-seller .slider-card .view-button a{
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2px 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #070762;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: 600;
+  &:hover {
+    background-color: #d94a1c;
+  }
+  
+}
+
+/* -----------------------------------------black friday section */
+
+.bfbanner-carousel .slick-slide {
+    display: flex !important;
+    align-items: stretch;
+    height: auto;
+}
+
+.offer-seller .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.offer-seller .section-title h1, .offer-seller .section-title h2, .offer-seller .section-title h3, .offer-seller .section-title h4, .offer-seller .section-title h5, .offer-seller .section-title h6{
+  font-size: 32px;
+  font-weight: 400;
+  color: #1b1b1d;
+  margin-bottom: 8px;
+  font-family: "Urbanist", sans-serif;
+}
+.offer-seller{
+  padding: 40px 20px;
+  background-color: #fff;
+  /* background-color: #f9f9f9; */
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+.bf-banner{
+   width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.bf-banner img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.offer-seller .slider-card{
+  background-color: #fff;
+  border:1px solid #e2e1e1;
+  border-radius: 5px;
+  padding: 14px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  font-family: "Urbanist", sans-serif;
+  display: grid;
+  height: 100%;
+  position: relative;
+}
+.offer-seller .slider-card .side-label{
+  position: absolute;
+  top: 18px;
+  right: -1px;
+  border-radius: 2px 0 0 2px;
+  background-color: #9b002a;
+  color: #fff;
+  padding: 5px 15px;
+  width: fit-content;
+  /* transform: rotate(-45deg); */
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 9;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offer-seller .slider-card .side-label-green{
+  position: relative;
+  top: 18px;
+  left: -96px;
+  background-color: #4f42ae;
+  color: #fff;
+  padding: 5px 40px;
+  transform: rotate(-45deg);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 9;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offer-seller .slider-card .pop-image{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 160px;
+}
+.offer-seller .slider-card .pop-image img{
+  max-width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.offer-seller .slider-card a{
+  text-decoration: none;
+}
+.offer-seller .slider-card .pop-info{
+  text-align: left;
+}
+.offer-seller .slider-card .pop-info h1, .offer-seller .slider-card .pop-info h2, .offer-seller .slider-card .pop-info h3, .offer-seller .slider-card .pop-info h4, .offer-seller .slider-card .pop-info h5, .offer-seller .slider-card .pop-info h6{
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d0d0d;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: "Urbanist", sans-serif !important;
+}
+.offer-seller .slider-card .pop-info .pop-price{
+  color: #f05821;
+  display: block;
+  margin-bottom: 4px !important;
+}
+.offer-seller .slider-card .specs-list{
+  text-align: left;
+}
+.offer-seller .slider-card .specs-list ul{
+  list-style: none;
+  padding-left: 14px;
+  margin: 0;
+  font-size: 14px;
+}
+.offer-seller .slider-card .specs-list ul li{
+  margin-bottom: 1px;
+  color: #54545c;
+  font-weight: 400;
+  line-height: 18px;
+}
+.offer-seller .slider-card .specs-list ul li::before{
+ content: "\2022";
+  font-family: 'Bootstrap-icons';
+  color: #f05821;
+  display: inline-block;
+  font-size: 18px;
+  width: 15px;  
+  margin-left: -15px;
+}
+.offer-seller .slider-card .view-button{
+  margin-top: 10px;
+  text-align: end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.offer-seller .slider-card .view-button a{
   color: #fff;
   text-decoration: none;
   display: inline-block;

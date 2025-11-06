@@ -225,4 +225,58 @@ const container = document.getElementById('carouselContainer');
   // Initialize to first slide
   goToSlide(0);
 
-  // ---------------------------------------
+  // ---------------------------------------slider
+
+  $(document).ready(function() {
+    $('.slick-carousel').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true, // Enable navigation arrows
+        autoplay: true,
+        autoplaySpeed: 2500, // Slide every 2.5 seconds (customize as needed)
+        // prevArrow: '<button type="button" class="slick-prev" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 45%; left: -40px; z-index: 3;"></button>',
+        // nextArrow: '<button type="button" class="slick-next" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 45%; right: -40px; z-index: 3;"></button>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: { slidesToShow: 4 }
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 2 }
+            }
+        ]
+    });
+});
+// ---------------------------------------
+$(document).ready(function() {
+    $('.bfbanner-carousel').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true, // Enable navigation arrows
+        autoplay: true,
+        autoplaySpeed: 2500, // Slide every 2.5 seconds (customize as needed)
+        // prevArrow: '<button type="button" class="slick-prev" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 45%; left: -40px; z-index: 3;"></button>',
+        // nextArrow: '<button type="button" class="slick-next" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 45%; right: -40px; z-index: 3;"></button>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: { slidesToShow: 4 }
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 2 }
+            }
+        ]
+    });
+});
