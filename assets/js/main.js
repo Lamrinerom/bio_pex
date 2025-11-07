@@ -280,3 +280,188 @@ $(document).ready(function() {
         ]
     });
 });
+
+// -----------------------------------add to cart modal
+
+const cart = [];
+const offcanvas = document.getElementById('offcanvas');
+const offcanvasContent = document.getElementById('offcanvas-content');
+const cartLabel = document.querySelector('.header-cart .dropdown-toggle');
+const cartCountElem = document.querySelector('.cart-count');
+const cartSection = document.querySelector('.cart-section');
+
+function updateCartUI() {
+  // Update cart count
+  cartCountElem.textContent = cart.length;
+
+  // Remove all cart items
+  const prevItems = cartSection.querySelectorAll('.cart-item');
+  prevItems.forEach(item => item.remove());
+
+  const emptyCartElem = cartSection.querySelector('.empty-cart');
+  // Check if cart has items to adjust width accordingly
+  if (cart.length === 0) {
+    emptyCartElem.style.display = 'block';
+    cartSection.style.width = '320px'; // Default width when empty
+  } else {
+    emptyCartElem.style.display = 'none';
+    cartSection.style.width = '490px'; // Wider width when products added
+  }
+  // Add cart items if any
+  cart.forEach(product => {
+    const li = document.createElement('p');
+    li.className = 'dropdown-item cart-item';
+    li.innerHTML = `
+      <div class="cart-item">
+        <img src="${product.image}" alt="${product.name}" />
+        <div class="cart-item-details">
+          <strong>${product.name}</strong>
+          Price: $${product.price} <br />
+          Quantity: ${product.quantity}
+        </div>
+      </div>
+    `;
+    cartSection.insertBefore(li, cartSection.querySelector('p.cart-list'));
+  });
+}
+
+function openOffcanvas(product) {
+  offcanvasContent.innerHTML = `
+    
+    <div class="offcanvas-product">
+      <img src="${product.image}" alt="${product.name}" />
+      <div class="offcanvas-product-info">
+        <h3>${product.name}</h3>
+        <p class="priceoff">Price: $${product.price}</p>
+        <p>Quantity: ${product.quantity}</p>
+      </div>
+    </div>
+    <div class="offcanvas-actions">
+      <a href="products.html" class="button">Continue Shopping</a>
+      <a href="cart.html" class="button" id="view-cart-btn">View Cart</a>
+    </div>
+    <div class="also-bought">
+      <h4>Customers who bought this also bought</h4>
+      <div class="also-bought-list row">
+        <div class="also-bought-item col-lg-6" data-id="2" data-name="Fisherbrand Microcentrifuge" data-price="180.00" data-image="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg">
+          <img src="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg" alt="Fisherbrand Microcentrifuge" />
+          <p class="cwbtabpname">Fisherbrand Microcentrifuge</p>
+          <p class="priceoff">$180.00</p>
+          <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+        </div>
+        <div class="also-bought-item col-lg-6" data-id="3" data-name="Biopex Vacuum Concentrator" data-price="140.00" data-image="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg">
+          <img src="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg" alt="Biopex Vacuum Concentrator" />
+          <p class="cwbtabpname">Biopex Vacuum Concentrator</p>
+          <p class="priceoff">$140.00</p>
+           <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+        </div>
+        <div class="also-bought-item col-lg-6" data-id="2" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="180.00" data-image="assets/images/dummy/assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+          <img src="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg" alt="Mopec Powered Hydraulic Cadaver Carrier" />
+          <p class="cwbtabpname">Mopec Powered Hydraulic Cadaver Carrier</p>
+          <p class="priceoff">$180.00</p>
+          <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+        </div>
+        <div class="also-bought-item col-lg-6" data-id="3" data-name="Fisher Science Education™ Triple-Beam Balance" data-price="140.00" data-image="assets/images/dummy/balances-and-scales-90165051-header-image.jpg-250.jpg">
+          <img src="assets/images/dummy/balances-and-scales-90165051-header-image.jpg-250.jpg" alt="Fisher Science Education™ Triple-Beam Balance" />
+          <p class="cwbtabpname">Fisher Science Education™ Triple-Beam Balance</p>
+          <p class="priceoff">$140.00</p>
+           <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+        </div>
+        <div class="also-bought-item col-lg-6" data-id="2" data-name="Fisherbrand Microcentrifuge" data-price="180.00" data-image="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg">
+          <img src="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg" alt="Fisherbrand Microcentrifuge" />
+          <p class="cwbtabpname">Fisherbrand Microcentrifuge</p>
+          <p class="priceoff">$180.00</p>
+          <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+        </div>
+        <div class="also-bought-item col-lg-6" data-id="3" data-name="Biopex Vacuum Concentrator" data-price="140.00" data-image="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg">
+          <img src="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg" alt="Biopex Vacuum Concentrator" />
+          <p class="cwbtabpname">Biopex Vacuum Concentrator</p>
+          <p class="priceoff">$140.00</p>
+           <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  `;
+  offcanvas.style.display = 'flex';
+
+  // Add event listener for add to cart in also bought section
+  offcanvas.querySelectorAll('.also-bought-item .add-cart-btn').forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      const itemEl = button.parentElement;
+      const newProduct = {
+        id: itemEl.getAttribute('data-id'),
+        name: itemEl.getAttribute('data-name'),
+        price: itemEl.getAttribute('data-price'),
+        image: itemEl.getAttribute('data-image'),
+        quantity: 1,
+      };
+      addToCart(newProduct);
+    });
+  });
+
+  // Add event listener for view cart button offcanvas
+  document.getElementById('view-cart-btn').addEventListener('click', () => {
+    window.location.href = 'cart.html';
+  });
+}
+
+function closeOffcanvas() {
+  offcanvas.style.display = 'none';
+}
+
+function addToCart(product) {
+  // Check if product already in cart
+  const existingProduct = cart.find(item => item.id === product.id);
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push(product);
+  }
+  updateCartUI();
+  openOffcanvas(product);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  closeOffcanvas();
+
+  // Handle Proceed to Checkout button click (dropdown)
+  document.querySelector('.proceed-to-checkout-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'cart.html';
+  }); 
+  // Add to cart button logic on main product card
+  document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.pop-card');
+      const product = {
+        id: card.getAttribute('data-id'),
+        name: card.getAttribute('data-name'),
+        price: card.getAttribute('data-price'),
+        image: card.getAttribute('data-image'),
+        quantity: 1,
+      };
+
+      // Change button text temporarily
+      button.disabled = true;
+      const originalText = button.textContent;
+      button.textContent = 'Added';
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+      }, 5000);
+
+      addToCart(product);
+    });
+  });
+
+  // Make overlay click close the offcanvas, but not clicks inside offcanvas content
+  offcanvas.addEventListener('click', function(e) {
+    if (e.target === offcanvas) {
+      closeOffcanvas();
+    }
+  });
+
+  // Offcanvas close button
+  document.getElementById('offcanvas-close').addEventListener('click', closeOffcanvas);
+});
