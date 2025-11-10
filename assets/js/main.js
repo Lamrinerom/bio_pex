@@ -238,17 +238,21 @@ const container = document.getElementById('carouselContainer');
         // prevArrow: '<button type="button" class="slick-prev" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 45%; left: -40px; z-index: 3;"></button>',
         // nextArrow: '<button type="button" class="slick-next" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 45%; right: -40px; z-index: 3;"></button>',
         responsive: [
-            {
-                breakpoint: 1200,
-                settings: { slidesToShow: 4 }
+           {
+                breakpoint: 1400,
+                settings: { slidesToShow: 5 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 1200,
                 settings: { slidesToShow: 3 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 768,
                 settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1 }
             }
         ]
     });
@@ -275,7 +279,7 @@ $(document).ready(function() {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 2 }
+                settings: { slidesToShow: 1 }
             }
         ]
     });
@@ -465,3 +469,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // Offcanvas close button
   document.getElementById('offcanvas-close').addEventListener('click', closeOffcanvas);
 });
+
+// ------------------------------------------------Aboutcarousel
+
+$(document).ready(function() {
+    $('.banner-carousel').slick({
+      slidesToShow: 1,       // Show one image at a time
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,          // Show arrows
+      autoplay: true,
+      autoplaySpeed: 2500,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: { slidesToShow: 1 }
+        },
+        {
+          breakpoint: 768,
+          settings: { slidesToShow: 1 }
+        },
+        {
+          breakpoint: 480,
+          settings: { slidesToShow: 1 }
+        }
+      ]
+    });
+  });

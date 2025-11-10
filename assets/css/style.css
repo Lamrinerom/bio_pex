@@ -340,7 +340,22 @@ hr{
   font-weight: 500;
   margin-right: 12px;
 }
+.cont-top a{
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-right: 12px;
+  text-decoration: none;
+}
 .cont-top p:first-child{
+  margin-right: 20px;
+  border-right: 1px solid #fff;
+  padding-right: 20px;
+}
+.cont-top a:first-child{
   margin-right: 20px;
   border-right: 1px solid #fff;
   padding-right: 20px;
@@ -999,7 +1014,7 @@ hr{
   background-color: #fff;
   border: 1px solid #e1e1e1;
   border-radius: 50%;
-  padding: 30px 10px;
+  padding: 16px 10px;
   text-align: center;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
@@ -1954,3 +1969,104 @@ hr{
     flex: 0 0 auto !important;
   }
 }
+
+/* ----------------------------------------Breadcrumbs */
+.breadcrumb-section .breadcrumb{
+  padding: 2px 10px;
+}
+.breadcrumb-section .breadcrumb .breadcrumb-item{
+  font-size: 13px !important;
+}
+.breadcrumb-section .breadcrumb .breadcrumb-item a{
+  color: red;
+  text-decoration: none;
+  font-weight: 500;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+ content: ' \F231' !important;
+ font-family: 'Bootstrap-Icons';
+ color: red !important;
+ font-size: 13px !important;
+}
+
+/* ---------------------------------About Us */
+.page-section{
+  padding: 40px 20px;
+}
+.page-section .universal-title{
+  
+}
+.page-section .universal-title h1, .page-section .universal-title h2, .page-section .universal-title h3, .page-section .universal-title h4, .page-section .universal-title h5, .page-section .universal-title h6{
+    font-size: 36px;
+    font-weight: 500;
+    font-family: "Urbanist", sans-serif;
+    color: #0b2258;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.aboutus-section {
+  margin-bottom: 30px;
+}
+.aboutus-section h2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ef5721;
+  letter-spacing: 0;
+  font-family: "Urbanist", sans-serif
+}
+.aboutus-section p,
+.aboutus-section ul {
+  font-size: 1rem;
+  color: #373f46;
+  margin-bottom: 12px;
+}
+.aboutus-section ul {
+  padding-left: 26px;
+  margin-bottom: 0;
+}
+.about-vision {
+  background: #f5fafc;
+  padding: 20px;
+  border-radius: 9px;
+  margin-top: 30px;
+  color: #185ac6;
+  text-align: center;
+}
+.aboutus-values {
+  background: #f0f4fa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+@media(max-width:600px) {
+  .aboutus-container {
+    padding: 14px;
+    margin: 10px;
+  }
+  .aboutus-header h1 {
+    font-size: 1.28rem;
+  }
+}
+.about-banner img{
+  width: 100%;
+}
+.pname{
+  display: flex;
+  overflow: scroll;
+  width: 100%;
+}
+.pname img{
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+}
+.aboutbanner-carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .aboutbanner-carousel {
+    max-width: 600px;
+    margin: 30px auto;
+  }
