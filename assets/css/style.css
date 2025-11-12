@@ -160,7 +160,7 @@ p{
 }
 
 .mobile-header .logo-mobile{
-  width: 200px;
+  width: 175px;
   height: auto;
   display: flex;
   align-items: center;
@@ -392,13 +392,14 @@ background: linear-gradient(91deg,rgba(50, 71, 139, 1) 35%, rgba(72, 120, 188, 1
 }
 .signingin-dropdown{
   position: absolute !important;
-  inset: 0px 0 auto -61px !important;
+ inset: 0px 0 auto -56px !important;
   margin: 0px !important;
-  transform: translate3d(0px, 41.2px, 0px) !important;
+  transform: translate3d(0px, 40.2px, 0px) !important;
   border-radius: 0 0 8px 8px !important;
-  width: 282px;
+  width: 300px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+
 .signingin-dropdown li{
   font-size: 14px !important;
 }
@@ -457,10 +458,23 @@ hr{
   margin-left: 0;
   border-right: 1px solid #fff;
 }
+.top-header .cartandsignin-section ul li:last-child{
+    border-left: 1px solid #fff;
+}
 .top-header .cartandsignin-section ul li:first-child{
   margin-left: 10px;
 }
 .top-header .cartandsignin-section ul li label{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 15px;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.top-header .cartandsignin-section ul li .wishlist{
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -468,15 +482,31 @@ hr{
   text-decoration: none;
   align-items: center;
   display: flex;
+  position: relative;
 }
 .top-header .cartandsignin-section ul li .cart-count{
   background: #f02349;
   border-radius: 50%;
-  padding: 2px 8px;
+  padding: 1px 6px;
   margin-left: 0px;
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+}
+.top-header .cartandsignin-section ul li .list-count{
+  background: #f02349;
+  border-radius: 50%;
+  padding: 1px 6px;
+  margin-left: 0px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 20px;
+  right: 8px;
 }
 .cartandsignin-section ul li .icon3::before{
   content: "\F4D7";
@@ -487,6 +517,13 @@ hr{
 }
 .cartandsignin-section ul li .icon4::before{
   content: "\F244";
+  font-family: "bootstrap-icons";
+  font-weight: 500;
+  margin-right: 4px;
+ font-size: 22px;
+}
+.cartandsignin-section ul li .icon5::before{
+  content: "\F417";
   font-family: "bootstrap-icons";
   font-weight: 500;
   margin-right: 4px;
@@ -1020,6 +1057,12 @@ hr{
   overflow: hidden;
   font-family: "Urbanist", sans-serif;
 }
+.custome-col:hover .category-card{
+  border: 1px solid #f07f24;
+}
+.custome-col:hover .category-info h2 {
+  color: #f07f24;
+}
 .categories .viewcategory{
   background-color: #fff;
   border: 1px solid #e1e1e1;
@@ -1099,6 +1142,11 @@ hr{
   height: 100%;
   position: relative;
   transition: box-shadow 0.3s;
+}
+.pop-card.hovered .action-buttons {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
 }
 .action-buttons {
   position: absolute;
@@ -1239,6 +1287,7 @@ hr{
   position: relative;
   width: 100%;
   z-index: 1;
+  margin: 14px auto;
 }
 .popular-product .pop-card a{
   text-decoration: none;
@@ -1353,8 +1402,8 @@ hr{
 }
 .top-product .pop-card .side-label{
   position: absolute;
-  top: 20px;
-  right: 0;
+  top: 0;
+  left: 0;
   background-color: #4f42ae14;
   color: #072e91;
   padding: 5px 15px;
@@ -1363,6 +1412,7 @@ hr{
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   z-index: 9;
+  border-radius: 0 0 5px 0;
 }
 .top-product .pop-card .pop-image{
   width: 100%;
@@ -1377,6 +1427,7 @@ hr{
   position: relative;
   width: 100%;
   z-index: 1;
+  margin: 14px auto;
 }
 .top-product .pop-card a{
   text-decoration: none;
@@ -1555,11 +1606,11 @@ hr{
   align-items: center;
 }
 .popular-product .side-label-pp{
-  position: relative;
-  top: 10px;
-  left: -18px;
+  position: absolute;
+  top: 0px;
+  left: -2px;
   background-color: #4f42ae14;
-  color: #072e91;
+  color: #f07f24;
   padding: 5px 14px;
   /* transform: rotate(-45deg); */
   font-size: 12px;
@@ -1571,7 +1622,7 @@ hr{
   justify-content: center;
   align-items: center;
   width: fit-content;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 0 5px 0
 }
 .best-seller .slider-card .pop-image{
   width: 100%;
@@ -2338,3 +2389,153 @@ button.btn-biopex {
 button.btn-biopex:hover {
   background-color: #0a54c8;
 }
+/* -----------------------------All Categories */
+.allcategories{
+  padding: 40px 20px;
+}
+.cate-custome-col{
+  flex: 0 0 auto;
+  width: 16.66% !important;
+  margin-bottom: 15px;
+}
+.allcategories .category-card {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 16px 10px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  font-family: "Urbanist", sans-serif;
+}
+.allcategories .category-card .category-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 125px;
+}
+.allcategories .category-card .category-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.allcategories .category-info h1, .allcategories .category-info h2, .allcategories .category-info h3, .allcategories .category-info h4, .allcategories .category-info h5, .allcategories .category-info h6 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #54545c;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+}
+
+/* -----------------------------Product by Category */
+.pbc-section{
+  padding: 0 40px 20px;
+}
+.pbc-custome-col{
+  flex: 0 0 auto;
+  width: 12.5% !important;
+  margin-bottom: 15px;
+}
+.pbc-section .category-card {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+  padding: 34px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  font-family: "Urbanist", sans-serif;
+}
+.pbc-section .category-card .category-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100px;
+}
+.pbc-section .category-card .category-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.pbc-section .category-info h1, .pbc-section .category-info h2, .pbc-section .category-info h3, .pbc-section .category-info h4, .pbc-section .category-info h5, .pbc-section .category-info h6 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #54545c;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+}
+.pbc-container {
+  overflow-x: auto !important;
+  -webkit-overpbcing: touch !important;
+  background-color: #f4f4f4;
+  padding: 34px 20px 10px;
+  border-radius: 8px;
+}
+
+.pbc-row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+/* @media (min-width: 1400px) {
+  .pbc-container {
+    overflow-x: visible !important;
+  }
+
+  .pbc-row {
+    flex-wrap: wrap !important;
+  }
+} */
+
+.tab-content > .active {
+  display: flex !important;
+}
+
+.filter-section {
+    max-width: 100%;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 8px rgba(0,0,0,0.1); */
+    margin-bottom: 40px;
+    margin-top: 16px;
+  }
+  .filter-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #f07f24;
+  }
+  .filter-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left;
+    color: #32478b;
+  }
+  .filter-section label {
+    margin: 6px 0;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+  justify-content: space-between;
+  }
+  .filter-section input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  #clearFilter {
+    margin-top: 15px;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
+    background-color: #f07f24;
+    color: #fff;
+  }

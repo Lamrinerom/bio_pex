@@ -499,4 +499,36 @@ $(document).ready(function() {
 
   // ---------------------------------------------Action on card
 
-  
+  const cards = document.querySelectorAll('.pop-card');
+cards.forEach(card => {
+  let hideTimeout;
+
+  card.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimeout);
+    card.classList.add('hovered');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    // Hide after 3 seconds delay
+    hideTimeout = setTimeout(() => {
+      card.classList.remove('hovered');
+    }, 3000);
+  });
+});
+
+
+const dropdown = document.querySelector('.signingin-dropdown');
+const btn = document.querySelector('#openDropdownBtn');
+
+btn.addEventListener('click', () => {
+  dropdown.classList.add('dropdown-open');
+  // Remove animation after it completes so repeat on next open
+  dropdown.addEventListener('animationend', function handler() {
+    dropdown.classList.remove('dropdown-open');
+    dropdown.removeEventListener('animationend', handler);
+  });
+});
+
+
+// ------------------------------Productby category
+
