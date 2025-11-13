@@ -969,6 +969,7 @@ hr{
   border-radius: 50%;
   font-size: 18px;
   margin: 0 18px;
+  display: none;
 }
 /* ------------------------------------Categories section */
 .categories{
@@ -2422,6 +2423,9 @@ button.btn-biopex:hover {
   width: 100%;
   z-index: 1;
 }
+.allcategories .category-info{
+  text-decoration: none;
+}
 .allcategories .category-info h1, .allcategories .category-info h2, .allcategories .category-info h3, .allcategories .category-info h4, .allcategories .category-info h5, .allcategories .category-info h6 {
   font-size: 15px;
   font-weight: 500;
@@ -2449,6 +2453,12 @@ button.btn-biopex:hover {
   transition: box-shadow 0.3s ease;
   overflow: hidden;
   font-family: "Urbanist", sans-serif;
+}
+.pbc-section .category-card.active{
+    border: 1px solid #f07f24;
+}
+.pbc-custome-col .category-info h2.active {
+  color: #f07f24;
 }
 .pbc-section .category-card .category-image {
   width: 100%;
@@ -2509,7 +2519,7 @@ button.btn-biopex:hover {
   }
   .filter-section h3 {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 17px;
     text-align: center;
     color: #f07f24;
   }
@@ -2539,3 +2549,59 @@ button.btn-biopex:hover {
     background-color: #f07f24;
     color: #fff;
   }
+  #spec-options {
+  display: grid;
+}
+.spec-link {
+  font-size: 14px;
+  color: #232323;
+  text-decoration: none;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 8px;
+  font-weight: 400;
+}
+.spec-link:hover{
+  background-color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  color: #4878bc;
+}
+
+/* ---------------------------Sub category */
+.sub-category .category-card {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+  padding: 16px 10px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  font-family: "Urbanist", sans-serif;
+}
+.sub-category .category-card .category-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 125px;
+}
+.sub-category .category-card .category-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.sub-category .category-info h1, .sub-category .category-info h2, .sub-category .category-info h3, .sub-category .category-info h4, .sub-category .category-info h5, .sub-category .category-info h6 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #54545c;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+}
+.scsection > .active {
+  display: flex !important;
+  gap: 18px !important;
+}
