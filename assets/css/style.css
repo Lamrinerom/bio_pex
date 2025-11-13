@@ -1279,7 +1279,7 @@ hr{
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 160px;
+  max-width: 130px;
 }
 .popular-product .pop-card .pop-image img{
   max-width: 100%;
@@ -1419,7 +1419,7 @@ hr{
   width: 100%;
   height: auto;
   margin: 0 auto 0 0;
-  max-width: 160px;
+  max-width: 130px;
 }
 .top-product .pop-card .pop-image img{
   max-width: 100%;
@@ -1458,7 +1458,7 @@ hr{
 }
 
 .discounted-price {
-  color: #CA576C;
+  color: #F37A90;
   font-weight: 600;
   background-color: #dfeeff;
   padding: 3px 5px;
@@ -1629,7 +1629,7 @@ hr{
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 160px;
+  max-width: 130px;
 }
 .best-seller .slider-card .pop-image img{
   max-width: 100%;
@@ -2515,7 +2515,7 @@ button.btn-biopex:hover {
     border-radius: 8px;
     /* box-shadow: 0 0 8px rgba(0,0,0,0.1); */
     margin-bottom: 40px;
-    margin-top: 16px;
+    margin-top: 22px;
   }
   .filter-section h3 {
     margin-bottom: 10px;
@@ -2573,17 +2573,20 @@ button.btn-biopex:hover {
   background-color: #fff;
   border: 1px solid #e1e1e1;
   border-radius: 50%;
-  padding: 16px 10px;
+  padding: 28px;
   text-align: center;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
   font-family: "Urbanist", sans-serif;
 }
+.sub-category .category-card.active{
+  border: 1px solid #f07f24;
+}
 .sub-category .category-card .category-image {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 125px;
+  max-width: 100px;
 }
 .sub-category .category-card .category-image img {
   max-width: 100%;
@@ -2593,15 +2596,67 @@ button.btn-biopex:hover {
   width: 100%;
   z-index: 1;
 }
+.sub-category .category-info{
+  text-decoration: none;
+}
 .sub-category .category-info h1, .sub-category .category-info h2, .sub-category .category-info h3, .sub-category .category-info h4, .sub-category .category-info h5, .sub-category .category-info h6 {
-  font-size: 15px;
-  font-weight: 500;
-  color: #54545c;
+  font-size: 16px;
+  font-weight: 600;
+  color: #54545c !important;
   margin-top: 10px;
   text-align: center;
   font-family: "Urbanist", sans-serif;
 }
+.category-section {
+  background-color: rgb(244, 244, 244);
+  padding: 30px 30px 0px 30px;
+  border-radius: 8px;
+}
 .scsection > .active {
-  display: flex !important;
-  gap: 18px !important;
+ 
+}
+.checkbox-circle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkbox-circle input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-circle input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.checkbox-circle input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 11px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+.filter-section h5{
+  margin-bottom: 10px;
+  font-size: 17px;
+  text-align: center;
+  color: #f07f24;
 }

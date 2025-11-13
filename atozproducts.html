@@ -86,7 +86,7 @@
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="aboutus.html">About Us</a></li>
                                     <li><a href="category.html">Biopex Categories</a></li>
-                                    <li><a href="producybycategory.html">A-Z Products</a></li>
+                                    <li><a href="atozproducts.html">A-Z Products</a></li>
                                     <li><a href="contactus.html">Contact Us</a></li>
                                 </ul>
                             </nav>
@@ -496,7 +496,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-10 top-product pt-3 tab-content" style="padding-right: 0;">
+                    <div class="col-xl-10 top-product pt-4 tab-content" style="padding-right: 0;">
                         <div id="product-loader" style="display: none; text-align: center; padding: 20px;">
                             <div class="spinner-border" role="status">
                                <span class="visually-hidden">Loading...</span>
@@ -1939,20 +1939,23 @@
         const productCards = document.querySelectorAll('.pop-card-wrapper');
         const filterTitle = document.getElementById('filter-title');
         const productLoader = document.getElementById('product-loader');
-
-        // Utility: Create specification link element
-        function createSpecLink(spec) {
-        const link = document.createElement('a');
-        link.href = '#';
-        link.textContent = spec;
-        link.className = 'spec-link';
-        link.dataset.value = spec.toLowerCase();
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            applyFilter();
-        });
-        return link;
-        }
+        
+            function createSpecLink(spec) {
+            const link = document.createElement('a');
+            link.href = 'subcategory.html';
+            link.textContent = spec;
+            link.className = 'spec-link';
+            link.dataset.value = spec.toLowerCase();
+            link.addEventListener('click', (e) => {
+                // Prevent default navigation until filtering is done
+                e.preventDefault();
+                // Apply filter logic
+                applyFilter();
+                // After filtering, navigate manually
+                window.location.href = link.href;
+            });
+            return link;
+            }
 
         // Render specs as links based on category key
         function renderSpecs(categoryKey) {
