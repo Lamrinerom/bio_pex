@@ -212,23 +212,27 @@
                         <div class="filter-section" style="margin-top: 40px;">
                             <h5>Filter</h5>
                             <div class="filter-specs">
-                            <h6>Specifications</h6>
+                            <h6>specifications</h6>
                             <div class="spec-checkboxes">
                                 <label class="checkbox-circle">
-                                <input type="checkbox" class="spec-checkbox" value="Capacity">
-                                <span>Capacity</span>
+                                    <input type="checkbox" class="spec-checkbox" data-filter="capacity" value="Capacity">
+                                    <span>Capacity</span>
                                 </label>
                                 <label class="checkbox-circle">
-                                <input type="checkbox" class="spec-checkbox" value="Range">
-                                <span>Range</span>
+                                    <input type="checkbox" class="spec-checkbox" data-filter="range" value="Range">
+                                    <span>Range</span>
                                 </label>
                                 <label class="checkbox-circle">
-                                    <input type="checkbox" class="spec-checkbox" value="Accuracy">
+                                    <input type="checkbox" class="spec-checkbox" data-filter="accuracy" value="Accuracy">
                                     <span>Accuracy</span>
                                 </label>
                                 <label class="checkbox-circle">
-                                    <input type="checkbox" class="spec-checkbox" value="Dimension">
-                                    <span>Dimension</span>
+                                    <input type="checkbox" class="spec-checkbox" data-filter="bath" value="Bath">
+                                    <span>Bath Dimension</span>
+                                </label>
+                                <label class="checkbox-circle">
+                                    <input type="checkbox" class="spec-checkbox" data-filter="inner" value="Inner">
+                                    <span>Inner Dimension</span>
                                 </label>
                             </div>
                             </div>
@@ -240,7 +244,7 @@
                                 <span>$150 - $200</span>
                                 </label>
                                 <label class="checkbox-circle">
-                                <input type="checkbox" class="price-checkbox" value="200-250">
+                                <input type="checkbox" class="price-checkbox" value="200-250"> 
                                 <span>$200 - $250</span>
                                 </label>
                                 <label class="checkbox-circle">
@@ -255,7 +259,7 @@
                     </div>
                     <div class="col-xl-10 popular-product">
                         <div class="row">
-                            <div class="col-xl-4 col-6 mb-4 mobile-col">
+                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="10L" data-range="100" data-accuracy="0.1" data-dimension="230x140x150">
                                 <div class="pop-card">
                                     <div class="action-buttons">
                                         <a href="" class="addtocart"><span>Add to cart</span></a>
@@ -281,13 +285,13 @@
                                             <li>Capacity : 10 L</li>
                                             <li>Range : Ambient to 100℃</li>
                                             <li>Accuracy : ±0.1 ℃</li>
-                                            <li>Bath  Dimension : 230x140x150 mm</li>
+                                            <li>Inner  Dimension : 230x140x150 mm</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col">
-                                <div class="pop-card">
+                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="15L" data-range="105" data-accuracy="0.1" data-dimension="230x140x155">
+                                <div class="pop-card sccards">
                                     <div class="action-buttons">
                                         <a href="" class="addtocart"><span>Add to cart</span></a>
                                         <a href="" class="wishlist"><span>Wishlist</span></a>
@@ -312,13 +316,13 @@
                                             <li>Capacity : 15 L</li>
                                             <li>Range : Ambient to 105℃</li>
                                             <li>Low noise during the operation</li>
-                                            <li>Bath  Dimension : 230x140x150 mm</li>
+                                            <li>Bath  Dimension : 230x140x155 mm</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col">
-                                <div class="pop-card">
+                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="20L" data-range="110" data-accuracy="0.1" data-dimension="230x140x200">
+                                <div class="pop-card sccards">
                                     <div class="action-buttons">
                                         <a href="" class="addtocart"><span>Add to cart</span></a>
                                         <a href="" class="wishlist"><span>Wishlist</span></a>
@@ -343,13 +347,13 @@
                                             <li>Capacity : 20 L</li>
                                             <li>Range : Ambient to 110℃</li>
                                             <li>Low noise during the operation</li>
-                                            <li>Bath  Dimension : 230x140x150 mm</li>
+                                            <li>Inner  Dimension : 230x140x200 mm</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col">
-                                <div class="pop-card">
+                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="25L" data-range="115" data-accuracy="0.1" data-dimension="230x140x250">
+                                <div class="pop-card sccards">
                                     <div class="action-buttons">
                                         <a href="" class="addtocart"><span>Add to cart</span></a>
                                         <a href="" class="wishlist"><span>Wishlist</span></a>
@@ -374,13 +378,13 @@
                                             <li>Capacity : 25 L</li>
                                             <li>Range : Ambient to 115℃</li>
                                             <li>Low noise during the operation</li>
-                                            <li>Bath  Dimension : 230x140x150 mm</li>
+                                            <li>Bath  Dimension : 230x140x250 mm</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col">
-                                <div class="pop-card">
+                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="30L" data-range="120" data-accuracy="0.1" data-dimension="230x140x300">
+                                <div class="pop-card sccards">
                                     <div class="action-buttons">
                                         <a href="" class="addtocart"><span>Add to cart</span></a>
                                         <a href="" class="wishlist"><span>Wishlist</span></a>
@@ -405,13 +409,13 @@
                                             <li>Capacity : 30 L</li>
                                             <li>Range : Ambient to 120℃</li>
                                             <li>Low noise during the operation</li>
-                                            <li>Bath  Dimension : 230x140x150 mm</li>
+                                            <li>Bath  Dimension : 230x140x300 mm</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col">
-                                <div class="pop-card">
+                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="35L" data-range="125" data-accuracy="0.1" data-dimension="230x140x350">
+                                <div class="pop-card sccards">
                                     <div class="action-buttons">
                                         <a href="" class="addtocart"><span>Add to cart</span></a>
                                         <a href="" class="wishlist"><span>Wishlist</span></a>
@@ -436,7 +440,7 @@
                                             <li>Capacity : 35 L</li>
                                             <li>Range : Ambient to 125℃</li>
                                             <li>Low noise during the operation</li>
-                                            <li>Bath  Dimension : 230x140x150 mm</li>
+                                            <li>Bath  Dimension : 230x140x350 mm</li>
                                         </ul>
                                     </div>
                                 </div>
