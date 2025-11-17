@@ -530,5 +530,5 @@ btn.addEventListener('click', () => {
 });
 
 
-// ------------------------------Productby category
+
 
