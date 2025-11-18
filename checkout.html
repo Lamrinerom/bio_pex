@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cart | www.biopex.com</title>
+    <title>Checkout | www.biopex.com</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -198,133 +198,98 @@
             <nav aria-label="breadcrumb-nav">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
-                </ol>
+                    <li class="breadcrumb-item active" aria-current="page">Check Out</li>
+                </ol>   
             </nav>
         </section>
-        <section class="page-section">
+        <section class="checkout-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="order-summery">
-                            <!-- <h3>CART TOTALS</h3> -->
-                            <div class="summary-details">
-                                <p>Subtotal: <span id="subtotal">£</span></p>
-                                <div class="shipping-options">
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="10" checked>
-                                        Flat rate (Delivery time: 2-10): <span class="shipping-rate">£ 10.00</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="20">
-                                        Parcelforce (Delivery time: 2 Days): <span class="shipping-rate">£20.00</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="300">
-                                        PalletWays (Delivery time: 3-4 days): <span class="shipping-rate">£ 300.00</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- <p style="margin-top: 12px; color: #888; font-size: 0.95rem;">
-                                    Shipping options will be updated during checkout.
-                                </p> -->
-                                <!-- <p style="color:#009bcc; margin:12px 0; cursor:pointer;">Calculate shipping</p> -->
-                                <hr />
-                                <p><strong>Total: <span id="total">£</span></strong></p>
-                                <a class="btn-checkout-cart" href="checkout.html">PROCEED TO CHECKOUT</a>
+                    <div class="col-xl-6">
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="product-list" id="productList">
+                            <!-- Dynamic product items injected here -->
                             </div>
+
+                            <div class="summary-items">
+                            <p>Subtotal: <span id="subtotal">£0.00</span></p>
+                            <p class="ship">
+                                Shipping:
+                                <select id="shippingSelect">
+                                <option value="10">Flat rate (2-10 days): £10.00</option>
+                                <option value="20">Parcelforce 48 UK Mainland - Fastest (2 days): £20.00</option>
+                                <option value="300">PalletWays (3-4 days): £300.00</option>
+                                </select>
+                            </p>
+                            <p class="textt">Tax (10%): <span id="tax">£0.00</span></p>
+                            <hr>  
+                            <p class="tot"><strong>Total: <span id="total">£0.00</span></strong></p>
+                            </div>
+
+                            <h4 class="pyme">Payment Method</h4>
+                            <div class="payment-methods">
+                            <label><input type="radio" name="payment" value="UPI" checked> UPI</label><br>
+                            <label><input type="radio" name="payment" value="Bank Transfer"> Bank Transfer</label><br>
+                            <label><input type="radio" name="payment" value="Credit Card"> Credit Card</label>
+                            </div>
+
+                            <button class="btn-checkout" id="checkoutBtn">Proceed to Payment</button>
                         </div>
                     </div>
-                    <div class="col-xl-9 col-lg-9">
-                        <div class="cart-table">
-                        <!-- <h3>Order Cart</h3> -->
-                        <table class="order-table">
-                            <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="order-tr">
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Blood Bank Refrigerator BBR-1000 Series">&times;</button>
-                                        <img src="assets/images/dummy/Blood-Bank-Refrigerator-BBR-1000-Series.png" alt="Product 1" class="product-image" />
-                                    <a href="productdescription.html">Blood Bank Refrigerator BBR-1000 Series</a>
-                                </td>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="50">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 50.00</td>
-                                <td class="line-total">£ 100.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Class II A2 Biological Safety Cabinets">&times;</button>
-                                        <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Class II A2 Biological Safety Cabinets</a>      
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="80">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 80.00</td>
-                                <td class="line-total">£ 80.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Digital Cooking Oil Tester OT-100">&times;</button>
-                                        <img src="assets/images/dummy/Digital-Cooking-Oil-Tester OT-100.png" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Digital Cooking Oil Tester OT-100</a>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="68">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 68.00</td>
-                                <td class="line-total">£ 68.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Laboratory Glassware Washers TGW-5000">&times;</button>
-                                        <img src="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Laboratory Glassware Washers TGW-5000</a>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="220">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 220.00</td>
-                                <td class="line-total">£ 220.00</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="col-xl-6">
+                        <div class="order-shipping-address">
+                            <h3>Shipping Address</h3>
+                            <form id="shippingForm">
+                            <!-- Full Name -->
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+
+                            <!-- Phone Number -->
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                            
+                            <!-- Email -->
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+
+                            <!-- Address -->
+                            <label for="address">Street Address</label>
+                            <textarea id="address" required></textarea>
+
+                            <!-- City -->
+                            <label for="city">City</label>
+                            <input type="text" id="city" required>
+
+                            <!-- Postal Code -->
+                            <label for="postcode">Postal Code</label>
+                            <input type="text" id="postcode" required>
+
+                            <!-- Country -->
+                            <label for="country">Country</label>
+                            <input type="text" id="country" required>
+
+                            <!-- Delivery Instructions -->
+                            <label for="instructions">Delivery Instructions</label>
+                            <textarea id="instructions" placeholder="Any specific delivery instructions"></textarea>
+
+                            <!-- Save Address Checkbox -->
+                            <div class="checksa">
+                                <input type="checkbox" class="ipsave" id="saveAddress">
+                                <label for="saveAddress" class="savelabel">Save this address for future orders</label>
+                            </div>
+
+                            <!-- Submit Button (optional if separate) -->
+                            <button type="submit" class="btn-submit">Confirm Address</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+       
+        
         <section class="footer">
             <footer>
                 <div class="container-fluid">
@@ -425,77 +390,64 @@
     </div>
     </div>
     <script>
-        function formatCurrency(amount, symbol = "£ ") {
-        return symbol + amount.toFixed(2);
+       const subtotalEl = document.getElementById('subtotal');
+        const taxEl = document.getElementById('tax');
+        const totalEl = document.getElementById('total');
+        const shippingSelect = document.getElementById('shippingSelect');
+        const productListEl = document.getElementById('productList');
+
+        const products = [
+        { name: "Blood Bank Refrigerator BBR-1000 Series", qty: 1, price: 50 },
+        { name: "Class II A2 Biological Safety Cabinets", qty: 1, price: 80 },
+        { name: "Digital Cooking Oil Tester OT-100", qty: 1, price: 68 },
+        { name: "Laboratory Glassware Washers TGW-5000", qty: 1, price: 220 }
+        ];
+
+        // Render product list dynamically
+        function renderProductList() {
+        productListEl.innerHTML = '';
+        products.forEach(prod => {
+            const item = document.createElement('div');
+            item.classList.add('product-item');
+            item.innerHTML = `
+            <span class="p_name">${prod.name} x ${prod.qty}</span>
+            <span class="p_price">£${(prod.price * prod.qty).toFixed(2)}</span>
+            `;
+            productListEl.appendChild(item);
+        });
         }
 
-        function getShippingValue() {
-        let shipping = 0;
-        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
-            if (radio.checked) shipping = parseFloat(radio.value);
-        });
-        return isNaN(shipping) ? 0 : shipping;
+        // Compute subtotal from product array and quantities
+        function computeSubtotal() {
+        return products.reduce((acc, prod) => acc + (prod.price * prod.qty), 0);
+        }
+
+        function formatCurrency(amount) {
+        return '£' + amount.toFixed(2);
         }
 
         function calculateTotals() {
-        let subtotal = 0;
-        // Get all current visible qty inputs
-        document.querySelectorAll('.qty-input').forEach(input => {
-            const price = parseFloat(input.dataset.price);
-            let qty = parseInt(input.value, 10);
-            if (isNaN(qty) || qty < 1) {
-            qty = 1;
-            input.value = qty;
-            }
-            const lineTotal = price * qty;
-            // Update the line total for this row
-            input.closest('tr').querySelector('.line-total').textContent = formatCurrency(lineTotal, '£ ');
-            subtotal += lineTotal;
-        });
+        const subtotal = computeSubtotal();
+        const shippingCost = parseFloat(shippingSelect.value);
+        const tax = subtotal * 0.10;
+        const total = subtotal + tax + shippingCost;
 
-        document.getElementById('subtotal').textContent = formatCurrency(subtotal, '£ ');
-        const shipping = getShippingValue();
-        const total = subtotal + shipping;
-        document.getElementById('total').textContent = formatCurrency(total, '£ ');
+        subtotalEl.textContent = formatCurrency(subtotal);
+        taxEl.textContent = formatCurrency(tax);
+        totalEl.textContent = formatCurrency(total);
         }
 
-        // Attach listeners for quantity controls (+/- and direct input)
-        document.querySelectorAll('.quantity-control').forEach(control => {
-        const input = control.querySelector('.qty-input');
-        const minus = control.querySelector('.minus');
-        const plus = control.querySelector('.plus');
-        minus.addEventListener('click', () => {
-            let val = parseInt(input.value, 10) || 1;
-            if (val > parseInt(input.min, 10)) {
-            input.value = val - 1;
-            input.dispatchEvent(new Event('input'));
-            }
-        });
-        plus.addEventListener('click', () => {
-            let val = parseInt(input.value, 10) || 1;
-            input.value = val + 1;
-            input.dispatchEvent(new Event('input'));
-        });
-        input.addEventListener('input', calculateTotals);
+        shippingSelect.addEventListener('change', calculateTotals);
+
+        window.addEventListener('DOMContentLoaded', () => {
+        renderProductList();
+        calculateTotals();
         });
 
-        // Attach listeners for shipping options
-        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
-        radio.addEventListener('change', calculateTotals);
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+        const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+        alert(`Proceeding to payment with method: ${paymentMethod}`);
         });
-
-        // Remove product functionality
-        document.querySelectorAll('.remove-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const row = btn.closest('tr');
-            row.parentNode.removeChild(row); // Remove row
-            calculateTotals(); // Recalculate totals
-        });
-        });
-
-        // Calculate totals on page load
-        window.addEventListener('DOMContentLoaded', calculateTotals);
-
 
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

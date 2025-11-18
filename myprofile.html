@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cart | www.biopex.com</title>
+    <title>My Profile | www.biopex.com</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -198,133 +198,49 @@
             <nav aria-label="breadcrumb-nav">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    <li class="breadcrumb-item active" aria-current="page">My Profile</li>
                 </ol>
             </nav>
         </section>
-        <section class="page-section">
-            <div class="container-fluid">
+        <section class="page-section my-profile">
+           <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="order-summery">
-                            <!-- <h3>CART TOTALS</h3> -->
-                            <div class="summary-details">
-                                <p>Subtotal: <span id="subtotal">£</span></p>
-                                <div class="shipping-options">
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="10" checked>
-                                        Flat rate (Delivery time: 2-10): <span class="shipping-rate">£ 10.00</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="20">
-                                        Parcelforce (Delivery time: 2 Days): <span class="shipping-rate">£20.00</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="300">
-                                        PalletWays (Delivery time: 3-4 days): <span class="shipping-rate">£ 300.00</span>
-                                        </label>
-                                    </div>
+                    <div class="col-xl-3">
+                        <div class="myprofile">
+                            <span class="mpname">Jame Smith Stone</span>
+                            <img src="assets/images/profile.jpg" alt="">
+                            <p class="email"><span class="name-inspan">Email : </span> jame.smith@gmail.com</p>
+                            <p class="email"><span class="name-inspan">Phone : </span> +1 1234 567890</p>
+                            <p class="email"><span class="name-inspan">WhatsApp : </span> +1 1234 567890</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="tab-content-myprofile">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link myprodata active" id="nav-pi-tab" data-bs-toggle="tab" data-bs-target="#nav-pi" type="button" role="tab" aria-controls="nav-pi" aria-selected="true">Personal Information</button>
+                                    <button class="nav-link myprodata" id="nav-oh-tab" data-bs-toggle="tab" data-bs-target="#nav-oh" type="button" role="tab" aria-controls="nav-oh" aria-selected="false">Order History</button>
+                                    <button class="nav-link myprodata" id="nav-wl-tab" data-bs-toggle="tab" data-bs-target="#nav-wl" type="button" role="tab" aria-controls="nav-wl" aria-selected="false">Wishlist</button>
+                                    <button class="nav-link myprodata" id="nav-ab-tab" data-bs-toggle="tab" data-bs-target="#nav-ab" type="button" role="tab" aria-controls="nav-ab" aria-selected="false">Address Book</button>
+                                    <button class="nav-link myprodata" id="nav-rrp-tab" data-bs-toggle="tab" data-bs-target="#nav-rrp" type="button" role="tab" aria-controls="nav-rrp" aria-selected="false">Returns and Refunds Policy</button>
+                                    <!-- <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button> -->
                                 </div>
-                                <!-- <p style="margin-top: 12px; color: #888; font-size: 0.95rem;">
-                                    Shipping options will be updated during checkout.
-                                </p> -->
-                                <!-- <p style="color:#009bcc; margin:12px 0; cursor:pointer;">Calculate shipping</p> -->
-                                <hr />
-                                <p><strong>Total: <span id="total">£</span></strong></p>
-                                <a class="btn-checkout-cart" href="checkout.html">PROCEED TO CHECKOUT</a>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-pi" role="tabpanel" aria-labelledby="nav-pi-tab" tabindex="0">...</div>
+                                <div class="tab-pane fade" id="nav-oh" role="tabpanel" aria-labelledby="nav-oh-tab" tabindex="0">...</div>
+                                <div class="tab-pane fade" id="nav-wl" role="tabpanel" aria-labelledby="nav-wl-tab" tabindex="0">...</div>
+                                <div class="tab-pane fade" id="nav-ab" role="tabpanel" aria-labelledby="nav-ab-tab" tabindex="0">...</div>
+                                <div class="tab-pane fade" id="nav-rrp" role="tabpanel" aria-labelledby="nav-rrp-tab" tabindex="0">...</div>
+                                <!-- <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-9 col-lg-9">
-                        <div class="cart-table">
-                        <!-- <h3>Order Cart</h3> -->
-                        <table class="order-table">
-                            <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="order-tr">
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Blood Bank Refrigerator BBR-1000 Series">&times;</button>
-                                        <img src="assets/images/dummy/Blood-Bank-Refrigerator-BBR-1000-Series.png" alt="Product 1" class="product-image" />
-                                    <a href="productdescription.html">Blood Bank Refrigerator BBR-1000 Series</a>
-                                </td>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="50">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 50.00</td>
-                                <td class="line-total">£ 100.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Class II A2 Biological Safety Cabinets">&times;</button>
-                                        <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Class II A2 Biological Safety Cabinets</a>      
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="80">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 80.00</td>
-                                <td class="line-total">£ 80.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Digital Cooking Oil Tester OT-100">&times;</button>
-                                        <img src="assets/images/dummy/Digital-Cooking-Oil-Tester OT-100.png" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Digital Cooking Oil Tester OT-100</a>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="68">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 68.00</td>
-                                <td class="line-total">£ 68.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Laboratory Glassware Washers TGW-5000">&times;</button>
-                                        <img src="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Laboratory Glassware Washers TGW-5000</a>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="220">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 220.00</td>
-                                <td class="line-total">£ 220.00</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>
                 </div>
-            </div>
+           </div>
         </section>
+       
+        
         <section class="footer">
             <footer>
                 <div class="container-fluid">
@@ -424,80 +340,6 @@
         </div>
     </div>
     </div>
-    <script>
-        function formatCurrency(amount, symbol = "£ ") {
-        return symbol + amount.toFixed(2);
-        }
-
-        function getShippingValue() {
-        let shipping = 0;
-        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
-            if (radio.checked) shipping = parseFloat(radio.value);
-        });
-        return isNaN(shipping) ? 0 : shipping;
-        }
-
-        function calculateTotals() {
-        let subtotal = 0;
-        // Get all current visible qty inputs
-        document.querySelectorAll('.qty-input').forEach(input => {
-            const price = parseFloat(input.dataset.price);
-            let qty = parseInt(input.value, 10);
-            if (isNaN(qty) || qty < 1) {
-            qty = 1;
-            input.value = qty;
-            }
-            const lineTotal = price * qty;
-            // Update the line total for this row
-            input.closest('tr').querySelector('.line-total').textContent = formatCurrency(lineTotal, '£ ');
-            subtotal += lineTotal;
-        });
-
-        document.getElementById('subtotal').textContent = formatCurrency(subtotal, '£ ');
-        const shipping = getShippingValue();
-        const total = subtotal + shipping;
-        document.getElementById('total').textContent = formatCurrency(total, '£ ');
-        }
-
-        // Attach listeners for quantity controls (+/- and direct input)
-        document.querySelectorAll('.quantity-control').forEach(control => {
-        const input = control.querySelector('.qty-input');
-        const minus = control.querySelector('.minus');
-        const plus = control.querySelector('.plus');
-        minus.addEventListener('click', () => {
-            let val = parseInt(input.value, 10) || 1;
-            if (val > parseInt(input.min, 10)) {
-            input.value = val - 1;
-            input.dispatchEvent(new Event('input'));
-            }
-        });
-        plus.addEventListener('click', () => {
-            let val = parseInt(input.value, 10) || 1;
-            input.value = val + 1;
-            input.dispatchEvent(new Event('input'));
-        });
-        input.addEventListener('input', calculateTotals);
-        });
-
-        // Attach listeners for shipping options
-        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
-        radio.addEventListener('change', calculateTotals);
-        });
-
-        // Remove product functionality
-        document.querySelectorAll('.remove-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const row = btn.closest('tr');
-            row.parentNode.removeChild(row); // Remove row
-            calculateTotals(); // Recalculate totals
-        });
-        });
-
-        // Calculate totals on page load
-        window.addEventListener('DOMContentLoaded', calculateTotals);
-
-
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>

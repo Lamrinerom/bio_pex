@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cart | www.biopex.com</title>
+    <title>FAQ | www.biopex.com</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -198,128 +198,163 @@
             <nav aria-label="breadcrumb-nav">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    <li class="breadcrumb-item active" aria-current="page">FAQ</li>
                 </ol>
             </nav>
         </section>
-        <section class="page-section">
+        <section class="page-section faq-section">
             <div class="container-fluid">
+                <div class="universal-title">
+                    <h1 class="aboutus-title">Frequently Asked Questions</h1>
+                </div>
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="order-summery">
-                            <!-- <h3>CART TOTALS</h3> -->
-                            <div class="summary-details">
-                                <p>Subtotal: <span id="subtotal">£</span></p>
-                                <div class="shipping-options">
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="10" checked>
-                                        Flat rate (Delivery time: 2-10): <span class="shipping-rate">£ 10.00</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="20">
-                                        Parcelforce (Delivery time: 2 Days): <span class="shipping-rate">£20.00</span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="shipping-label">
-                                        <input type="radio" name="shipping" value="300">
-                                        PalletWays (Delivery time: 3-4 days): <span class="shipping-rate">£ 300.00</span>
-                                        </label>
-                                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthOne" aria-expanded="false" aria-controls="collapseWidthOne">
+                                <span>Q 1 :</span>  What types of laboratory baths and circulators do you offer?
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthOne">
+                                <div class="card card-body ansboday">
+                                    BIOPEX Ltd. supplies a variety of laboratory baths and circulators designed to provide precise temperature control for research, industrial, and clinical applications. Our range includes water baths, oil baths, and recirculating chillers, each engineered for stability and uniformity. These instruments feature innovative controls that allow users to maintain accurate temperatures critical for sample integrity, enzyme reactions, and incubation processes. Our products cater to diverse scientific needs, from chemical synthesis to microbiology. We prioritize energy efficiency and safety with models that include over-temperature protection and easy-to-clean designs. Whatever your volume or application, BIOPEX offers custom solutions to optimize your workflow and lab safety.
                                 </div>
-                                <!-- <p style="margin-top: 12px; color: #888; font-size: 0.95rem;">
-                                    Shipping options will be updated during checkout.
-                                </p> -->
-                                <!-- <p style="color:#009bcc; margin:12px 0; cursor:pointer;">Calculate shipping</p> -->
-                                <hr />
-                                <p><strong>Total: <span id="total">£</span></strong></p>
-                                <a class="btn-checkout-cart" href="checkout.html">PROCEED TO CHECKOUT</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-9 col-lg-9">
-                        <div class="cart-table">
-                        <!-- <h3>Order Cart</h3> -->
-                        <table class="order-table">
-                            <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="order-tr">
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Blood Bank Refrigerator BBR-1000 Series">&times;</button>
-                                        <img src="assets/images/dummy/Blood-Bank-Refrigerator-BBR-1000-Series.png" alt="Product 1" class="product-image" />
-                                    <a href="productdescription.html">Blood Bank Refrigerator BBR-1000 Series</a>
-                                </td>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="50">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 50.00</td>
-                                <td class="line-total">£ 100.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Class II A2 Biological Safety Cabinets">&times;</button>
-                                        <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Class II A2 Biological Safety Cabinets</a>      
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="80">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 80.00</td>
-                                <td class="line-total">£ 80.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Digital Cooking Oil Tester OT-100">&times;</button>
-                                        <img src="assets/images/dummy/Digital-Cooking-Oil-Tester OT-100.png" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Digital Cooking Oil Tester OT-100</a>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="68">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 68.00</td>
-                                <td class="line-total">£ 68.00</td>
-                            </tr>
-                            <tr>
-                                <td class="product-image-cell" style="position:relative;">
-                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Laboratory Glassware Washers TGW-5000">&times;</button>
-                                        <img src="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg" alt="Product 2" class="product-image" />
-                                    <a href="productdescription.html">Laboratory Glassware Washers TGW-5000</a>
-                                </td>
-                                <td>
-                                    <div class="quantity-control">
-                                        <button type="button" class="qty-btn minus">−</button>
-                                            <input class="qty-input" value="1" min="1" data-price="220">
-                                        <button type="button" class="qty-btn plus">+</button>
-                                    </div>
-                                </td>
-                                <td>£ 220.00</td>
-                                <td class="line-total">£ 220.00</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthTwo" aria-expanded="false" aria-controls="collapseWidthTwo">
+                                <span>Q 2 :</span>  How do BIOPEX biological safety cabinets ensure lab safety?
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthTwo">
+                                <div class="card card-body ansboday">
+                                    Our biological safety cabinets (BSCs) are essential enclosures that protect laboratory personnel and the environment from harmful biohazards and pathogens. BIOPEX BSCs employ high-efficiency HEPA filtration systems that trap contaminants, while maintaining sterile conditions for samples. They are classified into Class I, II, and III based on containment level, meeting strict international standards (NSF/ANSI 49). Additionally, our cabinets provide ergonomic user comfort through adjustable sash windows and noise reduction technology. Built with robust stainless steel interiors and user-friendly controls, BIOPEX BSCs safeguard critical work while allowing easy maintenance and decontamination, supporting high containment labs, pharma research, and clinical diagnostics.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthThree" aria-expanded="false" aria-controls="collapseWidthThree">
+                                <span>Q 3 :</span>  Which types of centrifuges are available?
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthThree">
+                                <div class="card card-body ansboday">
+                                    BIOPEX offers a wide selection of centrifuges suitable for molecular biology, blood processing, sample preparation, and industrial applications. Our product lineup includes microcentrifuges, benchtop centrifuges, and floor-standing ultracentrifuges with programmable speed and temperature controls. Designed for precision and reliability, our centrifuges feature versatile rotor options to accommodate various tube sizes and sample types. With safety features such as imbalance detection and automatic rotor recognition, BIOPEX centrifuges ensure smooth, safe operation. Compatible with demanding laboratory workflows, they support applications ranging from DNA extraction to clinical sample separation, providing performance and durability.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthFour" aria-expanded="false" aria-controls="collapseWidthFour">
+                                <span>Q 4 :</span> What are the features of your evaporators and concentrators?
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthFour">
+                                <div class="card card-body ansboday">
+                                    Our evaporators and concentrators are engineered to efficiently reduce sample volume and concentrate analytes in research and clinical settings. BIOPEX offers rotary evaporators with digital controls that provide accurate temperature and vacuum regulation to preserve compound integrity. For solvent removal and sample concentration, our devices ensure gentle handling of temperature-sensitive materials. Compact footprint and easy operation are highlights that improve lab efficiency. Our concentrators include centrifugal vacuum models facilitating fast, even drying with minimal sample loss. Each unit emphasizes safety through built-in protections and compliance with international quality standards.
+                               
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthFive" aria-expanded="false" aria-controls="collapseWidthFive">
+                                <span>Q 5 :</span> How do BIOPEX fume hoods improve lab safety?
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthFive">
+                                <div class="card card-body ansboday">
+                                  BIOPEX fume hoods protect users by capturing hazardous chemical fumes during experiments. They maintain a steady airflow, venting contaminants away from the workspace. Our fume hoods come with adjustable face velocities, laminated safety glass, and robust exhaust systems to ensure compliance with OSHA and ANSI standards. The ergonomically designed units allow easy access and visibility while minimizing exposure risk. Additionally, user-friendly control panels and alarms monitor airflow and filter status. Suitable for chemical synthesis, toxic material handling, and pharmaceutical processes, our fume hoods enhance worker safety while facilitating precise laboratory work.
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthSix" aria-expanded="false" aria-controls="collapseWidthSix">
+                                <span>Q 6 :</span> What types of laboratory glassware washers do you supply?                
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthSix">
+                                <div class="card card-body ansboday">
+                                  BIOPEX provides state-of-the-art laboratory glassware washers that automate cleaning and sanitization of beakers, flasks, pipettes, and other labware. Our washers use programmable cycles, high temperature, and detergents to efficiently remove contaminants while preserving delicate glassware. Options include front-loading and top-loading models, with capacities for high-throughput labs. Features include rinse aid dispensing, flexible racks, and smart diagnostics for maintenance. Designed for biomedical, chemical, and food safety labs, BIOPEX glassware washers reduce manual labor, improve reproducibility, and uphold lab hygiene standards.
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthSeven" aria-expanded="false" aria-controls="collapseWidthSeven">
+                                <span>Q 7 :</span>  What is special about your incubators?               
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthSeven">
+                                <div class="card card-body ansboday">
+                                  BIOPEX incubators provide precise temperature, humidity, and CO2 control crucial for cell culture, microbiology, and molecular biology applications. Our range includes refrigerated and non-refrigerated models with digital interfaces enabling stringent environment regulation. Features such as uniform airflow, contamination control, and rapid temperature recovery enhance experimental reliability. Thoughtful design incorporates alarms, locks, and easy cleaning for user safety and convenience. From basic microbial incubation to mammalian cell culture, BIOPEX incubators support consistent, reproducible research results.
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthEight" aria-expanded="false" aria-controls="collapseWidthEight">
+                                <span>Q 8 :</span>  How does BIOPEX support laboratory filtration needs?               
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthEight">
+                                <div class="card card-body ansboday">
+                                  BIOPEX offers comprehensive laboratory filtration equipment, including vacuum pumps, membrane filters, and filtration manifolds. These products enable sterilization, clarification, and concentration of liquid samples. Our filtration solutions cover microbiology, pharmaceutical, and environmental testing applications. Durable materials and versatile filter compatibility ensure efficient, contamination-free separations. Our systems are designed for ease of use with leak-proof seals, adjustable flow control, and quick filter exchange, helping labs maintain sample integrity and compliance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthNine" aria-expanded="false" aria-controls="collapseWidthNine">
+                                <span>Q 9 :</span>  What range of medical equipment does BIOPEX provide?             
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthNine">
+                                <div class="card card-body ansboday">
+                                 BIOPEX delivers a broad suite of medical equipment including diagnostic devices, patient monitors, and therapeutic units. Our product offerings encompass blood pressure monitors, infusion pumps, pulse oximeters, and medical refrigerators. Designed with accuracy and patient safety in mind, our equipment integrates latest technologies for reliable clinical performance. We support hospitals, clinics, and laboratories with devices that meet international regulatory standards, offering training and after-sales service for smooth implementation.
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-drop">
+                        <p>
+                            <button class="que-faq" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthTen" aria-expanded="false" aria-controls="collapseWidthTen">
+                                <span>Q 10 :</span>  Which precision instruments like balances and viscometers does BIOPEX offer?             
+                            </button>
+                        </p>
+                        <div class="ans-faq">
+                            <div class="collapse collapse-vertical ansdrop" id="collapseWidthTen">
+                                <div class="card card-body ansboday">
+                                 To meet exacting measurement requirements, BIOPEX supplies high precision scales, balances, viscometers, and rheometers. Our weighing equipment includes analytical and micro balances with readability to micrograms, ideal for quantitative analysis. Viscometers and rheometers help characterize material flow properties in pharmaceuticals, food, and petrochemical industries. Compact, easy-to-calibrate instruments with digital displays and software integration enhance lab efficiency and accuracy. Robust construction ensures durability in demanding research or production environments.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -424,80 +459,6 @@
         </div>
     </div>
     </div>
-    <script>
-        function formatCurrency(amount, symbol = "£ ") {
-        return symbol + amount.toFixed(2);
-        }
-
-        function getShippingValue() {
-        let shipping = 0;
-        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
-            if (radio.checked) shipping = parseFloat(radio.value);
-        });
-        return isNaN(shipping) ? 0 : shipping;
-        }
-
-        function calculateTotals() {
-        let subtotal = 0;
-        // Get all current visible qty inputs
-        document.querySelectorAll('.qty-input').forEach(input => {
-            const price = parseFloat(input.dataset.price);
-            let qty = parseInt(input.value, 10);
-            if (isNaN(qty) || qty < 1) {
-            qty = 1;
-            input.value = qty;
-            }
-            const lineTotal = price * qty;
-            // Update the line total for this row
-            input.closest('tr').querySelector('.line-total').textContent = formatCurrency(lineTotal, '£ ');
-            subtotal += lineTotal;
-        });
-
-        document.getElementById('subtotal').textContent = formatCurrency(subtotal, '£ ');
-        const shipping = getShippingValue();
-        const total = subtotal + shipping;
-        document.getElementById('total').textContent = formatCurrency(total, '£ ');
-        }
-
-        // Attach listeners for quantity controls (+/- and direct input)
-        document.querySelectorAll('.quantity-control').forEach(control => {
-        const input = control.querySelector('.qty-input');
-        const minus = control.querySelector('.minus');
-        const plus = control.querySelector('.plus');
-        minus.addEventListener('click', () => {
-            let val = parseInt(input.value, 10) || 1;
-            if (val > parseInt(input.min, 10)) {
-            input.value = val - 1;
-            input.dispatchEvent(new Event('input'));
-            }
-        });
-        plus.addEventListener('click', () => {
-            let val = parseInt(input.value, 10) || 1;
-            input.value = val + 1;
-            input.dispatchEvent(new Event('input'));
-        });
-        input.addEventListener('input', calculateTotals);
-        });
-
-        // Attach listeners for shipping options
-        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
-        radio.addEventListener('change', calculateTotals);
-        });
-
-        // Remove product functionality
-        document.querySelectorAll('.remove-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const row = btn.closest('tr');
-            row.parentNode.removeChild(row); // Remove row
-            calculateTotals(); // Recalculate totals
-        });
-        });
-
-        // Calculate totals on page load
-        window.addEventListener('DOMContentLoaded', calculateTotals);
-
-
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
