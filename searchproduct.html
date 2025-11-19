@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Profile | www.biopex.com</title>
+    <title>Search Product | www.biopex.com</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -198,192 +198,219 @@
             <nav aria-label="breadcrumb-nav">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">My Profile</li>
+                    <li class="breadcrumb-item active" aria-current="page">Search Product</li>
                 </ol>
             </nav>
         </section>
-        <section class="page-section my-profile">
-           <div class="container">
+        <section class="search-section page-section">
+            <div class="container-fluid">
                 <div class="universal-title">
-                    <h1 class="aboutus-title">My Profile</h1>
+                    <h1 class="pp-title">Search Product Result : Water Bath</h1>
                 </div>
                 <div class="row">
-                    <div class="col-xl-3 col-lg-4">
-                        <div class="myprofile">
-                           
-                            <img src="assets/images/profile.jpg" alt="">
-                             <span class="mpname">Jame Smith Stone</span>
-                            <p class="email">
-                                <span class="name-inspan">Email : </span> 
-                                jame.smith@gmail.com
-                            </p>
-                            <p class="email">
-                                <span class="name-inspan">Phone : </span> 
-                                +1 1234 567890
-                            </p>
-                            <p class="email">
-                                <span class="name-inspan">WhatsApp : </span> 
-                                +1 1234 567890
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-8">
-                        <div class="tab-content-myprofile">
-                            <nav>
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button class="nav-link myprodata active" id="nav-pi-tab" data-bs-toggle="tab" data-bs-target="#nav-pi" type="button" role="tab" aria-controls="nav-pi" aria-selected="true">Personal Information</button>
-                                    <button class="nav-link myprodata" id="nav-oh-tab" data-bs-toggle="tab" data-bs-target="#nav-oh" type="button" role="tab" aria-controls="nav-oh" aria-selected="false">Order History</button>
-                                    <button class="nav-link myprodata" id="nav-wl-tab" data-bs-toggle="tab" data-bs-target="#nav-wl" type="button" role="tab" aria-controls="nav-wl" aria-selected="false">Wishlist</button>
-                                    <button class="nav-link myprodata" id="nav-ab-tab" data-bs-toggle="tab" data-bs-target="#nav-ab" type="button" role="tab" aria-controls="nav-ab" aria-selected="false">Address Book</button>
-                                    <button class="nav-link myprodata" id="nav-rrp-tab" data-bs-toggle="tab" data-bs-target="#nav-rrp" type="button" role="tab" aria-controls="nav-rrp" aria-selected="false">Returns and Refunds</button>
-                                    <!-- <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button> -->
-                                </div>
-                            </nav>
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="nav-pi" role="tabpanel" aria-labelledby="nav-pi-tab" tabindex="0">
-                                    <section class="profile-section">
-                                        <!-- <h2>Personal Information</h2> -->
-                                            <form id="personalInfoForm">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <label for="fullName">Full Name</label>
-                                                        <input type="text" id="fullName" name="fullName" value="Jame Smith Stone" required>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label for="email">Email</label>
-                                                        <input type="email" id="email" name="email" value="jame.smith@gmail.com" required>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label for="phone">Mobile Number</label>
-                                                        <input type="tel" id="phone" name="phone" value="+1 987 6543210" required>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label for="dob">Date of Birth</label>
-                                                        <input type="date" id="dob" name="dob">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label for="gender">Gender</label>
-                                                        <select id="gender" name="gender">
-                                                            <option value="">Select</option>
-                                                            <option value="male">Male</option>
-                                                            <option value="female">Female</option>
-                                                            <option value="other">Other</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label for="compName">Company Name</label>
-                                                        <input type="text" id="CompName" name="CompName" value="JSS Technologist Ltd." required>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label for="comphone">Company Number</label>
-                                                        <input type="tel" id="compphone" name="compphone" value="+1 987 694745" required>
-                                                    </div>
-                                                </div>
-                                                <button type="submit">Update Profile</button>
-                                            </form>
-                                    </section>
-                                </div>
-                                <div class="tab-pane fade" id="nav-oh" role="tabpanel" aria-labelledby="nav-oh-tab" tabindex="0">
-                                    <section class="profile-section ps-table">
-                                        <!-- <h2>Order History</h2> -->
-                                            <table class="order-history-table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Order ID</th>
-                                                        <th>Date</th>
-                                                        <th>Status</th>
-                                                        <th>Total</th>
-                                                        <th>Actions</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>#2025-00123</td>
-                                                        <td>18 Aug 2025</td>
-                                                        <td>Delivered</td>
-                                                        <td>₹9,800</td>
-                                                        <td>
-                                                        <button class="ohbtn">Track</button>
-                                                        <button class="ohbtn">Reorder</button>
-                                                        <button class="ohbtn">Review</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#2025-00124</td>
-                                                        <td>19 Aug 2025</td>
-                                                        <td>Delivered</td>
-                                                        <td>₹15,800</td>
-                                                        <td>
-                                                        <button class="ohbtn">Track</button>
-                                                        <button class="ohbtn">Reorder</button>
-                                                        <button class="ohbtn">Review</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#2025-00125</td>
-                                                        <td>20 Aug 2025</td>
-                                                        <td>Delivered</td>
-                                                        <td>₹20,800</td>
-                                                        <td>
-                                                        <button class="ohbtn">Track</button>
-                                                        <button class="ohbtn">Reorder</button>
-                                                        <button class="ohbtn">Review</button>
-                                                        </td>
-                                                    </tr>
-                                                <!-- Repeat for more orders -->
-                                                </tbody>
-                                            </table>
-                                    </section>
-
-                                </div>
-                                <div class="tab-pane fade" id="nav-wl" role="tabpanel" aria-labelledby="nav-wl-tab" tabindex="0">
-                                    <section class="profile-section">
-                                        <!-- <h2>Wishlist</h2> -->
-                                        <ul class="wishlist-list">
-                                            <li>
-                                            <span>Laboratory Glassware Washer TGW-5000</span>
-                                            <button class="wlbtn">Add to Cart</button>
-                                            <button class="wlbtn">Remove</button>
-                                            </li>
-                                            <!-- More wishlist items -->
-                                        </ul>
-                                    </section>
-                                </div>
-                                <div class="tab-pane fade" id="nav-ab" role="tabpanel" aria-labelledby="nav-ab-tab" tabindex="0">
-                                    <section class="profile-section">
-                                        <!-- <h2>Saved Addresses</h2> -->
-                                            <div class="address-list">
-                                                <!-- Example Address Item -->
-                                                <div class="address-item">
-                                                <p><strong>Home:</strong> 123 Main St, London, UK 123456</p>
-                                                <button class="abbtn">Edit</button>
-                                                <button class="abbtn">Delete</button>
-                                                <span class="default-label">Default</span>
-                                                </div>
-                                                <!-- Add, Edit, or Delete more addresses -->
-                                                <button class="abbtn mt-3" id="addAddressBtn">Add new address</button>
-                                            </div>
-                                    </section>
-                                </div>
-                                <div class="tab-pane fade" id="nav-rrp" role="tabpanel" aria-labelledby="nav-rrp-tab" tabindex="0">
-                                    <section class="profile-section">
-                                        <!-- <h2>Returns & Refunds</h2> -->
-                                            <ul class="return-list">
-                                                <li>
-                                                <span>Order #2025-00119 | Status: In Progress</span>
-                                                <button class="rrpbtn">View Details</button>
-                                                </li>
-                                                <!-- More returns -->
-                                                <button class="rrpbtn mt-3">Request a Return</button>
-                                            </ul>
-                                    </section>
-                                </div>
-                                <!-- <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div> -->
+                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                             <div class="side-label">
+                                <span>Water Bath</span>
+                            </div>
+                            <a href="productdescription.html" class="pop-image">
+                                <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
+                            </a>
+                            <div class="pop-info">
+                                <a href="productdescription.html"><h2>Circulating Water Bath Series WP-100(110V/60Hz)</h2></a>
+                                <p class="pop-price">
+                                    <span class="discounted-price">$150.00</span>
+                                    <span class="original-price">$200.00</span> 
+                                </p>
+                            </div>
+                            <div class="specs-list">
+                                <ul>
+                                    <li>LED Temperature display, resolution 0.1˚C</li>
+                                    <li>PID temperature control</li>
+                                    <li>Low noise during the operation</li>
+                                    <li>Convenient to use on a table</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                             <div class="side-label">
+                                <span>Water Bath</span>
+                            </div>
+                            <a href="productdescription.html" class="pop-image">
+                                <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
+                            </a>
+                            <div class="pop-info">
+                                <a href="productdescription.html"><h2>Circulating Water Bath Series WP-100(110V/60Hz)</h2></a>
+                                <p class="pop-price">
+                                    <span class="discounted-price">$150.00</span>
+                                    <span class="original-price">$200.00</span> 
+                                </p>
+                            </div>
+                            <div class="specs-list">
+                                <ul>
+                                    <li>LED Temperature display, resolution 0.1˚C</li>
+                                    <li>PID temperature control</li>
+                                    <li>Low noise during the operation</li>
+                                    <li>Convenient to use on a table</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                             <div class="side-label">
+                                <span>Water Bath</span>
+                            </div>
+                            <a href="productdescription.html" class="pop-image">
+                                <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
+                            </a>
+                            <div class="pop-info">
+                                <a href="productdescription.html"><h2>Circulating Water Bath Series WP-100(110V/60Hz)</h2></a>
+                                <p class="pop-price">
+                                    <span class="discounted-price">$150.00</span>
+                                    <span class="original-price">$200.00</span> 
+                                </p>
+                            </div>
+                            <div class="specs-list">
+                                <ul>
+                                    <li>LED Temperature display, resolution 0.1˚C</li>
+                                    <li>PID temperature control</li>
+                                    <li>Low noise during the operation</li>
+                                    <li>Convenient to use on a table</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                             <div class="side-label">
+                                <span>Water Bath</span>
+                            </div>
+                            <a href="productdescription.html" class="pop-image">
+                                <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
+                            </a>
+                            <div class="pop-info">
+                                <a href="productdescription.html"><h2>Circulating Water Bath Series WP-100(110V/60Hz)</h2></a>
+                                <p class="pop-price">
+                                    <span class="discounted-price">$150.00</span>
+                                    <span class="original-price">$200.00</span> 
+                                </p>
+                            </div>
+                            <div class="specs-list">
+                                <ul>
+                                    <li>LED Temperature display, resolution 0.1˚C</li>
+                                    <li>PID temperature control</li>
+                                    <li>Low noise during the operation</li>
+                                    <li>Convenient to use on a table</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                             <div class="side-label">
+                                <span>Water Bath</span>
+                            </div>
+                            <a href="productdescription.html" class="pop-image">
+                                <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
+                            </a>
+                            <div class="pop-info">
+                                <a href="productdescription.html"><h2>Circulating Water Bath Series WP-100(110V/60Hz)</h2></a>
+                                <p class="pop-price">
+                                    <span class="discounted-price">$150.00</span>
+                                    <span class="original-price">$200.00</span> 
+                                </p>
+                            </div>
+                            <div class="specs-list">
+                                <ul>
+                                    <li>LED Temperature display, resolution 0.1˚C</li>
+                                    <li>PID temperature control</li>
+                                    <li>Low noise during the operation</li>
+                                    <li>Convenient to use on a table</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                             <div class="side-label">
+                                <span>Water Bath</span>
+                            </div>
+                            <a href="productdescription.html" class="pop-image">
+                                <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
+                            </a>
+                            <div class="pop-info">
+                                <a href="productdescription.html"><h2>Circulating Water Bath Series WP-100(110V/60Hz)</h2></a>
+                                <p class="pop-price">
+                                    <span class="discounted-price">$150.00</span>
+                                    <span class="original-price">$200.00</span> 
+                                </p>
+                            </div>
+                            <div class="specs-list">
+                                <ul>
+                                    <li>LED Temperature display, resolution 0.1˚C</li>
+                                    <li>PID temperature control</li>
+                                    <li>Low noise during the operation</li>
+                                    <li>Convenient to use on a table</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                             <div class="side-label">
+                                <span>Water Bath</span>
+                            </div>
+                            <a href="productdescription.html" class="pop-image">
+                                <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
+                            </a>
+                            <div class="pop-info">
+                                <a href="productdescription.html"><h2>Circulating Water Bath Series WP-100(110V/60Hz)</h2></a>
+                                <p class="pop-price">
+                                    <span class="discounted-price">$150.00</span>
+                                    <span class="original-price">$200.00</span> 
+                                </p>
+                            </div>
+                            <div class="specs-list">
+                                <ul>
+                                    <li>LED Temperature display, resolution 0.1˚C</li>
+                                    <li>PID temperature control</li>
+                                    <li>Low noise during the operation</li>
+                                    <li>Convenient to use on a table</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                             <div class="side-label">
+                                <span>Water Bath</span>
+                            </div>
+                            <a href="productdescription.html" class="pop-image">
+                                <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
+                            </a>
+                            <div class="pop-info">
+                                <a href="productdescription.html"><h2>Circulating Water Bath Series WP-100(110V/60Hz)</h2></a>
+                                <p class="pop-price">
+                                    <span class="discounted-price">$150.00</span>
+                                    <span class="original-price">$200.00</span> 
+                                </p>
+                            </div>
+                            <div class="specs-list">
+                                <ul>
+                                    <li>LED Temperature display, resolution 0.1˚C</li>
+                                    <li>PID temperature control</li>
+                                    <li>Low noise during the operation</li>
+                                    <li>Convenient to use on a table</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-           </div>
+            </div>
         </section>
        
         
@@ -486,50 +513,6 @@
         </div>
     </div>
     </div>
-    <script>
-        document.getElementById('personalInfoForm')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Basic validation example
-        const fullname = this.fullName.value.trim();
-        const email = this.email.value.trim();
-
-        if(fullname === '' || email === '') {
-            alert("Please complete all required fields.");
-            return;
-        }
-        // You can add AJAX or form submission here
-        alert("Profile updated successfully!");
-        });
-        document.getElementById('passwordForm')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const newPass = this.newPassword.value;
-        const confirmPass = this.confirmPassword.value;
-        if(newPass !== confirmPass) {
-            alert("New passwords do not match.");
-            return;
-        }
-        // Handle password update logic here
-        alert("Password changed successfully!");
-        });
-
-
-
-        // Example toggle for address edit/add or wishlist item expand if needed
-        document.querySelectorAll('.address-item button, .wishlist-list button').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            // Example toggle view or perform actions
-            alert(`Clicked ${btn.textContent}`);
-            e.preventDefault();
-        });
-        });
-
-
-        document.querySelectorAll('.order-history-table button, .payment-list button').forEach(btn => {
-        btn.addEventListener('click', () => {
-            alert(`Action: ${btn.textContent.trim()}`);
-        });
-        });
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
