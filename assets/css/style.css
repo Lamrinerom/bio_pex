@@ -2878,7 +2878,7 @@ button.btn-biopex:hover {
     border: none;
     color: white;
     font-weight: 500;
-    padding: 8px 20px;
+    padding: 3px 15px;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -5095,4 +5095,301 @@ button.btn-biopex:hover {
   background-color: #fff;
   color: #f07f24;
   border: 1px solid #f07f24 !important;
+}
+/* ----------------------------------------Single catalog */
+.catalogpage-section{
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-bottom: 70px;
+}
+.catalogpage-section .catalgpage1{
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  padding: 30px;
+}
+.catalogpage-section .catalgpage1 .logosection{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.catalogpage-section .catalgpage1 .logosection img{
+  width: 180px;
+  height: auto;
+  display: flex;
+  margin-left: auto;
+}
+@media (max-width: 576px){
+  .catalogpage-section .catalgpage1 .logosection img {
+  width: 100%;
+  max-width: 130px;
+}
+}
+.catalogpage-section .catalgpage1 .scimage-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 172px 0 50px;
+}
+.catalogpage-section .catalgpage1 .scimage-section img{
+  width: 220px;
+  height: 220px;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 576px){
+  .catalogpage-section .catalgpage1 .scimage-section img{
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+}
+.catalogpage-section .catalgpage1 .scname-section{
+  display: block;
+  text-align: right;
+}
+.catalogpage-section .catalgpage1 .scname-section .scpprice{
+  font-size: 15px;
+  margin-top: 10px;
+  color:#6c6c6c;
+  font-weight: 500;
+}
+.catalogpage-section .catalgpage1 .scname-section .scpprice span{
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+.catalogpage-section .catalgpage1 .scname-section a{
+  text-decoration: none;
+}
+.catalogpage-section .catalgpage1 .scname-section a h2{
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #34498d;
+  font-family: "Urbanist", sans-serif;
+}
+@media (max-width: 576px){
+  .catalogpage-section .catalgpage1 .scname-section a h2 {
+  font-size: 18px;
+}
+.catalogpage-section .catalgpage1 .scname-section .scpprice {
+  font-size: 11px;
+}
+.catalogpage-section .catalgpage1 .scname-section .cate a {
+  font-size: 11px !important;
+}
+}
+@media (min-width: 576px) and (max-width: 768px){
+  .catalogpage-section .catalgpage1 .scname-section a h2 {
+  font-size: 28px;
+}
+}
+.catalogpage-section .catalgpage1 .scname-section .cate a{
+  text-decoration: none;
+  font-size: 15px;
+  background-color: aliceblue;
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: #f07f24;
+  margin-top: 10px;
+  display: inline-block;
+}
+.catalogpage-section .catalgpage1 .mailadd-section{
+  margin-top: auto;
+  display: flex;
+  height: 156px;
+  align-items: end;
+}
+.catalogpage-section .catalgpage1 .mailadd-section .addlist{
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+.catalogpage-section .catalgpage1 .mailadd-section .addlist li a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #676666;
+  font-weight: 600;
+  font-family: "Urbanist", sans-serif;
+}
+@media (max-width: 576px){
+  .catalogpage-section .catalgpage1 .mailadd-section .addlist li a{
+    font-size: 11px;
+  }
+}
+.catalogpage-section .catalgpage1 .mailadd-section .addlist li a{
+  margin: 0 0 0 5px;
+  padding:0 0 0 5px;
+
+}
+.catalogpage-section .catalogpage2{
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  padding: 30px;
+}
+@media (max-width: 576px){
+  .catalogpage-section .catalogpage2 {
+  padding: 15px;
+}
+}
+.catalogpage-section .pagetitle{
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f07f24;
+  text-align: start;
+  display: block;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 5px;
+}
+.catalogpage-section .catalogpage2 p{
+  text-align: justify;
+  font-size: 14px;
+}
+.catalogpage-section .catalogpage2 .specs-table, 
+.catalogpage-section .catalogpage2 .specs-table .sctr, 
+.catalogpage-section .catalogpage2 .specs-table .sctd{
+  border: 1px solid #e1e1e1;
+  padding: 8px;
+}
+.catalogpage-section .catalogpage2 .specs-table{
+  width: 100%;
+}
+.catalogpage-section .catalogpage2 .specification{
+
+}
+.catalogpage-section .catalogpage2 .specs-table .sctd{
+  color: #727272;
+  font-size: 14px;
+}
+.catalogpage-section .catalogpage2 .specs-table .bcdelf{
+ background-color: r#f5f5f5;
+}
+.catalogpage-section .catalgpage3{
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  padding: 30px;
+}
+@media (max-width: 576px){
+  .catalogpage-section .catalgpage3 {
+  padding: 15px;
+}
+}
+.catalogpage-section .catalgpage3 .multiangle .viewangles, .viewtr, .viewth, .viewtd{
+  border: 1px solid #e1e1e1;
+  text-align: center;
+  font-size: 14px;
+}
+.catalogpage-section .catalgpage3 .multiangle .viewangles{
+  overflow-x: scroll;
+  display: block;
+}
+.viewth{
+  font-weight: 500;
+}
+.viewtd, .viewth{
+  padding: 10px;
+}
+.viewtd{
+  color: #727272;
+}
+.viewtd .imagevie{
+  width: 150px;
+  height: 150px;
+}
+.viewtd .imagevie img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+}
+.catalogpage-section .catalgpage4{
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  padding: 30px;
+}
+@media (max-width:576px){
+  .catalogpage-section .catalgpage4 {
+  padding: 15px;
+}
+}
+.catalogpage-section .catalgpage4 .feature-sec ul{
+  padding: 0 0 0 12px;
+  margin: 0;
+  list-style: disc;
+  font-size: 14px;
+}
+.catalogpage-section .catalgpage4 .feature-sec ul li{
+  margin-bottom: 5px;
+}
+.catalogpage-section .catalgpage4 .feature-sec ul li::marker{
+  color: #f29246;
+}
+.applicationsec p{
+  text-align: justify;
+  font-size: 14px;
+}
+.footer-page{
+  margin-top: 70px;
+  display: block;
+}
+.footer-page img{
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.footer-page .footadd{
+  margin: 3px auto 0 auto !important;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aca7a7
+}
+.footer-page .links{
+  text-align: center;
+  display: block;
+}
+.footer-page .links a{
+  margin: 0 5px;
+  display: inline-flex;
+  font-size: 12px;
+  text-decoration: none;
+  color: #aca7a7;
+}
+.title-single-catalog{
+ display: block;
+  text-align: center;
+  position: sticky;
+  top: 20px;
+}
+@media (max-width: 991px){
+  .title-single-catalog{
+    margin-bottom: 20px;
+  }
+}
+.title-single-catalog h1{
+  font-size: 35px;
+  font-weight: 500;
+  color: #32478b;
+  font-family: "Urbanist", sans-serif !important;
+}
+.title-single-catalog .scdownload{
+  background-color: #32478b;
+  border: 1px solid #32478b;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 8px;
 }
