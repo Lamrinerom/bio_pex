@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Forgot Password | www.biopex.com</title>
+    <title>Wishlist | www.biopex.com</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -230,41 +230,99 @@
             <nav aria-label="breadcrumb-nav">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Forgot Password</li>
+                    <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
                 </ol>
             </nav>
         </section>
-        <section class="forgot-section">
-           <div class="container-fluid">
+        <section class="page-section">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="forgot-form-section">
-                        <form class="forgot-form" autocomplete="on" aria-label="forgot Form">
-                            <!-- <span>Login</span> -->
-                            <div class="fc-sec">
-                                <label for="forgotEmail" class="form-label cuformfl">Email</label>
-                                <input type="email" class="form-control fcip" id="forgotEmail" name="email" required-aria-required="true" autocomplete="email" placeholder="Enter your register email address">
-                            </div>
-                            <div class="fc-sec" style="display: flex; justify-content: space-between; align-items: center;">
-                                <!-- <div>
-                                    <input type="checkbox" id="rememberMe" name="rememberMe" class="form-check-input">
-                                    <label for="rememberMe" class="form-label rem" style="margin-left: 5px;">Remember Me</label>
-                                </div> -->
-                                <a href="login.html" class="forgot-link rem">Login</a>
-                            </div> 
-                            <button type="submit" class="cuform" aria-label="Submit Forgot">
-                                Submit
-                            </button>
-                        </form>
-                        <!-- <div class="login-section-side">
-                            <p>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
-                            <a href="login.html" type="button" class="lg">Log in</a>
-                        </div> -->
+                   
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="cart-table">
+                        <!-- <h3>Order Cart</h3> -->
+                        <table class="order-table">
+                            <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="order-tr">
+                                <td class="product-image-cell" style="position:relative;">
+                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Blood Bank Refrigerator BBR-1000 Series">&times;</button>
+                                        <img src="assets/images/dummy/Blood-Bank-Refrigerator-BBR-1000-Series.png" alt="Product 1" class="product-image" />
+                                    <a href="productdescription.html">Blood Bank Refrigerator BBR-1000 Series</a>
+                                </td>
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn minus">−</button>
+                                            <input class="qty-input" value="1" min="1" data-price="50">
+                                        <button type="button" class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td>£ 50.00</td>
+                                <td class="line-total">£ 100.00</td>
+                            </tr>
+                            <tr>
+                                <td class="product-image-cell" style="position:relative;">
+                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Class II A2 Biological Safety Cabinets">&times;</button>
+                                        <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="Product 2" class="product-image" />
+                                    <a href="productdescription.html">Class II A2 Biological Safety Cabinets</a>      
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn minus">−</button>
+                                            <input class="qty-input" value="1" min="1" data-price="80">
+                                        <button type="button" class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td>£ 80.00</td>
+                                <td class="line-total">£ 80.00</td>
+                            </tr>
+                            <tr>
+                                <td class="product-image-cell" style="position:relative;">
+                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Digital Cooking Oil Tester OT-100">&times;</button>
+                                        <img src="assets/images/dummy/Digital-Cooking-Oil-Tester OT-100.png" alt="Product 2" class="product-image" />
+                                    <a href="productdescription.html">Digital Cooking Oil Tester OT-100</a>
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn minus">−</button>
+                                            <input class="qty-input" value="1" min="1" data-price="68">
+                                        <button type="button" class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td>£ 68.00</td>
+                                <td class="line-total">£ 68.00</td>
+                            </tr>
+                            <tr>
+                                <td class="product-image-cell" style="position:relative;">
+                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Laboratory Glassware Washers TGW-5000">&times;</button>
+                                        <img src="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg" alt="Product 2" class="product-image" />
+                                    <a href="productdescription.html">Laboratory Glassware Washers TGW-5000</a>
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn minus">−</button>
+                                            <input class="qty-input" value="1" min="1" data-price="220">
+                                        <button type="button" class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td>£ 220.00</td>
+                                <td class="line-total">£ 220.00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
                     </div>
                 </div>
-           </div>
+            </div>
         </section>
-       
-        
         <section class="footer">
             <footer>
                 <div class="container-fluid">
@@ -366,6 +424,80 @@
         </div>
     </div>
     </div>
+    <script>
+        function formatCurrency(amount, symbol = "£ ") {
+        return symbol + amount.toFixed(2);
+        }
+
+        function getShippingValue() {
+        let shipping = 0;
+        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+            if (radio.checked) shipping = parseFloat(radio.value);
+        });
+        return isNaN(shipping) ? 0 : shipping;
+        }
+
+        function calculateTotals() {
+        let subtotal = 0;
+        // Get all current visible qty inputs
+        document.querySelectorAll('.qty-input').forEach(input => {
+            const price = parseFloat(input.dataset.price);
+            let qty = parseInt(input.value, 10);
+            if (isNaN(qty) || qty < 1) {
+            qty = 1;
+            input.value = qty;
+            }
+            const lineTotal = price * qty;
+            // Update the line total for this row
+            input.closest('tr').querySelector('.line-total').textContent = formatCurrency(lineTotal, '£ ');
+            subtotal += lineTotal;
+        });
+
+        document.getElementById('subtotal').textContent = formatCurrency(subtotal, '£ ');
+        const shipping = getShippingValue();
+        const total = subtotal + shipping;
+        document.getElementById('total').textContent = formatCurrency(total, '£ ');
+        }
+
+        // Attach listeners for quantity controls (+/- and direct input)
+        document.querySelectorAll('.quantity-control').forEach(control => {
+        const input = control.querySelector('.qty-input');
+        const minus = control.querySelector('.minus');
+        const plus = control.querySelector('.plus');
+        minus.addEventListener('click', () => {
+            let val = parseInt(input.value, 10) || 1;
+            if (val > parseInt(input.min, 10)) {
+            input.value = val - 1;
+            input.dispatchEvent(new Event('input'));
+            }
+        });
+        plus.addEventListener('click', () => {
+            let val = parseInt(input.value, 10) || 1;
+            input.value = val + 1;
+            input.dispatchEvent(new Event('input'));
+        });
+        input.addEventListener('input', calculateTotals);
+        });
+
+        // Attach listeners for shipping options
+        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+        radio.addEventListener('change', calculateTotals);
+        });
+
+        // Remove product functionality
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const row = btn.closest('tr');
+            row.parentNode.removeChild(row); // Remove row
+            calculateTotals(); // Recalculate totals
+        });
+        });
+
+        // Calculate totals on page load
+        window.addEventListener('DOMContentLoaded', calculateTotals);
+
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>

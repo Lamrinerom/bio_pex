@@ -167,63 +167,59 @@ document.getElementById('searchButton').addEventListener('click', function() {
 });
 // ---------------------------------------Baneer section
 
-const container = document.getElementById('carouselContainer');
-  const slides = container.children;
-  const slidesCount = slides.length;
-  let currentIndex = 0;
-  let slideInterval = null;
+// const container = document.getElementById('carouselContainer');
+//   const slides = container.children;
+//   const slidesCount = slides.length;
+//   let currentIndex = 0;
+//   let slideInterval = null;
 
-  function goToSlide(index) {
-    currentIndex = index % slidesCount;
-    if (currentIndex < 0) currentIndex += slidesCount;
-    container.style.transform = `translateX(${-currentIndex * 100}%)`;
-  }
+//   function goToSlide(index) {
+//     currentIndex = index % slidesCount;
+//     if (currentIndex < 0) currentIndex += slidesCount;
+//     container.style.transform = `translateX(${-currentIndex * 100}%)`;
+//   }
 
-  function nextSlide() {
-    goToSlide(currentIndex + 1);
-  }
+//   function nextSlide() {
+//     goToSlide(currentIndex + 1);
+//   }
 
-  function prevSlide() {
-    goToSlide(currentIndex - 1);
-  }
+//   function prevSlide() {
+//     goToSlide(currentIndex - 1);
+//   }
 
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    nextSlide();
-    resetTimer();
-  });
+//   document.getElementById('nextBtn').addEventListener('click', () => {
+//     nextSlide();
+//     resetTimer();
+//   });
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    prevSlide();
-    resetTimer();
-  });
+//   document.getElementById('prevBtn').addEventListener('click', () => {
+//     prevSlide();
+//     resetTimer();
+//   });
 
-  // Make slides clickable
-  Array.from(slides).forEach((slide, index) => {
-    slide.style.cursor = 'pointer';
-    slide.addEventListener('click', () => {
-      const url = slide.getAttribute('data-url');
-      if (url) {
-        window.open(url, '_blank');
-      }
-    });
-    // Accessibility - allow Enter key to trigger click
-    slide.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        slide.click();
-      }
-    });
-  });
+//   Array.from(slides).forEach((slide, index) => {
+//     slide.style.cursor = 'pointer';
+//     slide.addEventListener('click', () => {
+//       const url = slide.getAttribute('data-url');
+//       if (url) {
+//         window.open(url, '_blank');
+//       }
+//     });
+//     slide.addEventListener('keydown', e => {
+//       if (e.key === 'Enter') {
+//         slide.click();
+//       }
+//     });
+//   });
 
-  function resetTimer() {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 5000);
-  }
+//   function resetTimer() {
+//     clearInterval(slideInterval);
+//     slideInterval = setInterval(nextSlide, 5000);
+//   }
 
-  // Start automatic sliding
-  slideInterval = setInterval(nextSlide, 5000);
+//   slideInterval = setInterval(nextSlide, 5000);
 
-  // Initialize to first slide
-  goToSlide(0);
+//   goToSlide(0);
 
   // ---------------------------------------slider
 
@@ -291,41 +287,45 @@ const cart = [];
 const offcanvas = document.getElementById('offcanvas');
 const offcanvasContent = document.getElementById('offcanvas-content');
 const cartLabel = document.querySelector('.header-cart .dropdown-toggle');
-const cartCountElem = document.querySelector('.cart-count');
-const cartSection = document.querySelector('.cart-section');
+const cartCountElems = document.querySelectorAll('.cart-count');      // All cart counts
+const cartSections = document.querySelectorAll('.cart-section');      // All dropdown cart sections
 
 function updateCartUI() {
-  // Update cart count
-  cartCountElem.textContent = cart.length;
+  // Update cart count for all UI carts
+  cartCountElems.forEach(elem => {
+    elem.textContent = cart.length;
+  });
 
-  // Remove all cart items
-  const prevItems = cartSection.querySelectorAll('.cart-item');
-  prevItems.forEach(item => item.remove());
+  cartSections.forEach(cartSection => {
+    // Remove all cart items
+    const prevItems = cartSection.querySelectorAll('.cart-item');
+    prevItems.forEach(item => item.remove());
 
-  const emptyCartElem = cartSection.querySelector('.empty-cart');
-  // Check if cart has items to adjust width accordingly
-  if (cart.length === 0) {
-    emptyCartElem.style.display = 'block';
-    cartSection.style.width = '320px'; // Default width when empty
-  } else {
-    emptyCartElem.style.display = 'none';
-    cartSection.style.width = '490px'; // Wider width when products added
-  }
-  // Add cart items if any
-  cart.forEach(product => {
-    const li = document.createElement('p');
-    li.className = 'dropdown-item cart-item';
-    li.innerHTML = `
-      <div class="cart-item">
-        <img src="${product.image}" alt="${product.name}" />
-        <div class="cart-item-details">
-          <strong>${product.name}</strong>
-          Price: $${product.price} <br />
-          Quantity: ${product.quantity}
+    const emptyCartElem = cartSection.querySelector('.empty-cart');
+    // Check if cart has items to adjust width accordingly
+    if (cart.length === 0) {
+      emptyCartElem.style.display = 'block';
+      cartSection.style.width = '320px'; // Default width
+    } else {
+      emptyCartElem.style.display = 'none';
+      cartSection.style.width = '490px'; // Wider with products
+    }
+    // Add cart items if any
+    cart.forEach(product => {
+      const li = document.createElement('p');
+      li.className = 'dropdown-item cart-item';
+      li.innerHTML = `
+        <div class="cart-item">
+          <img src="${product.image}" alt="${product.name}" />
+          <div class="cart-item-details">
+            <strong>${product.name}</strong>
+            Price: $${product.price} <br />
+            Quantity: ${product.quantity}
+          </div>
         </div>
-      </div>
-    `;
-    cartSection.insertBefore(li, cartSection.querySelector('p.cart-list'));
+      `;
+      cartSection.insertBefore(li, cartSection.querySelector('p.cart-list'));
+    });
   });
 }
 
@@ -529,6 +529,7 @@ btn.addEventListener('click', () => {
   });
 });
 
+// -------------------------------------------------Wishlist
 
 
 

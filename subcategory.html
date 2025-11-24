@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
   <body>
     <div class="biopex-main">
@@ -21,23 +22,23 @@
             <div class="top-header nomobile">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center justify-content-lg-start justify-content-xl-start">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 thcol-1">
                             <div class="cont-top">
                                 <!-- <p>Welcome to Biopex - Your Trusted Partner in Biotechnology Solutions!</p> -->
                                 <a href="mailto:info@biopex.com"><span class="icon1"></span> info@biopex.com</a>
                                 <a href="https://wa.me/1987654321"><span class="icon2"></span> +1 9876 543210</a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center justify-content-lg-end justify-content-xl-end">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 thcol-2">
                             <div class="cartandsignin-section">
-                                <ul class="d-flex justify-content-center justify-content-lg-end justify-content-xl-end p-0 m-0">
+                                <ul class="thul p-0 m-0">
                                     <li class="dropdown">
                                         <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">SIGN IN</label>
                                         <ul class="dropdown-menu signingin-dropdown">
                                             <li class="m-0"><a class="dropdown-item" href="login.html">Sign In</a></li>
-                                            <li><a class="dropdown-item" href="profile.html">Account Profile</a></li>
+                                            <li><a class="dropdown-item" href="myprofile.html">Account Profile</a></li>
                                             <li><a class="dropdown-item" href="register.html">Register</a></li>
-                                            <li><a class="dropdown-item" href="forgot.html">Forgot Password</a></li>
+                                            <li><a class="dropdown-item" href="forgotpassword.html">Forgot Password</a></li>
                                             <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                             <li><hr></li>
                                             <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
@@ -62,7 +63,7 @@
                                                 
                                             </div>
                                              <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="products.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
                                             <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
@@ -75,12 +76,12 @@
             <div class="bottom-header nomobile">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 d-flex align-items-center">
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 bhcol-1">
                             <div class="logo">
                                 <a href="index.html"><img src="assets/images/Asset 8.png" alt="Biopex Logo"></a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-9 col-md-8 col-sm-6 col-6 d-flex align-items-center justify-content-center">
+                        <div class="col-xl-6 col-lg-9 col-md-8 col-sm-6 col-6 bhcol-2">
                             <nav class="main-menu ">
                                 <ul class="d-flex justify-content-center p-0 m-0">
                                     <li><a href="index.html">Home</a></li>
@@ -110,24 +111,68 @@
                         <!-- <div class="col-xl-1"> -->
                             
                         <!-- </div> -->
-                        <div class="col-xl-4 col-lg-6 col-md-6 order-xl-1 col-sm-6 order-sm-2 col-6 order-2 d-flex align-items-center">
-                            <div class="toggle-me me-4">
+                        <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 col-6 order-xl-1 order-md-1 order-sm-1 order-1 mhcol-1">
+                            <div class="toggle-me">
                                 <button class="btn toggle-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></button>
-                                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                                <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                </div>
-                                <div class="offcanvas-body">
-                                    <p>Try scrolling the rest of the page to see this option in action.</p>
-                                </div>
+                                <div class="offcanvas offcanvas-start mobilemenu" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                    <div class="offcanvas-header mobilehd">
+                                        <p class="offcanvas-title mobiletitle" id="offcanvasWithBothOptionsLabel"><img src="assets/images/Asset 8.png" alt=""></p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body mobilebody">
+                                        <div class="mobilerow">
+                                            <div class="cat-col">
+                                                <div class="categegory-list">
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="">
+                                                        <a href="section.html"><h2>Cabinets</h2></a>
+                                                    </div>
+                                                     <div class="smallcard">
+                                                        <img src="assets/images/dummy/Digital-Cooking-Oil-Tester OT-100.png" alt="">
+                                                        <a href="section.html"><h2>Oil Tester</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Fume-Hood-TFH-2700.jpg" alt="">
+                                                        <a href="section.html"><h2>Fume Hood</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/glassware-washers-and-cleaners-header-image.jpg-250.jpg" alt="">
+                                                        <a href="section.html"><h2>Washer</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/incubators-header-image.jpg-250.jpg" alt="">
+                                                        <a href="section.html"><h2>Incubators</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Micro-Spectrophotometer-MS-2000-Series.jpg" alt="">
+                                                        <a href="section.html"><h2>Spectrophotometer</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Moisture-Balance-TMB-1000-Series.jpg" alt="">
+                                                        <a href="section.html"><h2>Balance</h2></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main-col">
+                                                <div class="mainmenu-list">
+                                                    <ul>
+                                                        <li><a href="index.html">Home</a></li>
+                                                        <li><a href="aboutus.html">About Us</a></li>
+                                                        <li><a href="category.html">Biopex Categories</a></li>
+                                                        <li><a href="atozproducts.html">A to Z Product</a></li>
+                                                        <li><a href="contactus.html">Contact Us</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="logo-mobile">
                                 <a href="index.html"><img src="assets/images/Asset 8.png" alt="Biopex Logo"></a>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 order-xl-2 col-12 order-sm-1 order-1">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 order-xl-2 order-md-2 order-sm-3 order-3 mhcol-2">
                             <div class="mobile-search-bar">
                                 <form autocomplete="off" action="/action_page.php" class="mobile-form-sec">
                                     <div class="mobile-autocomplete" id="searchContainer">
@@ -137,17 +182,17 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 order-xl-3 col-md-6 col-sm-6 col-6 order-sm-3  order-3">
+                        <div class="col-xl-4 col-lg-3  col-md-3 col-sm-6 col-6 order-xl-3 order-md-3 order-sm-2 order-2 mhcol-3">
                             <div class="mobile-cartandsignin-section">
-                                <ul class="d-flex justify-content-center justify-content-lg-end justify-content-xl-end p-0 m-0">
+                                <ul class="mhul p-0 m-0">
                                     <li class="dropdown">
-                                        <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">Sign In</span></label>
+                                        <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">SIGN IN</span></label>
                                         <ul class="dropdown-menu mobile-signingin-dropdown">
                                             <li class="m-0"><a class="dropdown-item" href="login.html">Sign In</a></li>
-                                            <li><a class="dropdown-item" href="profile.html">Account Profile</a></li>
+                                            <li><a class="dropdown-item" href="myprofile.html">Account Profile</a></li>
                                             <li><a class="dropdown-item" href="register.html">Register</a></li>
-                                            <li><a class="dropdown-item" href="forget.html">Forgot Password</a></li>
-                                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                                            <li><a class="dropdown-item" href="forgotpassword.html">Forgot Password</a></li>
+                                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                             <li><hr></li>
                                             <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                                             <li><a class="dropdown-item" href="privacypolicy.html">Privacy Policy</a></li>
@@ -155,23 +200,11 @@
                                             <li><a class="dropdown-item" href="termsandconditions.html">Terms and Conditions</a></li>
                                         </ul>
                                     </li>
-                                    <!-- <li class="dropdown">
-                                        <label class="icon4 dropdown-toggle" href="cart.html" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">Cart(0)</span></label>
-                                        <ul class="dropdown-menu mobile-cart-section">
-                                            <p class="dropdown-item mobile-empty-cart">
-                                                <div class="mobile-empty-cart-image">
-                                                    <img src="assets/images/empty-cart-10681468-8593284.png" alt="Empty Cart">
-                                                </div>
-                                                <span class="yciempty">Your cart is currently empty.</span>
-                                            </p>    
-                                            <p class="dropdown-item mobile-cart-list"><a href="products.html">Browse Products</a></p>
-                                            <p class="dropdown-item mobile-cart-list"><a href="checkout.html">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item mobile-cart-list"><a href="cart.html">View Cart</a></p>
-
-                                        </ul>
-                                    </li> -->
                                     <li class="dropdown">
-                                        <label class="icon4 dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" role="button" tabindex="0">
+                                        <a class="icon5" href="wishlist.html"><span class="mobilecount">0</span></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <label class="mobcart icon4 dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" role="button" tabindex="0">
                                          <span class="cart-count">0</span>
                                         </label>
                                         <ul class="dropdown-menu cart-section" aria-label="Shopping Cart Menu" tabindex="-1">
@@ -182,8 +215,8 @@
                                                 </div>
                                                 
                                             </div>
-                                             <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="products.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
+                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
                                             <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
@@ -259,13 +292,12 @@
                     </div>
                     <div class="col-xl-10 popular-product">
                         <div class="row">
-                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="10L" data-range="100" data-accuracy="0.1" data-dimension="230x140x150">
-                                <div class="pop-card">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="10L" data-range="100" data-accuracy="0.1" data-dimension="230x140x150" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                                <div class="pop-card sccards" wish-id="thirtyseven">
                                     <div class="action-buttons">
-                                        <a href="" class="addtocart"><span>Add to cart</span></a>
-                                        <a href="" class="wishlist"><span>Wishlist</span></a>
-                                        <a href="" class="compare"><span>Compare</span></a>
-                                        <a href="" class="viewproduct"><span>View</span></a>
+                                        <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
+                                        <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
+                                        <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                                     </div>
                                     <div class="side-label-pp">
                                         <span>Bath and Circulators</span>
@@ -288,15 +320,27 @@
                                             <li>Inner  Dimension : 230x140x150 mm</li>
                                         </ul>
                                     </div>
+                                    <div class="view-button">
+                                        <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
+                                        <div class="cpp">
+                                            <span class="action action--compare-add m-right">
+                                                <input class="check-hidden checkbox" type="checkbox" autocomplete="off" value="ERBS-1000A" id="flexCheckERBS-1000A">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <!-- <img src="assets/images/circular.png" class="fa-plus" alt=""> -->
+                                                <i class="fas fa-check"></i> 
+                                            </span>
+                                        </div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="15L" data-range="105" data-accuracy="0.1" data-dimension="230x140x155">
-                                <div class="pop-card sccards">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="15L" data-range="105" data-accuracy="0.1" data-dimension="230x140x155">
+                                <div class="pop-card sccards" wish-id="thirtyeight">
                                     <div class="action-buttons">
-                                        <a href="" class="addtocart"><span>Add to cart</span></a>
-                                        <a href="" class="wishlist"><span>Wishlist</span></a>
-                                        <a href="" class="compare"><span>Compare</span></a>
-                                        <a href="" class="viewproduct"><span>View</span></a>
+                                        <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
+                                        <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
+                                        <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                        <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                                     </div>
                                     <div class="side-label-pp">
                                         <span>Bath and Circulators</span>
@@ -319,15 +363,26 @@
                                             <li>Bath  Dimension : 230x140x155 mm</li>
                                         </ul>
                                     </div>
+                                    <div class="view-button">
+                                        <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
+                                        <div class="cpp">
+                                            <span class="action action--compare-add m-right">
+                                                <input class="check-hidden checkbox" type="checkbox" autocomplete="off" value="ERBS-1000A" id="flexCheckERBS-1000A">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <i class="fas fa-check"></i> 
+                                            </span>
+                                        </div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="20L" data-range="110" data-accuracy="0.1" data-dimension="230x140x200">
-                                <div class="pop-card sccards">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="20L" data-range="110" data-accuracy="0.1" data-dimension="230x140x200">
+                                <div class="pop-card sccards" wish-id="thirtynine">
                                     <div class="action-buttons">
-                                        <a href="" class="addtocart"><span>Add to cart</span></a>
-                                        <a href="" class="wishlist"><span>Wishlist</span></a>
-                                        <a href="" class="compare"><span>Compare</span></a>
-                                        <a href="" class="viewproduct"><span>View</span></a>
+                                        <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
+                                        <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
+                                        <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                        <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                                     </div>
                                     <div class="side-label-pp">
                                         <span>Bath and Circulators</span>
@@ -350,15 +405,26 @@
                                             <li>Inner  Dimension : 230x140x200 mm</li>
                                         </ul>
                                     </div>
+                                    <div class="view-button">
+                                        <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
+                                        <div class="cpp">
+                                            <span class="action action--compare-add m-right">
+                                                <input class="check-hidden checkbox" type="checkbox" autocomplete="off" value="ERBS-1000A" id="flexCheckERBS-1000A">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <i class="fas fa-check"></i> 
+                                            </span>
+                                        </div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="25L" data-range="115" data-accuracy="0.1" data-dimension="230x140x250">
-                                <div class="pop-card sccards">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="25L" data-range="115" data-accuracy="0.1" data-dimension="230x140x250">
+                                <div class="pop-card sccards" wish-id="fourty">
                                     <div class="action-buttons">
-                                        <a href="" class="addtocart"><span>Add to cart</span></a>
-                                        <a href="" class="wishlist"><span>Wishlist</span></a>
-                                        <a href="" class="compare"><span>Compare</span></a>
-                                        <a href="" class="viewproduct"><span>View</span></a>
+                                        <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
+                                        <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
+                                        <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                        <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                                     </div>
                                     <div class="side-label-pp">
                                         <span>Bath and Circulators</span>
@@ -381,15 +447,26 @@
                                             <li>Bath  Dimension : 230x140x250 mm</li>
                                         </ul>
                                     </div>
+                                    <div class="view-button">
+                                        <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
+                                        <div class="cpp">
+                                            <span class="action action--compare-add m-right">
+                                                <input class="check-hidden checkbox" type="checkbox" autocomplete="off" value="ERBS-1000A" id="flexCheckERBS-1000A">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <i class="fas fa-check"></i> 
+                                            </span>
+                                        </div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="30L" data-range="120" data-accuracy="0.1" data-dimension="230x140x300">
-                                <div class="pop-card sccards">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="30L" data-range="120" data-accuracy="0.1" data-dimension="230x140x300">
+                                <div class="pop-card sccards" wish-id="fourtyone">
                                     <div class="action-buttons">
-                                        <a href="" class="addtocart"><span>Add to cart</span></a>
-                                        <a href="" class="wishlist"><span>Wishlist</span></a>
-                                        <a href="" class="compare"><span>Compare</span></a>
-                                        <a href="" class="viewproduct"><span>View</span></a>
+                                        <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
+                                        <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
+                                        <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                        <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                                     </div>
                                     <div class="side-label-pp">
                                         <span>Bath and Circulators</span>
@@ -412,15 +489,26 @@
                                             <li>Bath  Dimension : 230x140x300 mm</li>
                                         </ul>
                                     </div>
+                                    <div class="view-button">
+                                        <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
+                                        <div class="cpp">
+                                            <span class="action action--compare-add m-right">
+                                                <input class="check-hidden checkbox" type="checkbox" autocomplete="off" value="ERBS-1000A" id="flexCheckERBS-1000A">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <i class="fas fa-check"></i> 
+                                            </span>
+                                        </div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-6 mb-4 mobile-col pop-card-wrapper" data-capacity="35L" data-range="125" data-accuracy="0.1" data-dimension="230x140x350">
-                                <div class="pop-card sccards">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="35L" data-range="125" data-accuracy="0.1" data-dimension="230x140x350">
+                                <div class="pop-card sccards" wish-id="fourtytwo">
                                     <div class="action-buttons">
-                                        <a href="" class="addtocart"><span>Add to cart</span></a>
-                                        <a href="" class="wishlist"><span>Wishlist</span></a>
-                                        <a href="" class="compare"><span>Compare</span></a>
-                                        <a href="" class="viewproduct"><span>View</span></a>
+                                        <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
+                                        <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
+                                        <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                        <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                                     </div>
                                     <div class="side-label-pp">
                                         <span>Bath and Circulators</span>
@@ -442,6 +530,17 @@
                                             <li>Low noise during the operation</li>
                                             <li>Bath  Dimension : 230x140x350 mm</li>
                                         </ul>
+                                    </div>
+                                    <div class="view-button">
+                                        <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
+                                        <div class="cpp">
+                                            <span class="action action--compare-add m-right">
+                                                <input class="check-hidden checkbox" type="checkbox" autocomplete="off" value="ERBS-1000A" id="flexCheckERBS-1000A">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <i class="fas fa-check"></i> 
+                                            </span>
+                                        </div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -481,20 +580,23 @@
                             <ul>
                                 <li><a href="index.html" class="qla">Home</a></li>
                                 <li><a href="aboutus.html" class="qla">About Us</a></li>
-                                <li><a href="product.html" class="qla">Biopex Categories</a></li>
-                                <li><a href="product.html" class="qla">A to Z Products</a></li>
+                                <li><a href="category.html" class="qla">Biopex Categories</a></li>
+                                <li><a href="atozproducts.html" class="qla">A to Z Products</a></li>
                                 <li><a href="contactus.html" class="qla">Contact Us</a></li>
-                                <li><a href="faq.html" class="qla">FAQ</a></li>
+                                <li><a href="forgotpassword.html" class="qla">FAQ</a></li>
+                                <li><a href="sitemap.html" class="qla">Site Map</a></li>
                             </ul>
                         </div>
                         <div class="colfooter">
                             <h3 class="quicklink">Customer Service</h3>
                             <ul>
-                                <li><a href="shipping.html" class="qla">Shipping & Delivery</a></li>
-                                <li><a href="returns.html" class="qla">Returns & Exchanges</a></li>
-                                <li><a href="warranty.html" class="qla">Warranty Information</a></li>
-                                <li><a href="support.html" class="qla">Technical Support</a></li>
-                                <li><a href="privacy.html" class="qla">Privacy Policy</a></li>
+                                <li><a href="orderdetails.html" class="qla">Order Details</a></li>
+                                <li><a href="privacypolicy.html" class="qla">privacy Policy</a></li>
+                                <li><a href="returnpolicy.html" class="qla">Return Policy</a></li>
+                                <li><a href="termsandconditions.html" class="qla">Terms Ans Conditions</a></li>
+                                <li><a href="trackmyorder.html" class="qla">Track My order</a></li>
+                                <li><a href="thankyou.html" class="qla">Thank You</a></li>
+                                <li><a href="wishlist.html" class="qla">Wishlist</a></li>
                             </ul>
                         </div>
                         <!-- <div class="colfooter">
@@ -526,7 +628,6 @@
                             <div class="newsletter-success" style="display: none;">
                                 <p>Thank you for subscribing!</p>
                                 <p>You will receive the latest updates and offers in your inbox.</p>
-
                             </div>
                         </div>
                     </div>
@@ -541,9 +642,9 @@
     </div>
     <!-- OFFCANVAS PRODUCT SECTION -->
     <div id="offcanvas" class="offcanvas-overlay" role="dialog" aria-modal="true" aria-labelledby="offcanvas-label">
-    <div class="offcanvas">
+    <div class="offcanvas atcsection">
         <div class="offcanvas-header">
-            <h2 id="offcanvas-label" class="atctitle">Product Added to Cart</h2>
+            <p id="offcanvas-label" class="atctitle">Product Added to Cart</p>
         </div>
         <button aria-label="Close" class="offcanvas-close btn" id="offcanvas-close">&times;</button>
         <div id="offcanvas-content">
@@ -551,6 +652,62 @@
         </div>
     </div>
     </div>
+    <div class="compare compare_btn">
+        <div class="row row-2 compare-section">
+            <a href="compare.html" class="btn compare_btn pull-right btn-compare" style="display:none;">
+                COMPARE  <span class="compare-count-badge">0</span>
+            </a>
+            <br>
+        </div>
+    </div>
+    <script>
+        const wishlist = new Set();
+
+        const desktopWishlistCount = document.querySelector('.list-count');
+        const mobileWishlistCount = document.querySelector('.mobilecount');
+
+        // Update all wishlist counters
+        function updateWishlistUI() {
+        const count = wishlist.size;
+        desktopWishlistCount.textContent = count;
+        // mobileWishlistCount.textContent = count;
+        }
+
+        // Toggle wishlist state on product cards
+        document.querySelectorAll('.wishlist-btn-like').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Example: Replace with your unique product ID for each card
+            const card = btn.closest('.card, .pop-card, slider-card');
+            const productId = card.getAttribute('wish-id');
+
+            if (wishlist.has(productId)) {
+            wishlist.delete(productId);
+            btn.classList.remove('active');
+            } else {
+            wishlist.add(productId);
+            btn.classList.add('active');
+            }
+            updateWishlistUI();
+        });
+        });
+
+        // Optionally, update state on page load (if you want to preserve on reload, use localStorage)
+        document.addEventListener('DOMContentLoaded', () => {
+        updateWishlistUI();
+
+        // Restore active state for wishlisted items (if needed)
+        document.querySelectorAll('.wishlist-btn-like').forEach(btn => {
+            const card = btn.closest('.card, .pop-card, slider-card');
+            const productId = card.getAttribute('wish-id');
+            if (wishlist.has(productId)) {
+            btn.classList.add('active');
+            }
+        });
+        });
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
@@ -614,6 +771,239 @@
 
         // Reset filters on page load
         window.addEventListener('load', clearFilters);
+
+    </script>
+    <script>
+      $(document).ready(function() {
+    var $btn_compare = $('.btn-compare');
+    var $count_badge = $btn_compare.find('.compare-count-badge');
+    var base_url = ""; // Set base_url if needed
+
+    function updateCompareButton() {
+        var checkedCheckboxes = $(".action--compare-add .checkbox:checked");
+        var count = checkedCheckboxes.length;
+
+        if (count > 4) {
+            alert('Cannot add more than 4 products to Compare');
+            checkedCheckboxes.last().prop("checked", false);
+            return;
+        }
+
+        if (count > 0) {
+            $btn_compare.show();
+        } else {
+            $btn_compare.hide();
+        }
+
+        // Update badge number
+        $count_badge.text(count);
+
+        var ids = checkedCheckboxes.map(function() {
+            return $(this).val();
+        }).get();
+
+        // Only enable link if at least 2 products are checked
+        if (ids.length > 1) {
+            $btn_compare.attr('href', base_url + 'compare.html?products=' + ids.join(","));
+            $btn_compare.removeClass('disabled');
+        } else {
+            $btn_compare.attr('href', 'javascript:void(0);');
+            $btn_compare.addClass('disabled');
+        }
+    }
+
+    $(document).on("change", ".action--compare-add .checkbox", updateCompareButton);
+    updateCompareButton();
+});
+
+    </script>
+    <script>
+        const cart = [];
+        const offcanvas = document.getElementById('offcanvas');
+        const offcanvasContent = document.getElementById('offcanvas-content');
+        const cartLabel = document.querySelector('.header-cart .dropdown-toggle');
+        const cartCountElems = document.querySelectorAll('.cart-count');      // All cart counts
+        const cartSections = document.querySelectorAll('.cart-section');      // All dropdown cart sections
+
+        function updateCartUI() {
+        // Update cart count for all UI carts
+        cartCountElems.forEach(elem => {
+            elem.textContent = cart.length;
+        });
+
+        cartSections.forEach(cartSection => {
+            // Remove all cart items
+            const prevItems = cartSection.querySelectorAll('.cart-item');
+            prevItems.forEach(item => item.remove());
+
+            const emptyCartElem = cartSection.querySelector('.empty-cart');
+            // Check if cart has items to adjust width accordingly
+            if (cart.length === 0) {
+            emptyCartElem.style.display = 'block';
+            cartSection.style.width = '320px'; // Default width
+            } else {
+            emptyCartElem.style.display = 'none';
+            cartSection.style.width = '490px'; // Wider with products
+            }
+            // Add cart items if any
+            cart.forEach(product => {
+            const li = document.createElement('p');
+            li.className = 'dropdown-item cart-item';
+            li.innerHTML = `
+                <div class="cart-item">
+                <img src="${product.image}" alt="${product.name}" />
+                <div class="cart-item-details">
+                    <strong>${product.name}</strong>
+                    Price: $${product.price} <br />
+                    Quantity: ${product.quantity}
+                </div>
+                </div>
+            `;
+            cartSection.insertBefore(li, cartSection.querySelector('p.cart-list'));
+            });
+        });
+        }
+
+        function openOffcanvas(product) {
+        offcanvasContent.innerHTML = `
+            
+            <div class="offcanvas-product">
+            <img src="${product.image}" alt="${product.name}" />
+            <div class="offcanvas-product-info">
+                <h3>${product.name}</h3>
+                <p class="priceoff">Price: $${product.price}</p>
+                <p>Quantity: ${product.quantity}</p>
+            </div>
+            </div>
+            <div class="offcanvas-actions">
+            <a href="products.html" class="button">Continue Shopping</a>
+            <a href="cart.html" class="button" id="view-cart-btn">View Cart</a>
+            </div>
+            <div class="also-bought">
+            <h4>Customers who bought this also bought</h4>
+            <div class="also-bought-list row">
+                <div class="also-bought-item col-lg-6" data-id="2" data-name="Fisherbrand Microcentrifuge" data-price="180.00" data-image="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg">
+                <img src="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg" alt="Fisherbrand Microcentrifuge" />
+                <p class="cwbtabpname">Fisherbrand Microcentrifuge</p>
+                <p class="priceoff">$180.00</p>
+                <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+                </div>
+                <div class="also-bought-item col-lg-6" data-id="3" data-name="Biopex Vacuum Concentrator" data-price="140.00" data-image="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg">
+                <img src="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg" alt="Biopex Vacuum Concentrator" />
+                <p class="cwbtabpname">Biopex Vacuum Concentrator</p>
+                <p class="priceoff">$140.00</p>
+                <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+                </div>
+                <div class="also-bought-item col-lg-6" data-id="2" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="180.00" data-image="assets/images/dummy/assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                <img src="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg" alt="Mopec Powered Hydraulic Cadaver Carrier" />
+                <p class="cwbtabpname">Mopec Powered Hydraulic Cadaver Carrier</p>
+                <p class="priceoff">$180.00</p>
+                <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+                </div>
+                <div class="also-bought-item col-lg-6" data-id="3" data-name="Fisher Science Education™ Triple-Beam Balance" data-price="140.00" data-image="assets/images/dummy/balances-and-scales-90165051-header-image.jpg-250.jpg">
+                <img src="assets/images/dummy/balances-and-scales-90165051-header-image.jpg-250.jpg" alt="Fisher Science Education™ Triple-Beam Balance" />
+                <p class="cwbtabpname">Fisher Science Education™ Triple-Beam Balance</p>
+                <p class="priceoff">$140.00</p>
+                <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+                </div>
+                <div class="also-bought-item col-lg-6" data-id="2" data-name="Fisherbrand Microcentrifuge" data-price="180.00" data-image="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg">
+                <img src="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg" alt="Fisherbrand Microcentrifuge" />
+                <p class="cwbtabpname">Fisherbrand Microcentrifuge</p>
+                <p class="priceoff">$180.00</p>
+                <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+                </div>
+                <div class="also-bought-item col-lg-6" data-id="3" data-name="Biopex Vacuum Concentrator" data-price="140.00" data-image="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg">
+                <img src="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg" alt="Biopex Vacuum Concentrator" />
+                <p class="cwbtabpname">Biopex Vacuum Concentrator</p>
+                <p class="priceoff">$140.00</p>
+                <a href="#" class="add-cart-btn offatc">Add to Cart</a>
+                </div>
+            </div>
+            </div>
+        `;
+        offcanvas.style.display = 'flex';
+
+        // Add event listener for add to cart in also bought section
+        offcanvas.querySelectorAll('.also-bought-item .add-cart-btn').forEach(button => {
+            button.addEventListener('click', event => {
+            event.preventDefault();
+            const itemEl = button.parentElement;
+            const newProduct = {
+                id: itemEl.getAttribute('data-id'),
+                name: itemEl.getAttribute('data-name'),
+                price: itemEl.getAttribute('data-price'),
+                image: itemEl.getAttribute('data-image'),
+                quantity: 1,
+            };
+            addToCart(newProduct);
+            });
+        });
+
+        // Add event listener for view cart button offcanvas
+        document.getElementById('view-cart-btn').addEventListener('click', () => {
+            window.location.href = 'cart.html';
+        });
+        }
+
+        function closeOffcanvas() {
+        offcanvas.style.display = 'none';
+        }
+
+        function addToCart(product) {
+        // Check if product already in cart
+        const existingProduct = cart.find(item => item.id === product.id);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+        updateCartUI();
+        openOffcanvas(product);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+        closeOffcanvas();
+
+        // Handle Proceed to Checkout button click (dropdown)
+        document.querySelector('.proceed-to-checkout-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'cart.html';
+        }); 
+        // Add to cart button logic on main product card
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', () => {
+            const card = button.closest('.pop-card');
+            const product = {
+                id: card.getAttribute('data-id'),
+                name: card.getAttribute('data-name'),
+                price: card.getAttribute('data-price'),
+                image: card.getAttribute('data-image'),
+                quantity: 1,
+            };
+
+            // Change button text temporarily
+            button.disabled = true;
+            const originalText = button.textContent;
+            button.textContent = 'Added';
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.disabled = false;
+            }, 5000);
+
+            addToCart(product);
+            });
+        });
+
+        // Make overlay click close the offcanvas, but not clicks inside offcanvas content
+        offcanvas.addEventListener('click', function(e) {
+            if (e.target === offcanvas) {
+            closeOffcanvas();
+            }
+        });
+
+        // Offcanvas close button
+        document.getElementById('offcanvas-close').addEventListener('click', closeOffcanvas);
+        });
 
     </script>
   </body>

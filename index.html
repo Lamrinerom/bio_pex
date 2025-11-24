@@ -13,9 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Include Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <!-- Optional Slick theme -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
   <body>
@@ -24,23 +22,23 @@
             <div class="top-header nomobile">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center justify-content-lg-start justify-content-xl-start">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 thcol-1">
                             <div class="cont-top">
                                 <!-- <p>Welcome to Biopex - Your Trusted Partner in Biotechnology Solutions!</p> -->
                                 <a href="mailto:info@biopex.com"><span class="icon1"></span> info@biopex.com</a>
                                 <a href="https://wa.me/1987654321"><span class="icon2"></span> +1 9876 543210</a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center justify-content-lg-end justify-content-xl-end">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 thcol-2">
                             <div class="cartandsignin-section">
-                                <ul class="d-flex justify-content-center justify-content-lg-end justify-content-xl-end p-0 m-0">
+                                <ul class="thul p-0 m-0">
                                     <li class="dropdown">
                                         <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">SIGN IN</label>
                                         <ul class="dropdown-menu signingin-dropdown">
                                             <li class="m-0"><a class="dropdown-item" href="login.html">Sign In</a></li>
-                                            <li><a class="dropdown-item" href="profile.html">Account Profile</a></li>
+                                            <li><a class="dropdown-item" href="myprofile.html">Account Profile</a></li>
                                             <li><a class="dropdown-item" href="register.html">Register</a></li>
-                                            <li><a class="dropdown-item" href="forgot.html">Forgot Password</a></li>
+                                            <li><a class="dropdown-item" href="forgotpassword.html">Forgot Password</a></li>
                                             <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                             <li><hr></li>
                                             <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
@@ -65,7 +63,7 @@
                                                 
                                             </div>
                                              <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="products.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
                                             <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
@@ -78,12 +76,12 @@
             <div class="bottom-header nomobile">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 d-flex align-items-center">
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 bhcol-1">
                             <div class="logo">
                                 <a href="index.html"><img src="assets/images/Asset 8.png" alt="Biopex Logo"></a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-9 col-md-8 col-sm-6 col-6 d-flex align-items-center justify-content-center">
+                        <div class="col-xl-6 col-lg-9 col-md-8 col-sm-6 col-6 bhcol-2">
                             <nav class="main-menu ">
                                 <ul class="d-flex justify-content-center p-0 m-0">
                                     <li><a href="index.html">Home</a></li>
@@ -113,24 +111,68 @@
                         <!-- <div class="col-xl-1"> -->
                             
                         <!-- </div> -->
-                        <div class="col-xl-4 col-lg-6 col-md-6 order-xl-1 col-sm-6 order-sm-2 col-6 order-2 d-flex align-items-center">
-                            <div class="toggle-me me-4">
+                        <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 col-6 order-xl-1 order-md-1 order-sm-1 order-1 mhcol-1">
+                            <div class="toggle-me">
                                 <button class="btn toggle-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></button>
-                                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                                <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                </div>
-                                <div class="offcanvas-body">
-                                    <p>Try scrolling the rest of the page to see this option in action.</p>
-                                </div>
+                                <div class="offcanvas offcanvas-start mobilemenu" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                    <div class="offcanvas-header mobilehd">
+                                        <p class="offcanvas-title mobiletitle" id="offcanvasWithBothOptionsLabel"><img src="assets/images/Asset 8.png" alt=""></p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body mobilebody">
+                                        <div class="mobilerow">
+                                            <div class="cat-col">
+                                                <div class="categegory-list">
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="">
+                                                        <a href="section.html"><h2>Cabinets</h2></a>
+                                                    </div>
+                                                     <div class="smallcard">
+                                                        <img src="assets/images/dummy/Digital-Cooking-Oil-Tester OT-100.png" alt="">
+                                                        <a href="section.html"><h2>Oil Tester</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Fume-Hood-TFH-2700.jpg" alt="">
+                                                        <a href="section.html"><h2>Fume Hood</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/glassware-washers-and-cleaners-header-image.jpg-250.jpg" alt="">
+                                                        <a href="section.html"><h2>Washer</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/incubators-header-image.jpg-250.jpg" alt="">
+                                                        <a href="section.html"><h2>Incubators</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Micro-Spectrophotometer-MS-2000-Series.jpg" alt="">
+                                                        <a href="section.html"><h2>Spectrophotometer</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Moisture-Balance-TMB-1000-Series.jpg" alt="">
+                                                        <a href="section.html"><h2>Balance</h2></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main-col">
+                                                <div class="mainmenu-list">
+                                                    <ul>
+                                                        <li><a href="index.html">Home</a></li>
+                                                        <li><a href="aboutus.html">About Us</a></li>
+                                                        <li><a href="category.html">Biopex Categories</a></li>
+                                                        <li><a href="atozproducts.html">A to Z Product</a></li>
+                                                        <li><a href="contactus.html">Contact Us</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="logo-mobile">
                                 <a href="index.html"><img src="assets/images/Asset 8.png" alt="Biopex Logo"></a>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 order-xl-2 col-12 order-sm-1 order-1">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 order-xl-2 order-md-2 order-sm-3 order-3 mhcol-2">
                             <div class="mobile-search-bar">
                                 <form autocomplete="off" action="/action_page.php" class="mobile-form-sec">
                                     <div class="mobile-autocomplete" id="searchContainer">
@@ -140,17 +182,17 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 order-xl-3 col-md-6 col-sm-6 col-6 order-sm-3  order-3">
+                        <div class="col-xl-4 col-lg-3  col-md-3 col-sm-6 col-6 order-xl-3 order-md-3 order-sm-2 order-2 mhcol-3">
                             <div class="mobile-cartandsignin-section">
-                                <ul class="d-flex justify-content-center justify-content-lg-end justify-content-xl-end p-0 m-0">
+                                <ul class="mhul p-0 m-0">
                                     <li class="dropdown">
-                                        <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">Sign In</span></label>
+                                        <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">SIGN IN</span></label>
                                         <ul class="dropdown-menu mobile-signingin-dropdown">
                                             <li class="m-0"><a class="dropdown-item" href="login.html">Sign In</a></li>
-                                            <li><a class="dropdown-item" href="profile.html">Account Profile</a></li>
+                                            <li><a class="dropdown-item" href="myprofile.html">Account Profile</a></li>
                                             <li><a class="dropdown-item" href="register.html">Register</a></li>
-                                            <li><a class="dropdown-item" href="forget.html">Forgot Password</a></li>
-                                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                                            <li><a class="dropdown-item" href="forgotpassword.html">Forgot Password</a></li>
+                                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                             <li><hr></li>
                                             <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                                             <li><a class="dropdown-item" href="privacypolicy.html">Privacy Policy</a></li>
@@ -158,23 +200,11 @@
                                             <li><a class="dropdown-item" href="termsandconditions.html">Terms and Conditions</a></li>
                                         </ul>
                                     </li>
-                                    <!-- <li class="dropdown">
-                                        <label class="icon4 dropdown-toggle" href="cart.html" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">Cart(0)</span></label>
-                                        <ul class="dropdown-menu mobile-cart-section">
-                                            <p class="dropdown-item mobile-empty-cart">
-                                                <div class="mobile-empty-cart-image">
-                                                    <img src="assets/images/empty-cart-10681468-8593284.png" alt="Empty Cart">
-                                                </div>
-                                                <span class="yciempty">Your cart is currently empty.</span>
-                                            </p>    
-                                            <p class="dropdown-item mobile-cart-list"><a href="products.html">Browse Products</a></p>
-                                            <p class="dropdown-item mobile-cart-list"><a href="checkout.html">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item mobile-cart-list"><a href="cart.html">View Cart</a></p>
-
-                                        </ul>
-                                    </li> -->
                                     <li class="dropdown">
-                                        <label class="icon4 dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" role="button" tabindex="0">
+                                        <a class="icon5" href="wishlist.html"><span class="mobilecount">0</span></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <label class="mobcart icon4 dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" role="button" tabindex="0">
                                          <span class="cart-count">0</span>
                                         </label>
                                         <ul class="dropdown-menu cart-section" aria-label="Shopping Cart Menu" tabindex="-1">
@@ -185,8 +215,8 @@
                                                 </div>
                                                 
                                             </div>
-                                             <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="products.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
+                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
                                             <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
@@ -467,12 +497,12 @@
                     </div>
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card card" wish-id="one">
                             <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Bath and Circulators</span>
@@ -496,17 +526,18 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
-                             <div class="action-buttons">
+                        <div class="pop-card card" wish-id="two">
+                            <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Biological Safety Cabinets</span>
@@ -530,18 +561,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="three">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Centrifuges</span>
@@ -565,18 +597,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="four">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Evaporators & Concentrators</span>
@@ -600,18 +633,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="five">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Fume Hood</span>
@@ -635,18 +669,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="six">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Glassware Washers</span>
@@ -670,18 +705,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="seven">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Incubator</span>
@@ -705,18 +741,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="eight">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Laboratory Filtration</span>
@@ -740,18 +777,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="nine">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Laboratory Refrigerator</span>
@@ -775,18 +813,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="ten">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Medical Equipment</span>
@@ -810,18 +849,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="eleven">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Microscopes</span>
@@ -845,18 +885,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card">
+                        <div class="pop-card" wish-id="twelve">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-pp">
                                 <span>Spectrophotometer</span>
@@ -880,6 +921,7 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
@@ -897,17 +939,17 @@
                 </div>
                 <div class="slick-carousel">
                     <div>
-                        <div class="slider-card" data-id="13" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
+                        <div class="slider-card card" wish-id="thirteen" data-id="13" data-name="Circulating Water Bath Series WP-100(110V/60Hz)" data-price="150.00" data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-green">
                                 <span>Top Selling</span>
                             </div>
-                            <a href="productdescription.html" class="pop-image">
+                            <a href="productdescript ion.html" class="pop-image">
                                 <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
                             </a>
                             <div class="pop-info">
@@ -926,18 +968,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="fourteen" data-name="Class-II A2 Biological Safety Cabinets TBSC-2000A2" data-price="150.00" data-image="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label">
                                 <span>Best Seller</span>
@@ -961,18 +1004,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="fifteen" data-name="Portable Centrifuge PC-310" data-price="150.00" data-image="assets/images/dummy/Portable-Centrifuge-PC-300-Series.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label">
                                 <span>Best Seller</span>
@@ -996,18 +1040,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="sixteen" data-name="Rotory Evaporator TE-110" data-price="150.00" data-image="assets/images/dummy/Rotory-Evaporator-TE-100-Series.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-green">
                                 <span>Top Selling</span>
@@ -1031,18 +1076,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="seventeen" data-name="Circulating Water Bath Series WP-100(110V/60Hz)" data-price="150.00" data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label">
                                 <span>Best Seller</span>
@@ -1066,18 +1112,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="eighteen" data-name="Laboratory Glassware Washers TGW-5000" data-price="150.00" data-image="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-green">
                                 <span>Top Selling</span>
@@ -1101,18 +1148,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="nineteen" data-name="Touch screen Laboratory Incubator BI-130(110V/60Hz)" data-price="150.00" data-image="assets/images/dummy/Touch-screen-Laboratory-Incubator-BI-100 Series.png">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label">
                                 <span>Best Seller</span>
@@ -1136,18 +1184,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="twenty" data-name="Standard Vacuum Filtration Manifold VFM-1103" data-price="150.00" data-image="assets/images/dummy/Standard-Vacuum-Filtration-Manifold-VFM-1000.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-green">
                                 <span>Top Selling</span>
@@ -1171,18 +1220,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="twentyone" data-name="Blood Bank Refrigerator BBR-1010" data-price="150.00" data-image="assets/images/dummy//Blood-Bank-Refrigerator-BBR-1000-Series.png">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label">
                                 <span>Best Seller</span>
@@ -1206,18 +1256,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                         <div class="slider-card">
+                         <div class="slider-card card" wish-id="twentytwo" data-name="Oxygen Concentrator TOC-3005-110V" data-price="150.00" data-image="assets/images/dummy/Oxygen-Concentrator-TOC-3005-110V.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label">
                                 <span>Best Seller</span>
@@ -1241,18 +1292,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="twentythree" data-name="Polarizing Microscope TPM-1101" data-price="150.00" data-image="assets/images/dummy/PolarizingMicroscopeTPM-1101.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label-green">
                                 <span>Top Selling</span>
@@ -1276,18 +1328,19 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div>
-                        <div class="slider-card">
+                        <div class="slider-card card" wish-id="twentyfour" data-name="Micro-Spectrophotometer MS-2000" data-price="150.00" data-image="assets/images/dummy/Micro-Spectrophotometer-MS-2000-Series.jpg">
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <div class="side-label">
                                 <span>Best Seller</span>
@@ -1311,6 +1364,7 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
@@ -1328,15 +1382,15 @@
                     </div>
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="twentyfive" data-id="1" data-name="Circulating Water Bath Series WP-100(110V/60Hz)" data-price="150.00" data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                             <!-- <div class="side-label">
                                 <span>Get 12% OFF</span>
                             </div> -->
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Popular Product 1">
@@ -1357,21 +1411,22 @@
                                 </ul>
                             </div>
                             <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="2" data-name="Fisher Science Education™ Triple-Beam Balance" data-price="150.00" data-image="assets/images/dummy/balances-and-scales-90165051-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="twentysix" data-id="2" data-name="Class-II A2 Biological Safety Cabinets TBSC-2000A2" data-price="150.00" data-image="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg">
                             <div class="side-label">
                                 <span>up to 25% OFF</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="Popular Product 1">
@@ -1392,21 +1447,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="3" data-name="Fisherbrand™ accuSpin™ Micro 17/17R Microcentrifuge" data-price="150.00" data-image="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="twentyseven" data-id="3" data-name="Portable Centrifuge PC-310" data-price="150.00" data-image="assets/images/dummy/Portable-Centrifuge-PC-300-Series.jpg">
                             <div class="side-label">
                                 <span>Best deal</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Portable-Centrifuge-PC-300-Series.jpg" alt="Popular Product 1">
@@ -1427,21 +1483,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="4" data-name="Instructor's General Dissecting Set" data-price="150.00" data-image="assets/images/dummy/dissection-equipment-90184205-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="twentyeight" data-id="4" data-name="Rotory Evaporator TE-110" data-price="150.00" data-image="assets/images/dummy/Rotory-Evaporator-TE-100-Series.jpg">
                             <div class="side-label">
                                 <span>Get 25% OFF</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Rotory-Evaporator-TE-100-Series.jpg" alt="Popular Product 1">
@@ -1462,21 +1519,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="5" data-name="Biopex Scientific™ Savant™ SpeedVac™ SPD120 Vacuum Concentrator and Kits" data-price="150.00" data-image="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="twentynine" data-id="5" data-name="Fume Hood TFH-2600" data-price="150.00" data-image="assets/images/dummy/Fume-Hood-TFH-2700.jpg">
                             <!-- <div class="side-label">
                                 <span>Best Deal</span>
                             </div> -->
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Fume-Hood-TFH-2700.jpg" alt="Popular Product 1">
@@ -1497,21 +1555,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="6" data-name="Biopex™ Disposable PES Filter Units" data-price="150.00" data-image="assets/images/dummy/filters-and-filtration-header-image-v3.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="thirty" data-id="6" data-name="Laboratory Glassware Washers TGW-5000" data-price="150.00" data-image="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg">
                             <div class="side-label">
                                 <span>Get 20% OFF</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg" alt="Popular Product 1">
@@ -1532,21 +1591,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="7" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/glassware-washers-and-cleaners-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="thirtyone" data-id="7" data-name="Touch screen Laboratory Incubator BI-130(110V/60Hz)" data-price="150.00" data-image="assets/images/dummy/Touch-screen-Laboratory-Incubator-BI-100 Series.png">
                             <div class="side-label">
                                 <span>Great Deal</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Touch-screen-Laboratory-Incubator-BI-100 Series.png" alt="Popular Product 1">
@@ -1567,21 +1627,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="8" data-name="Fisher Science Education™ Triple-Beam Balance" data-price="150.00" data-image="assets/images/dummy/humidity-and-hygrometry-90151009-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="thirtytwo" data-id="8" data-name="Standard Vacuum Filtration Manifold VFM-1103" data-price="150.00" data-image="assets/images/dummy/Standard-Vacuum-Filtration-Manifold-VFM-1000.jpg">
                             <div class="side-label">
                                 <span>Get 30% OFF</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Standard-Vacuum-Filtration-Manifold-VFM-1000.jpg" alt="Popular Product 1">
@@ -1602,21 +1663,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="9" data-name="Fisherbrand™ accuSpin™ Micro 17/17R Microcentrifuge" data-price="150.00" data-image="assets/images/dummy/incubators-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="thirtythree" data-id="9" data-name="Blood Bank Refrigerator BBR-1010" data-price="150.00" data-image="assets/images/dummy/Blood-Bank-Refrigerator-BBR-1000-Series.png">
                             <div class="side-label">
                                 <span>Most Popular</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Blood-Bank-Refrigerator-BBR-1000-Series.png" alt="Popular Product 1">
@@ -1637,21 +1699,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="10" data-name="Instructor's General Dissecting Set" data-price="150.00" data-image="assets/images/dummy/laboratory-ventilation-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="thirtyfour" data-id="10" data-name="Oxygen Concentrator TOC-3005-110V" data-price="150.00" data-image="assets/images/dummy/Oxygen-Concentrator-TOC-3005-110V.jpg">
                             <div class="side-label">
                                 <span>Get 25% OFF</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Oxygen-Concentrator-TOC-3005-110V.jpg" alt="Popular Product 1">
@@ -1672,21 +1735,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="11" data-name="Biopex Scientific™ Savant™ SpeedVac™ SPD120 Vacuum Concentrator and Kits" data-price="150.00" data-image="assets/images/dummy/microplates_header_image_90111007_1.23.20.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="thirtyfive" data-id="11" data-name="Polarizing Microscope TPM-1101" data-price="150.00" data-image="assets/images/dummy/PolarizingMicroscopeTPM-1101.jpg">
                             <!-- <div class="side-label">
                                 <span>Limited Offer</span>
                             </div> -->
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/PolarizingMicroscopeTPM-1101.jpg" alt="Popular Product 1">
@@ -1707,21 +1771,22 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4 mobile-col">
-                        <div class="pop-card" data-id="12" data-name="Biopex™ Disposable PES Filter Units" data-price="150.00" data-image="assets/images/dummy/ovens-header-image.jpg-250.jpg">
+                        <div class="pop-card card" wish-id="thirtysix" data-id="12" data-name="Micro-Spectrophotometer MS-2000" data-price="150.00" data-image="assets/images/dummy/Micro-Spectrophotometer-MS-2000-Series.jpg">
                             <div class="side-label">
                                 <span>Get 25% OFF</span>
                             </div>
                              <div class="action-buttons">
                                 <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
-                                <a href="" class="wishlist"><span>Wishlist</span></a>
-                                <!-- <a href="" class="compare"><span>Compare</span></a>
-                                <a href="" class="viewproduct"><span>View</span></a> -->
+                                <!-- <a class="wishlist"><span>Wishlist</span></a> -->
+                                <!-- <a href="" class="compare"><span>Compare</span></a> -->
+                                <a href="singlecatalog.html" class="viewproduct"><span>Catalog</span></a>
                             </div>
                             <a href="productdescription.html" class="pop-image">
                                 <img src="assets/images/dummy/Micro-Spectrophotometer-MS-2000-Series.jpg" alt="Popular Product 1">
@@ -1742,6 +1807,7 @@
                                 </ul>
                             </div>
                              <div class="view-button">
+                                <a href="#" class="wishlist-btn-like"><span class="icon-heart"></span></a>
                                 <button class="add-to-cart-btn">Add to Cart</button>
                             </div>
                             
@@ -1923,20 +1989,23 @@
                             <ul>
                                 <li><a href="index.html" class="qla">Home</a></li>
                                 <li><a href="aboutus.html" class="qla">About Us</a></li>
-                                <li><a href="product.html" class="qla">Biopex Categories</a></li>
-                                <li><a href="product.html" class="qla">A to Z Products</a></li>
+                                <li><a href="category.html" class="qla">Biopex Categories</a></li>
+                                <li><a href="atozproducts.html" class="qla">A to Z Products</a></li>
                                 <li><a href="contactus.html" class="qla">Contact Us</a></li>
-                                <li><a href="faq.html" class="qla">FAQ</a></li>
+                                <li><a href="forgotpassword.html" class="qla">FAQ</a></li>
+                                <li><a href="sitemap.html" class="qla">Site Map</a></li>
                             </ul>
                         </div>
                         <div class="colfooter">
                             <h3 class="quicklink">Customer Service</h3>
                             <ul>
-                                <li><a href="shipping.html" class="qla">Shipping & Delivery</a></li>
-                                <li><a href="returns.html" class="qla">Returns & Exchanges</a></li>
-                                <li><a href="warranty.html" class="qla">Warranty Information</a></li>
-                                <li><a href="support.html" class="qla">Technical Support</a></li>
-                                <li><a href="privacy.html" class="qla">Privacy Policy</a></li>
+                                <li><a href="orderdetails.html" class="qla">Order Details</a></li>
+                                <li><a href="privacypolicy.html" class="qla">privacy Policy</a></li>
+                                <li><a href="returnpolicy.html" class="qla">Return Policy</a></li>
+                                <li><a href="termsandconditions.html" class="qla">Terms Ans Conditions</a></li>
+                                <li><a href="trackmyorder.html" class="qla">Track My order</a></li>
+                                <li><a href="thankyou.html" class="qla">Thank You</a></li>
+                                <li><a href="wishlist.html" class="qla">Wishlist</a></li>
                             </ul>
                         </div>
                         <!-- <div class="colfooter">
@@ -1968,7 +2037,6 @@
                             <div class="newsletter-success" style="display: none;">
                                 <p>Thank you for subscribing!</p>
                                 <p>You will receive the latest updates and offers in your inbox.</p>
-
                             </div>
                         </div>
                     </div>
@@ -1983,9 +2051,9 @@
     </div>
     <!-- OFFCANVAS PRODUCT SECTION -->
     <div id="offcanvas" class="offcanvas-overlay" role="dialog" aria-modal="true" aria-labelledby="offcanvas-label">
-    <div class="offcanvas">
+    <div class="offcanvas atcsection">
         <div class="offcanvas-header">
-            <h2 id="offcanvas-label" class="atctitle">Product Added to Cart</h2>
+            <p id="offcanvas-label" class="atctitle">Product Added to Cart</p>
         </div>
         <button aria-label="Close" class="offcanvas-close btn" id="offcanvas-close">&times;</button>
         <div id="offcanvas-content">
@@ -1993,13 +2061,56 @@
         </div>
     </div>
     </div>
-    <!-- 1. jQuery library FIRST -->
+    <script>
+        const wishlist = new Set();
+
+        const desktopWishlistCount = document.querySelector('.list-count');
+        const mobileWishlistCount = document.querySelector('.mobilecount');
+
+        // Update all wishlist counters
+        function updateWishlistUI() {
+        const count = wishlist.size;
+        desktopWishlistCount.textContent = count;
+        mobileWishlistCount.textContent = count;
+        }
+
+        // Toggle wishlist state on product cards
+        document.querySelectorAll('.wishlist-btn-like').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Example: Replace with your unique product ID for each card
+            const card = btn.closest('.card, .pop-card, slider-card');
+            const productId = card.getAttribute('wish-id');
+
+            if (wishlist.has(productId)) {
+            wishlist.delete(productId);
+            btn.classList.remove('active');
+            } else {
+            wishlist.add(productId);
+            btn.classList.add('active');
+            }
+            updateWishlistUI();
+        });
+        });
+
+        // Optionally, update state on page load (if you want to preserve on reload, use localStorage)
+        document.addEventListener('DOMContentLoaded', () => {
+        updateWishlistUI();
+
+        // Restore active state for wishlisted items (if needed)
+        document.querySelectorAll('.wishlist-btn-like').forEach(btn => {
+            const card = btn.closest('.card, .pop-card, slider-card');
+            const productId = card.getAttribute('wish-id');
+            if (wishlist.has(productId)) {
+            btn.classList.add('active');
+            }
+        });
+        });
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- 2. Slick Carousel JS (after jQuery) -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <!-- 3. Your custom JavaScript after both (e.g., main.js) -->
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>

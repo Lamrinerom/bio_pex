@@ -21,23 +21,23 @@
             <div class="top-header nomobile">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center justify-content-lg-start justify-content-xl-start">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 thcol-1">
                             <div class="cont-top">
                                 <!-- <p>Welcome to Biopex - Your Trusted Partner in Biotechnology Solutions!</p> -->
                                 <a href="mailto:info@biopex.com"><span class="icon1"></span> info@biopex.com</a>
                                 <a href="https://wa.me/1987654321"><span class="icon2"></span> +1 9876 543210</a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center justify-content-lg-end justify-content-xl-end">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 thcol-2">
                             <div class="cartandsignin-section">
-                                <ul class="d-flex justify-content-center justify-content-lg-end justify-content-xl-end p-0 m-0">
+                                <ul class="thul p-0 m-0">
                                     <li class="dropdown">
                                         <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">SIGN IN</label>
                                         <ul class="dropdown-menu signingin-dropdown">
                                             <li class="m-0"><a class="dropdown-item" href="login.html">Sign In</a></li>
-                                            <li><a class="dropdown-item" href="profile.html">Account Profile</a></li>
+                                            <li><a class="dropdown-item" href="myprofile.html">Account Profile</a></li>
                                             <li><a class="dropdown-item" href="register.html">Register</a></li>
-                                            <li><a class="dropdown-item" href="forgot.html">Forgot Password</a></li>
+                                            <li><a class="dropdown-item" href="forgotpassword.html">Forgot Password</a></li>
                                             <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                             <li><hr></li>
                                             <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
@@ -62,7 +62,7 @@
                                                 
                                             </div>
                                              <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="products.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
                                             <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
@@ -75,12 +75,12 @@
             <div class="bottom-header nomobile">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 d-flex align-items-center">
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 bhcol-1">
                             <div class="logo">
                                 <a href="index.html"><img src="assets/images/Asset 8.png" alt="Biopex Logo"></a>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-9 col-md-8 col-sm-6 col-6 d-flex align-items-center justify-content-center">
+                        <div class="col-xl-6 col-lg-9 col-md-8 col-sm-6 col-6 bhcol-2">
                             <nav class="main-menu ">
                                 <ul class="d-flex justify-content-center p-0 m-0">
                                     <li><a href="index.html">Home</a></li>
@@ -110,24 +110,68 @@
                         <!-- <div class="col-xl-1"> -->
                             
                         <!-- </div> -->
-                        <div class="col-xl-4 col-lg-6 col-md-6 order-xl-1 col-sm-6 order-sm-2 col-6 order-2 d-flex align-items-center">
-                            <div class="toggle-me me-4">
+                        <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 col-6 order-xl-1 order-md-1 order-sm-1 order-1 mhcol-1">
+                            <div class="toggle-me">
                                 <button class="btn toggle-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></button>
-                                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                                <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                </div>
-                                <div class="offcanvas-body">
-                                    <p>Try scrolling the rest of the page to see this option in action.</p>
-                                </div>
+                                <div class="offcanvas offcanvas-start mobilemenu" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                    <div class="offcanvas-header mobilehd">
+                                        <p class="offcanvas-title mobiletitle" id="offcanvasWithBothOptionsLabel"><img src="assets/images/Asset 8.png" alt=""></p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body mobilebody">
+                                        <div class="mobilerow">
+                                            <div class="cat-col">
+                                                <div class="categegory-list">
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="">
+                                                        <a href="section.html"><h2>Cabinets</h2></a>
+                                                    </div>
+                                                     <div class="smallcard">
+                                                        <img src="assets/images/dummy/Digital-Cooking-Oil-Tester OT-100.png" alt="">
+                                                        <a href="section.html"><h2>Oil Tester</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Fume-Hood-TFH-2700.jpg" alt="">
+                                                        <a href="section.html"><h2>Fume Hood</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/glassware-washers-and-cleaners-header-image.jpg-250.jpg" alt="">
+                                                        <a href="section.html"><h2>Washer</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/incubators-header-image.jpg-250.jpg" alt="">
+                                                        <a href="section.html"><h2>Incubators</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Micro-Spectrophotometer-MS-2000-Series.jpg" alt="">
+                                                        <a href="section.html"><h2>Spectrophotometer</h2></a>
+                                                    </div>
+                                                    <div class="smallcard">
+                                                        <img src="assets/images/dummy/Moisture-Balance-TMB-1000-Series.jpg" alt="">
+                                                        <a href="section.html"><h2>Balance</h2></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main-col">
+                                                <div class="mainmenu-list">
+                                                    <ul>
+                                                        <li><a href="index.html">Home</a></li>
+                                                        <li><a href="aboutus.html">About Us</a></li>
+                                                        <li><a href="category.html">Biopex Categories</a></li>
+                                                        <li><a href="atozproducts.html">A to Z Product</a></li>
+                                                        <li><a href="contactus.html">Contact Us</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="logo-mobile">
                                 <a href="index.html"><img src="assets/images/Asset 8.png" alt="Biopex Logo"></a>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 order-xl-2 col-12 order-sm-1 order-1">
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 order-xl-2 order-md-2 order-sm-3 order-3 mhcol-2">
                             <div class="mobile-search-bar">
                                 <form autocomplete="off" action="/action_page.php" class="mobile-form-sec">
                                     <div class="mobile-autocomplete" id="searchContainer">
@@ -137,17 +181,17 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 order-xl-3 col-md-6 col-sm-6 col-6 order-sm-3  order-3">
+                        <div class="col-xl-4 col-lg-3  col-md-3 col-sm-6 col-6 order-xl-3 order-md-3 order-sm-2 order-2 mhcol-3">
                             <div class="mobile-cartandsignin-section">
-                                <ul class="d-flex justify-content-center justify-content-lg-end justify-content-xl-end p-0 m-0">
+                                <ul class="mhul p-0 m-0">
                                     <li class="dropdown">
-                                        <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">Sign In</span></label>
+                                        <label class="icon3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">SIGN IN</span></label>
                                         <ul class="dropdown-menu mobile-signingin-dropdown">
                                             <li class="m-0"><a class="dropdown-item" href="login.html">Sign In</a></li>
-                                            <li><a class="dropdown-item" href="profile.html">Account Profile</a></li>
+                                            <li><a class="dropdown-item" href="myprofile.html">Account Profile</a></li>
                                             <li><a class="dropdown-item" href="register.html">Register</a></li>
-                                            <li><a class="dropdown-item" href="forget.html">Forgot Password</a></li>
-                                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                                            <li><a class="dropdown-item" href="forgotpassword.html">Forgot Password</a></li>
+                                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                             <li><hr></li>
                                             <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                                             <li><a class="dropdown-item" href="privacypolicy.html">Privacy Policy</a></li>
@@ -155,23 +199,11 @@
                                             <li><a class="dropdown-item" href="termsandconditions.html">Terms and Conditions</a></li>
                                         </ul>
                                     </li>
-                                    <!-- <li class="dropdown">
-                                        <label class="icon4 dropdown-toggle" href="cart.html" data-bs-toggle="dropdown" aria-expanded="false"><span class="hideinmobile">Cart(0)</span></label>
-                                        <ul class="dropdown-menu mobile-cart-section">
-                                            <p class="dropdown-item mobile-empty-cart">
-                                                <div class="mobile-empty-cart-image">
-                                                    <img src="assets/images/empty-cart-10681468-8593284.png" alt="Empty Cart">
-                                                </div>
-                                                <span class="yciempty">Your cart is currently empty.</span>
-                                            </p>    
-                                            <p class="dropdown-item mobile-cart-list"><a href="products.html">Browse Products</a></p>
-                                            <p class="dropdown-item mobile-cart-list"><a href="checkout.html">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item mobile-cart-list"><a href="cart.html">View Cart</a></p>
-
-                                        </ul>
-                                    </li> -->
                                     <li class="dropdown">
-                                        <label class="icon4 dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" role="button" tabindex="0">
+                                        <a class="icon5" href="wishlist.html"><span class="mobilecount">0</span></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <label class="mobcart icon4 dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" role="button" tabindex="0">
                                          <span class="cart-count">0</span>
                                         </label>
                                         <ul class="dropdown-menu cart-section" aria-label="Shopping Cart Menu" tabindex="-1">
@@ -182,8 +214,8 @@
                                                 </div>
                                                 
                                             </div>
-                                             <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="products.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
+                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
                                             <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
@@ -208,7 +240,7 @@
                     <h1 class="pp-title">Search Product Result : Water Bath</h1>
                 </div>
                 <div class="row">
-                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mobile-col">
                         <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
                              <div class="side-label">
                                 <span>Water Bath</span>
@@ -233,7 +265,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mobile-col">
                         <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
                              <div class="side-label">
                                 <span>Water Bath</span>
@@ -258,7 +290,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mobile-col">
                         <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
                              <div class="side-label">
                                 <span>Water Bath</span>
@@ -283,7 +315,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mobile-col">
                         <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
                              <div class="side-label">
                                 <span>Water Bath</span>
@@ -308,7 +340,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mobile-col">
                         <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
                              <div class="side-label">
                                 <span>Water Bath</span>
@@ -333,7 +365,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mobile-col">
                         <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
                              <div class="side-label">
                                 <span>Water Bath</span>
@@ -358,7 +390,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mobile-col">
                         <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
                              <div class="side-label">
                                 <span>Water Bath</span>
@@ -383,7 +415,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-6 mb-4 mobile-col">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mobile-col">
                         <div class="pop-card" data-id="1" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
                              <div class="side-label">
                                 <span>Water Bath</span>
@@ -443,20 +475,23 @@
                             <ul>
                                 <li><a href="index.html" class="qla">Home</a></li>
                                 <li><a href="aboutus.html" class="qla">About Us</a></li>
-                                <li><a href="product.html" class="qla">Biopex Categories</a></li>
-                                <li><a href="product.html" class="qla">A to Z Products</a></li>
+                                <li><a href="category.html" class="qla">Biopex Categories</a></li>
+                                <li><a href="atozproducts.html" class="qla">A to Z Products</a></li>
                                 <li><a href="contactus.html" class="qla">Contact Us</a></li>
-                                <li><a href="faq.html" class="qla">FAQ</a></li>
+                                <li><a href="forgotpassword.html" class="qla">FAQ</a></li>
+                                <li><a href="sitemap.html" class="qla">Site Map</a></li>
                             </ul>
                         </div>
                         <div class="colfooter">
                             <h3 class="quicklink">Customer Service</h3>
                             <ul>
-                                <li><a href="shipping.html" class="qla">Shipping & Delivery</a></li>
-                                <li><a href="returns.html" class="qla">Returns & Exchanges</a></li>
-                                <li><a href="warranty.html" class="qla">Warranty Information</a></li>
-                                <li><a href="support.html" class="qla">Technical Support</a></li>
-                                <li><a href="privacy.html" class="qla">Privacy Policy</a></li>
+                                <li><a href="orderdetails.html" class="qla">Order Details</a></li>
+                                <li><a href="privacypolicy.html" class="qla">privacy Policy</a></li>
+                                <li><a href="returnpolicy.html" class="qla">Return Policy</a></li>
+                                <li><a href="termsandconditions.html" class="qla">Terms Ans Conditions</a></li>
+                                <li><a href="trackmyorder.html" class="qla">Track My order</a></li>
+                                <li><a href="thankyou.html" class="qla">Thank You</a></li>
+                                <li><a href="wishlist.html" class="qla">Wishlist</a></li>
                             </ul>
                         </div>
                         <!-- <div class="colfooter">
@@ -488,7 +523,6 @@
                             <div class="newsletter-success" style="display: none;">
                                 <p>Thank you for subscribing!</p>
                                 <p>You will receive the latest updates and offers in your inbox.</p>
-
                             </div>
                         </div>
                     </div>
