@@ -167,59 +167,77 @@ document.getElementById('searchButton').addEventListener('click', function() {
 });
 // ---------------------------------------Baneer section
 
-// const container = document.getElementById('carouselContainer');
-//   const slides = container.children;
-//   const slidesCount = slides.length;
-//   let currentIndex = 0;
-//   let slideInterval = null;
+    document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('carouselContainer');
+  if (!container) {
+    console.error('No element with id="carouselContainer" found.');
+    return;
+  }
+  const slides = container.children;
+  const slidesCount = slides.length;
+  let currentIndex = 0;
+  let slideInterval = null;
 
-//   function goToSlide(index) {
-//     currentIndex = index % slidesCount;
-//     if (currentIndex < 0) currentIndex += slidesCount;
-//     container.style.transform = `translateX(${-currentIndex * 100}%)`;
-//   }
+  // Set up the parent container's CSS for sliding
+  container.style.display = 'flex';
+  container.style.transition = 'transform 0.5s ease-in-out';
+  container.style.width = '100%';
+  // Ensure each slide takes 100% width
+  Array.from(slides).forEach(slide => {
+    slide.style.flex = '0 0 100%';
+    slide.style.maxWidth = '100%';
+  });
 
-//   function nextSlide() {
-//     goToSlide(currentIndex + 1);
-//   }
+  function goToSlide(index) {
+    currentIndex = index % slidesCount;
+    if (currentIndex < 0) currentIndex += slidesCount;
+    container.style.transform = `translateX(${-currentIndex * 100}%)`;
+  }
 
-//   function prevSlide() {
-//     goToSlide(currentIndex - 1);
-//   }
+  function nextSlide() {
+    goToSlide(currentIndex + 1);
+  }
 
-//   document.getElementById('nextBtn').addEventListener('click', () => {
-//     nextSlide();
-//     resetTimer();
-//   });
+  function prevSlide() {
+    goToSlide(currentIndex - 1);
+  }
 
-//   document.getElementById('prevBtn').addEventListener('click', () => {
-//     prevSlide();
-//     resetTimer();
-//   });
+  // Next/Prev button event listeners
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    nextSlide();
+    resetTimer();
+  });
 
-//   Array.from(slides).forEach((slide, index) => {
-//     slide.style.cursor = 'pointer';
-//     slide.addEventListener('click', () => {
-//       const url = slide.getAttribute('data-url');
-//       if (url) {
-//         window.open(url, '_blank');
-//       }
-//     });
-//     slide.addEventListener('keydown', e => {
-//       if (e.key === 'Enter') {
-//         slide.click();
-//       }
-//     });
-//   });
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    prevSlide();
+    resetTimer();
+  });
 
-//   function resetTimer() {
-//     clearInterval(slideInterval);
-//     slideInterval = setInterval(nextSlide, 5000);
-//   }
+  // Slide click/key listeners
+  Array.from(slides).forEach((slide, index) => {
+    slide.style.cursor = 'pointer';
+    slide.addEventListener('click', () => {
+      const url = slide.getAttribute('data-url');
+      if (url) {
+        window.open(url, '_blank');
+      }
+    });
+    slide.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        slide.click();
+      }
+    });
+  });
 
-//   slideInterval = setInterval(nextSlide, 5000);
+  function resetTimer() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 5000);
+  }
 
-//   goToSlide(0);
+  slideInterval = setInterval(nextSlide, 5000);
+
+  goToSlide(0);
+});
 
   // ---------------------------------------slider
 
@@ -291,9 +309,10 @@ const cartCountElems = document.querySelectorAll('.cart-count');      // All car
 const cartSections = document.querySelectorAll('.cart-section');      // All dropdown cart sections
 
 function updateCartUI() {
-  // Update cart count for all UI carts
+  // Update cart count (sum of quantities)
+  const totalQty = cart.reduce((sum, p) => sum + p.quantity, 0);
   cartCountElems.forEach(elem => {
-    elem.textContent = cart.length;
+    elem.textContent = totalQty;
   });
 
   cartSections.forEach(cartSection => {
@@ -302,29 +321,32 @@ function updateCartUI() {
     prevItems.forEach(item => item.remove());
 
     const emptyCartElem = cartSection.querySelector('.empty-cart');
+    const proceedBtnWrapper = cartSection.querySelector('.proceed-btn');
     // Check if cart has items to adjust width accordingly
     if (cart.length === 0) {
       emptyCartElem.style.display = 'block';
+       proceedBtnWrapper.style.display = 'none';
       cartSection.style.width = '320px'; // Default width
     } else {
       emptyCartElem.style.display = 'none';
+       proceedBtnWrapper.style.display = 'block'; 
       cartSection.style.width = '490px'; // Wider with products
     }
     // Add cart items if any
     cart.forEach(product => {
-      const li = document.createElement('p');
-      li.className = 'dropdown-item cart-item';
-      li.innerHTML = `
-        <div class="cart-item">
-          <img src="${product.image}" alt="${product.name}" />
-          <div class="cart-item-details">
-            <strong>${product.name}</strong>
-            Price: $${product.price} <br />
-            Quantity: ${product.quantity}
+        const li = document.createElement('p');
+        li.className = 'dropdown-item cart-item';
+        li.innerHTML = `
+          <div class="cart-item">
+            <img src="${product.image}" alt="${product.name}" />
+            <div class="cart-item-details">
+              <strong>${product.name}</strong><br>
+              Price: $${product.price} <br />
+              Quantity: ${product.quantity}
+            </div>
           </div>
-        </div>
-      `;
-      cartSection.insertBefore(li, cartSection.querySelector('p.cart-list'));
+        `;
+        cartSection.insertBefore(li, proceedBtnWrapper);
     });
   });
 }
@@ -347,39 +369,39 @@ function openOffcanvas(product) {
     <div class="also-bought">
       <h4>Customers who bought this also bought</h4>
       <div class="also-bought-list row">
-        <div class="also-bought-item col-lg-6" data-id="2" data-name="Fisherbrand Microcentrifuge" data-price="180.00" data-image="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg">
-          <img src="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg" alt="Fisherbrand Microcentrifuge" />
-          <p class="cwbtabpname">Fisherbrand Microcentrifuge</p>
+        <div class="also-bought-item col-lg-6" data-id="2" data-name="Circulating Water Bath Series WP-100(110V/60Hz)" data-price="180.00" data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
+          <img src="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg" alt="Circulating Water Bath Series WP-100(110V/60Hz)" />
+          <p class="cwbtabpname">Circulating Water Bath Series WP-100(110V/60Hz)</p>
           <p class="priceoff">$180.00</p>
           <a href="#" class="add-cart-btn offatc">Add to Cart</a>
         </div>
-        <div class="also-bought-item col-lg-6" data-id="3" data-name="Biopex Vacuum Concentrator" data-price="140.00" data-image="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg">
-          <img src="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg" alt="Biopex Vacuum Concentrator" />
-          <p class="cwbtabpname">Biopex Vacuum Concentrator</p>
+        <div class="also-bought-item col-lg-6" data-id="3" data-name="Class-II A2 Biological Safety Cabinets TBSC-2000A2 " data-price="140.00" data-image="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg">
+          <img src="assets/images/dummy/Class-II-A2-Biological-Safety-Cabinets.jpg" alt="Class-II A2 Biological Safety Cabinets TBSC-2000A2 " />
+          <p class="cwbtabpname">Class-II A2 Biological Safety Cabinets TBSC-2000A2 </p>
           <p class="priceoff">$140.00</p>
            <a href="#" class="add-cart-btn offatc">Add to Cart</a>
         </div>
-        <div class="also-bought-item col-lg-6" data-id="2" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="180.00" data-image="assets/images/dummy/assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
-          <img src="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg" alt="Mopec Powered Hydraulic Cadaver Carrier" />
-          <p class="cwbtabpname">Mopec Powered Hydraulic Cadaver Carrier</p>
+        <div class="also-bought-item col-lg-6" data-id="2" data-name="Portable Centrifuge PC-310 " data-price="180.00" data-image="assets/images/dummy/Portable-Centrifuge-PC-300-Series.jpg">
+          <img src="assets/images/dummy/Portable-Centrifuge-PC-300-Series.jpg" alt="Portable Centrifuge PC-310 " />
+          <p class="cwbtabpname">Portable Centrifuge PC-310 </p>
           <p class="priceoff">$180.00</p>
           <a href="#" class="add-cart-btn offatc">Add to Cart</a>
         </div>
-        <div class="also-bought-item col-lg-6" data-id="3" data-name="Fisher Science Education™ Triple-Beam Balance" data-price="140.00" data-image="assets/images/dummy/balances-and-scales-90165051-header-image.jpg-250.jpg">
-          <img src="assets/images/dummy/balances-and-scales-90165051-header-image.jpg-250.jpg" alt="Fisher Science Education™ Triple-Beam Balance" />
-          <p class="cwbtabpname">Fisher Science Education™ Triple-Beam Balance</p>
+        <div class="also-bought-item col-lg-6" data-id="3" data-name="Rotory Evaporator TE-110" data-price="140.00" data-image="assets/images/dummy/Rotory-Evaporator-TE-100-Series.jpg">
+          <img src="assets/images/dummy/Rotory-Evaporator-TE-100-Series.jpg" alt="Rotory Evaporator TE-110" />
+          <p class="cwbtabpname">Rotory Evaporator TE-110</p>
           <p class="priceoff">$140.00</p>
            <a href="#" class="add-cart-btn offatc">Add to Cart</a>
         </div>
-        <div class="also-bought-item col-lg-6" data-id="2" data-name="Fisherbrand Microcentrifuge" data-price="180.00" data-image="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg">
-          <img src="assets/images/dummy/centrifuges-90180031-header-image.jpg-250.jpg" alt="Fisherbrand Microcentrifuge" />
-          <p class="cwbtabpname">Fisherbrand Microcentrifuge</p>
+        <div class="also-bought-item col-lg-6" data-id="2" data-name="Fume Hood TFH-2600 " data-price="180.00" data-image="assets/images/dummy/Fume-Hood-TFH-2700.jpg">
+          <img src="assets/images/dummy/Fume-Hood-TFH-2700.jpg" alt="Fume Hood TFH-2600 " />
+          <p class="cwbtabpname">Fume Hood TFH-2600 </p>
           <p class="priceoff">$180.00</p>
           <a href="#" class="add-cart-btn offatc">Add to Cart</a>
         </div>
-        <div class="also-bought-item col-lg-6" data-id="3" data-name="Biopex Vacuum Concentrator" data-price="140.00" data-image="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg">
-          <img src="assets/images/dummy/evaporators-header-image-v3.jpg-250.jpg" alt="Biopex Vacuum Concentrator" />
-          <p class="cwbtabpname">Biopex Vacuum Concentrator</p>
+        <div class="also-bought-item col-lg-6" data-id="3" data-name="Laboratory Glassware Washers TGW-5000" data-price="140.00" data-image="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg">
+          <img src="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg" alt="Laboratory Glassware Washers TGW-5000" />
+          <p class="cwbtabpname">Laboratory Glassware Washers TGW-5000</p>
           <p class="priceoff">$140.00</p>
            <a href="#" class="add-cart-btn offatc">Add to Cart</a>
         </div>
@@ -418,8 +440,9 @@ function addToCart(product) {
   // Check if product already in cart
   const existingProduct = cart.find(item => item.id === product.id);
   if (existingProduct) {
-    existingProduct.quantity += 1;
+    existingProduct.quantity += product.quantity || 1;
   } else {
+    product.quantity = product.quantity || 1;
     cart.push(product);
   }
   updateCartUI();
@@ -429,15 +452,17 @@ function addToCart(product) {
 document.addEventListener('DOMContentLoaded', () => {
   closeOffcanvas();
 
-  // Handle Proceed to Checkout button click (dropdown)
-  document.querySelector('.proceed-to-checkout-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.location.href = 'cart.html';
-  }); 
+ // Proceed to Checkout button click
+  document.querySelectorAll('.proceed-to-checkout-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = 'checkout.html';
+    });
+  });
   // Add to cart button logic on main product card
   document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     button.addEventListener('click', () => {
-      const card = button.closest('.pop-card');
+      const card = button.closest('.pop-card, .slider-card, .description-section');
       const product = {
         id: card.getAttribute('data-id'),
         name: card.getAttribute('data-name'),
@@ -449,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Change button text temporarily
       button.disabled = true;
       const originalText = button.textContent;
-      button.textContent = 'Added';
+      button.textContent = ' Added';
       setTimeout(() => {
         button.textContent = originalText;
         button.disabled = false;
@@ -468,6 +493,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Offcanvas close button
   document.getElementById('offcanvas-close').addEventListener('click', closeOffcanvas);
+  // Initialize UI on page load
+  updateCartUI();
 });
 
 // ------------------------------------------------Aboutcarousel

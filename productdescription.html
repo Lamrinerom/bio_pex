@@ -62,9 +62,9 @@
                                                 </div>
                                                 
                                             </div>
-                                             <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
-                                            <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
+                                             <p class="dropdown-item cart-list text-center cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
+                                            <p class="dropdown-item cart-list text-center"><a href="atozproducts.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list text-center"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
                                 </ul>
@@ -215,9 +215,9 @@
                                                 </div>
                                                 
                                             </div>
-                                            <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
-                                            <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
+                                            <p class="dropdown-item cart-list text-center cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
+                                            <p class="dropdown-item cart-list text-center"><a href="atozproducts.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list text-center"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
                                 </ul>
@@ -236,7 +236,7 @@
                 </ol>
             </nav>
         </section>
-        <section class="page-section description-section">
+        <section class="page-section description-section" data-id="1" data-name="Laboratory Glassware Washers TGW-5000" data-price="900" data-image="assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
@@ -286,7 +286,7 @@
                         <div class="catalog-section">
                             <h3>Download Our Catalog</h3>
                             <p>Get the complete product catalog for detailed specifications and pricing.</p>
-                            <a href="assets/catalogs/laboratory-glassware-tgw5000.pdf" download class="download-btn">Download Catalog</a>
+                            <a href="singlecatalog.html" download class="download-btn">Download Catalog</a>
                         </div>
                         <div class="product-actions">
                             <div class="quantity-selector">
@@ -294,7 +294,7 @@
                                 <input id="product-quantity" value="1" min="1" max="99" readonly>
                                 <button type="button" class="qty-btn" id="qty-increase">+</button>
                             </div>
-                            <button class="add-to-cart-btn" type="button">Add to Cart</button>
+                            <button class="add-to-cart-btn" type="button"></button>
                             <button class="add-to-wishlist-btn" type="button"><i class="fa-regular fa-heart"></i></button>
                         </div>
                         <div class="specification-section">
@@ -753,33 +753,164 @@
         scrollRightBtn.addEventListener('mouseleave', stopScrolling);
     </script>
     <script>
-        const qtyInput = document.getElementById('product-quantity');
-        const decreaseBtn = document.getElementById('qty-decrease');
-        const increaseBtn = document.getElementById('qty-increase');
+        // Cart array and DOM elements
+const cart = [];
+const offcanvas = document.getElementById('offcanvas');
+const offcanvasContent = document.getElementById('offcanvas-content');
+const cartCountElems = document.querySelectorAll('.cart-count');
+const cartSections = document.querySelectorAll('.cart-section');
 
-        decreaseBtn.addEventListener('click', () => {
-            let currentQty = parseInt(qtyInput.value);
-            if (currentQty > 1) {
-            qtyInput.value = currentQty - 1;
-            }
-        });
+const qtyInput = document.getElementById('product-quantity');
+const decreaseBtn = document.getElementById('qty-decrease');
+const increaseBtn = document.getElementById('qty-increase');
+const addToCartBtn = document.querySelector('.add-to-cart-btn');
 
-        increaseBtn.addEventListener('click', () => {
-            let currentQty = parseInt(qtyInput.value);
-            if (currentQty < 99) {
-            qtyInput.value = currentQty + 1;
-            }
-        });
+function updateCartUI() {
+  cartCountElems.forEach(elem => {
+    elem.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+  });
 
-        document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
-            alert(`Added ${qtyInput.value} item(s) to cart`);
-            // Here, integrate your cart logic or API call
-        });
+  cartSections.forEach(cartSection => {
+    const prevItems = cartSection.querySelectorAll('.cart-item');
+    prevItems.forEach(item => item.remove());
 
-        document.querySelector('.add-to-wishlist-btn').addEventListener('click', () => {
-            alert('Added to Wishlist');
-            // Here, integrate your wishlist logic or API call
-        });
+    const emptyCartElem = cartSection.querySelector('.empty-cart');
+    if (cart.length === 0) {
+      emptyCartElem.style.display = 'block';
+      cartSection.style.width = '320px';
+    } else {
+      emptyCartElem.style.display = 'none';
+      cartSection.style.width = '490px';
+    }
+
+    cart.forEach(product => {
+      const li = document.createElement('p');
+      li.className = 'dropdown-item cart-item';
+      li.innerHTML = `
+        <div class="cart-item">
+          <img src="${product.image}" alt="${product.name}" />
+          <div class="cart-item-details">
+            <strong>${product.name}</strong><br>
+            Price: $${product.price}<br>
+            Quantity: ${product.quantity}
+          </div>
+        </div>
+      `;
+      cartSection.insertBefore(li, cartSection.querySelector('p.cart-list'));
+    });
+  });
+}
+
+function openOffcanvas(product) {
+  offcanvasContent.innerHTML = `
+    <div class="offcanvas-product">
+      <img src="${product.image}" alt="${product.name}" />
+      <div class="offcanvas-product-info">
+        <h3>${product.name}</h3>
+        <p class="priceoff">Price: $${product.price}</p>
+        <p>Quantity: ${product.quantity}</p>
+      </div>
+    </div>
+    <div class="offcanvas-actions">
+      <a href="products.html" class="button">Continue Shopping</a>
+      <a href="cart.html" class="button" id="view-cart-btn">View Cart</a>
+    </div>
+    <!-- also-bought section omitted for brevity, add as needed -->
+  `;
+  offcanvas.style.display = 'flex';
+
+  document.getElementById('view-cart-btn').addEventListener('click', () => {
+    window.location.href = 'cart.html';
+  });
+}
+
+function closeOffcanvas() {
+  offcanvas.style.display = 'none';
+}
+
+function addToCart(product) {
+  const existingProduct = cart.find(item => item.id === product.id);
+  if (existingProduct) {
+    existingProduct.quantity += product.quantity; // accumulate quantity
+  } else {
+    cart.push(product);
+  }
+  updateCartUI();
+  openOffcanvas(product);
+}
+
+// Quantity change updates offcanvas immediately if product is in cart currently
+function updateOffcanvasQuantity(productId, newQty) {
+  const productInCart = cart.find(p => p.id === productId);
+  if (productInCart) {
+    productInCart.quantity = newQty;
+    updateCartUI();
+    openOffcanvas(productInCart);
+  }
+}
+
+// Event listeners for quantity buttons/input
+decreaseBtn.addEventListener('click', () => {
+  let qty = parseInt(qtyInput.value) || 1;
+  if (qty > 1) {
+    qty--;
+    qtyInput.value = qty;
+    updateOffcanvasQuantity(currentProduct.id, qty);
+  }
+});
+
+increaseBtn.addEventListener('click', () => {
+  let qty = parseInt(qtyInput.value) || 1;
+  if (qty < 99) {
+    qty++;
+    qtyInput.value = qty;
+    updateOffcanvasQuantity(currentProduct.id, qty);
+  }
+});
+
+addToCartBtn.addEventListener('click', () => {
+  const product = {
+    id: currentProduct.id,
+    name: currentProduct.name,
+    price: currentProduct.price,
+    image: currentProduct.image,
+    quantity: parseInt(qtyInput.value) || 1,
+  };
+
+  addToCart(product);
+
+  // Temporarily disable button with 'Added' text
+  addToCartBtn.disabled = true;
+  const originalText = addToCartBtn.textContent;
+  addToCartBtn.textContent = 'Added';
+  setTimeout(() => {
+    addToCartBtn.textContent = originalText;
+    addToCartBtn.disabled = false;
+  }, 5000);
+});
+
+offcanvas.addEventListener('click', e => {
+  if (e.target === offcanvas) {
+    closeOffcanvas();
+  }
+});
+
+document.getElementById('offcanvas-close').addEventListener('click', closeOffcanvas);
+
+let currentProduct = {
+  id: 'TGW-5000',
+  name: 'Laboratory Glassware Washers TGW-5000',
+  price: 900, // discounted price or current price
+  image: 'assets/images/dummy/Laboratory-Glassware-Washers-TGW-5000.jpg',
+};
+
+// Initialize offcanvas hidden on load
+document.addEventListener('DOMContentLoaded', () => {
+  closeOffcanvas();
+  updateCartUI();
+});
+
+
     </script>
 </body>
 </html>

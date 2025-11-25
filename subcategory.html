@@ -62,9 +62,9 @@
                                                 </div>
                                                 
                                             </div>
-                                             <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
-                                            <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
+                                             <p class="dropdown-item cart-list text-center cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
+                                            <p class="dropdown-item cart-list text-center"><a href="atozproducts.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list text-center"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
                                 </ul>
@@ -215,9 +215,9 @@
                                                 </div>
                                                 
                                             </div>
-                                            <p class="dropdown-item cart-list cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
-                                            <p class="dropdown-item cart-list"><a href="atozproducts.html">Browse Products</a></p>
-                                            <p class="dropdown-item cart-list"><a href="cart.html">View Cart</a></p>
+                                            <p class="dropdown-item cart-list text-center cart-actions proceed-btn" style="display:none;"><a href="checkout.html" class="proceed-to-checkout-btn">Proceed to Checkout</a></p>
+                                            <p class="dropdown-item cart-list text-center"><a href="atozproducts.html">Browse Products</a></p>
+                                            <p class="dropdown-item cart-list text-center"><a href="cart.html">View Cart</a></p>
                                         </ul>
                                     </li>
                                 </ul>
@@ -243,46 +243,54 @@
                     </div>
                     <div class="col-xl-2">
                         <div class="filter-section" style="margin-top: 40px;">
-                            <h5>Filter</h5>
+                            <h5>Filter By</h5>
                             <div class="filter-specs">
-                            <h6>specifications</h6>
+                            <h6 class="text-center">specifications</h6>
                             <div class="spec-checkboxes">
                                 <label class="checkbox-circle">
-                                    <input type="checkbox" class="spec-checkbox" data-filter="capacity" value="Capacity">
                                     <span>Capacity</span>
+                                    <input type="checkbox" class="spec-checkbox" data-filter="capacity" value="Capacity">
+                                    
                                 </label>
                                 <label class="checkbox-circle">
-                                    <input type="checkbox" class="spec-checkbox" data-filter="range" value="Range">
                                     <span>Range</span>
+                                    <input type="checkbox" class="spec-checkbox" data-filter="range" value="Range">
+                                    
                                 </label>
                                 <label class="checkbox-circle">
+                                     <span>Accuracy</span>
                                     <input type="checkbox" class="spec-checkbox" data-filter="accuracy" value="Accuracy">
-                                    <span>Accuracy</span>
+                                   
                                 </label>
                                 <label class="checkbox-circle">
-                                    <input type="checkbox" class="spec-checkbox" data-filter="bath" value="Bath">
                                     <span>Bath Dimension</span>
+                                    <input type="checkbox" class="spec-checkbox" data-filter="bath" value="Bath">
+                                    
                                 </label>
                                 <label class="checkbox-circle">
-                                    <input type="checkbox" class="spec-checkbox" data-filter="inner" value="Inner">
                                     <span>Inner Dimension</span>
+                                    <input type="checkbox" class="spec-checkbox" data-filter="inner" value="Inner">
+                                    
                                 </label>
                             </div>
                             </div>
                             <div class="filter-prices">
-                            <h6>Price Range</h6>
+                            <h6 class="text-center mt-4">Price Range</h6>
                             <div class="price-checkboxes">
                                 <label class="checkbox-circle">
+                                     <span>$150 - $200</span>
                                 <input type="checkbox" class="price-checkbox" value="150-200">
-                                <span>$150 - $200</span>
+                               
                                 </label>
                                 <label class="checkbox-circle">
+                                     <span>$200 - $250</span>
                                 <input type="checkbox" class="price-checkbox" value="200-250"> 
-                                <span>$200 - $250</span>
+                               
                                 </label>
                                 <label class="checkbox-circle">
+                                    <span>$250 - $300</span>
                                 <input type="checkbox" class="price-checkbox" value="250-300">
-                                <span>$250 - $300</span>
+                                
                                 </label>
                             </div>
                             </div>
@@ -292,8 +300,15 @@
                     </div>
                     <div class="col-xl-10 popular-product">
                         <div class="row">
-                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="10L" data-range="100" data-accuracy="0.1" data-dimension="230x140x150" data-name="Mopec Powered Hydraulic Cadaver Carrier" data-price="150.00" data-image="assets/images/dummy/autopsy-supplies-header-image.jpg-250.jpg">
-                                <div class="pop-card sccards" wish-id="thirtyseven">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" 
+                            data-capacity="10L" 
+                            data-range="100" 
+                            data-accuracy="0.1" 
+                            data-dimension="230x140x150">
+                                <div class="pop-card sccards" wish-id="thirtyseven"
+                                data-name="Circulating Water Bath Series WP-100(110V/60Hz)" 
+                                data-price="150.00" 
+                                data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                                     <div class="action-buttons">
                                         <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
                                         <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
@@ -330,12 +345,19 @@
                                                 <i class="fas fa-check"></i> 
                                             </span>
                                         </div>
-                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                        <button class="add-to-cart-btn"></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="15L" data-range="105" data-accuracy="0.1" data-dimension="230x140x155">
-                                <div class="pop-card sccards" wish-id="thirtyeight">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" 
+                            data-capacity="15L" 
+                            data-range="105" 
+                            data-accuracy="0.1" 
+                            data-dimension="230x140x155">
+                                <div class="pop-card sccards" wish-id="thirtyeight"
+                                    data-name="Circulating Water Bath Series WP-101(110V/60Hz)" 
+                                    data-price="170.00" 
+                                    data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                                     <div class="action-buttons">
                                         <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
                                         <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
@@ -372,12 +394,19 @@
                                                 <i class="fas fa-check"></i> 
                                             </span>
                                         </div>
-                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                        <button class="add-to-cart-btn"></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="20L" data-range="110" data-accuracy="0.1" data-dimension="230x140x200">
-                                <div class="pop-card sccards" wish-id="thirtynine">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" 
+                            data-capacity="20L" 
+                            data-range="110" 
+                            data-accuracy="0.1" 
+                            data-dimension="230x140x200">
+                                <div class="pop-card sccards" wish-id="thirtynine"
+                                    data-name="Circulating Water Bath Series WP-102(110V/60Hz)" 
+                                    data-price="180.00" 
+                                    data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                                     <div class="action-buttons">
                                         <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
                                         <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
@@ -414,12 +443,19 @@
                                                 <i class="fas fa-check"></i> 
                                             </span>
                                         </div>
-                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                        <button class="add-to-cart-btn"></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="25L" data-range="115" data-accuracy="0.1" data-dimension="230x140x250">
-                                <div class="pop-card sccards" wish-id="fourty">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" 
+                            data-capacity="25L" 
+                            data-range="115" 
+                            data-accuracy="0.1" 
+                            data-dimension="230x140x250">
+                                <div class="pop-card sccards" wish-id="fourty"
+                                    data-name="Circulating Water Bath Series WP-103(110V/60Hz)" 
+                                    data-price="200.00" 
+                                    data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                                     <div class="action-buttons">
                                         <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
                                         <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
@@ -456,12 +492,19 @@
                                                 <i class="fas fa-check"></i> 
                                             </span>
                                         </div>
-                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                        <button class="add-to-cart-btn"></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="30L" data-range="120" data-accuracy="0.1" data-dimension="230x140x300">
-                                <div class="pop-card sccards" wish-id="fourtyone">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" 
+                            data-capacity="30L" 
+                            data-range="120" 
+                            data-accuracy="0.1" 
+                            data-dimension="230x140x300">
+                                <div class="pop-card sccards" wish-id="fourtyone"
+                                    data-name="Circulating Water Bath Series WP-104(110V/60Hz)" 
+                                    data-price="220.00" 
+                                    data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                                     <div class="action-buttons">
                                         <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
                                         <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
@@ -498,12 +541,19 @@
                                                 <i class="fas fa-check"></i> 
                                             </span>
                                         </div>
-                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                        <button class="add-to-cart-btn"></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" data-capacity="35L" data-range="125" data-accuracy="0.1" data-dimension="230x140x350">
-                                <div class="pop-card sccards" wish-id="fourtytwo">
+                            <div class="col-xl-4 col-md-4 col-12 mb-4 mobile-col pop-card-wrapper" 
+                            data-capacity="35L" 
+                            data-range="125" 
+                            data-accuracy="0.1" 
+                            data-dimension="230x140x350">
+                                <div class="pop-card sccards" wish-id="fourtytwo"
+                                    data-name="Circulating Water Bath Series WP-105(110V/60Hz)" 
+                                    data-price="250.00" 
+                                    data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                                     <div class="action-buttons">
                                         <!-- <a href="" class="addtocart"><span>Add to cart</span></a> -->
                                         <!-- <a href="" class="wishlist"><span>Wishlist</span></a> -->
@@ -540,7 +590,7 @@
                                                 <i class="fas fa-check"></i> 
                                             </span>
                                         </div>
-                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                        <button class="add-to-cart-btn"></button>
                                     </div>
                                 </div>
                             </div>
@@ -652,7 +702,7 @@
         </div>
     </div>
     </div>
-    <div class="compare compare_btn">
+    <div class="compare_btn">
         <div class="row row-2 compare-section">
             <a href="compare.html" class="btn compare_btn pull-right btn-compare" style="display:none;">
                 COMPARE  <span class="compare-count-badge">0</span>
@@ -817,35 +867,31 @@
 });
 
     </script>
-    <script>
+    <!-- <script>
         const cart = [];
         const offcanvas = document.getElementById('offcanvas');
         const offcanvasContent = document.getElementById('offcanvas-content');
         const cartLabel = document.querySelector('.header-cart .dropdown-toggle');
-        const cartCountElems = document.querySelectorAll('.cart-count');      // All cart counts
-        const cartSections = document.querySelectorAll('.cart-section');      // All dropdown cart sections
+        const cartCountElems = document.querySelectorAll('.cart-count');  
+        const cartSections = document.querySelectorAll('.cart-section'); 
 
         function updateCartUI() {
-        // Update cart count for all UI carts
         cartCountElems.forEach(elem => {
             elem.textContent = cart.length;
         });
 
         cartSections.forEach(cartSection => {
-            // Remove all cart items
             const prevItems = cartSection.querySelectorAll('.cart-item');
             prevItems.forEach(item => item.remove());
 
             const emptyCartElem = cartSection.querySelector('.empty-cart');
-            // Check if cart has items to adjust width accordingly
             if (cart.length === 0) {
             emptyCartElem.style.display = 'block';
-            cartSection.style.width = '320px'; // Default width
+            cartSection.style.width = '320px';
             } else {
             emptyCartElem.style.display = 'none';
-            cartSection.style.width = '490px'; // Wider with products
+            cartSection.style.width = '490px'; 
             }
-            // Add cart items if any
             cart.forEach(product => {
             const li = document.createElement('p');
             li.className = 'dropdown-item cart-item';
@@ -922,8 +968,6 @@
             </div>
         `;
         offcanvas.style.display = 'flex';
-
-        // Add event listener for add to cart in also bought section
         offcanvas.querySelectorAll('.also-bought-item .add-cart-btn').forEach(button => {
             button.addEventListener('click', event => {
             event.preventDefault();
@@ -938,8 +982,6 @@
             addToCart(newProduct);
             });
         });
-
-        // Add event listener for view cart button offcanvas
         document.getElementById('view-cart-btn').addEventListener('click', () => {
             window.location.href = 'cart.html';
         });
@@ -950,7 +992,6 @@
         }
 
         function addToCart(product) {
-        // Check if product already in cart
         const existingProduct = cart.find(item => item.id === product.id);
         if (existingProduct) {
             existingProduct.quantity += 1;
@@ -963,13 +1004,10 @@
 
         document.addEventListener('DOMContentLoaded', () => {
         closeOffcanvas();
-
-        // Handle Proceed to Checkout button click (dropdown)
         document.querySelector('.proceed-to-checkout-btn').addEventListener('click', function(e) {
             e.preventDefault();
             window.location.href = 'cart.html';
         }); 
-        // Add to cart button logic on main product card
         document.querySelectorAll('.add-to-cart-btn').forEach(button => {
             button.addEventListener('click', () => {
             const card = button.closest('.pop-card');
@@ -980,8 +1018,6 @@
                 image: card.getAttribute('data-image'),
                 quantity: 1,
             };
-
-            // Change button text temporarily
             button.disabled = true;
             const originalText = button.textContent;
             button.textContent = 'Added';
@@ -994,17 +1030,14 @@
             });
         });
 
-        // Make overlay click close the offcanvas, but not clicks inside offcanvas content
         offcanvas.addEventListener('click', function(e) {
             if (e.target === offcanvas) {
             closeOffcanvas();
             }
         });
-
-        // Offcanvas close button
         document.getElementById('offcanvas-close').addEventListener('click', closeOffcanvas);
         });
 
-    </script>
+    </script> -->
   </body>
 </html>
